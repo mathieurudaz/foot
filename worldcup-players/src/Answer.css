@@ -1,0 +1,22 @@
+.answer{
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid #333;
+    display: inline-block;
+    margin-right: 5px;
+    transition: transform 100ms ease-in;
+}
+
+.answer:hover{
+    transform: translate(0px, -4px);
+}
+
+.answer.faded{
+    border-color: #cdcdcd;
+    color: #999;
+    opacity: 0.5;
+}
+
+.answer:last-child{
+    margin-right: 0px;
+}

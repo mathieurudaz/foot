@@ -5,48 +5,62 @@ import './App.css';
 const questions = [
   {
     "title": "Question A",
-    "answers": ["A", "B", "C"],
-    "id": 0
+    "answers": ["Réponse A", "Réponse B"]
   },{
     "title": "Question B",
-    "answers": ["A", "B", "C"],
-    "id": 1
+    "answers": ["Réponse A", "Réponse B"]
   },{
     "title": "Question C",
-    "answers": ["A", "B", "C"],
-    "id": 2
+    "answers": ["Réponse A", "Réponse B", "Réponse C"]
   },{
     "title": "Question D",
-    "answers": ["A", "B", "C"],
-    "id": 3
+    "answers": ["Réponse A", "Réponse B", "Réponse C"]
   },{
     "title": "Question E",
-    "answers": ["A", "B", "C"],
-    "id": 4
+    "answers": ["Réponse A", "Réponse B", "Réponse C", "Réponse D"]
   },{
     "title": "Question F",
-    "answers": ["A", "B", "C"],
-    "id": 5
+    "answers": ["Réponse A", "Réponse B", "Réponse C"]
   },{
     "title": "Question G",
-    "answers": ["A", "B", "C"],
-    "id": 6
+    "answers": ["Réponse A", "Réponse B", "Réponse C"]
   },{
     "title": "Question H",
-    "answers": ["A", "B", "C"],
-    "id": 7
+    "answers": ["Réponse A", "Réponse B", "Réponse C"]
   }
 ]
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {currentQuestion: 0};
+    this.answeredHandler = this.answeredHandler.bind(this);
+  }
+  gotoQuestion(id){
+    let nextQuestionId = (id+1) % questions.length
+    console.log("Goto question " + nextQuestionId)
+    // TODO: Use react plugin, on component, not directly dom selection
+    window.scrollTo(0, document.getElementById("question-"+nextQuestionId).offsetTop);
+  }
+  answeredHandler(id) {
+    console.log("Question "+id + " answered.")
+    this.gotoQuestion(id)
+  }
   render() {
     return (
       <div className="App">
-        <div>
-          {questions.map(question => { return <Question
-            key={question.id}
-            title={question.title.toUpperCase()}
-            answers={question.answers} />})}
+        <div className='questions'>
+          { questions.map((question, index) => {
+              return <div className="question-container" id={"question-"+index}>
+                        <Question
+                          key={index}
+                          id={index}
+                          onAnswered={this.answeredHandler}
+                          title={question.title.toUpperCase()}
+                          answers={question.answers} />
+                      </div>
+              })
+          }
         </div>
       </div>
     );
