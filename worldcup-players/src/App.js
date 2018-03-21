@@ -3,6 +3,7 @@ import scrollToComponent from 'react-scroll-to-component';
 import Player from './Player';
 import Question from './Question';
 import Answer from './Answer';
+import CardsContainer from './CardsContainer';
 import './App.css';
 
 const questions = [
@@ -86,6 +87,17 @@ class App extends Component {
     return (
       <div className={"app style-" + this.state.currentTemplate}>
         <div onClick={this.setNextTemplate} className='templates-selector'></div>
+        <CardsContainer cards={[
+          1,2,3,4,5,6,7,8,9,10,
+          1,2,3,4,5,6,7,8,9,10,
+          1,2,3,4,5,6,7,8,9,10,
+          1,2,3,4,5,6,7,8,9,10,
+          1,2,3,4,5,6,7,8,9,10,
+          1,2,3,4,5,6,7,8,9,10,
+          1,2,3,4,5,6,7,8,9,10,
+          1,2,3,4,5,6,7,8,9,10,
+          1,2,3,4,5,6,7,8,9,10,
+          1,2,3,4,5,6,7,8,9,10]} />
         <div className="title container">
           <div><h1>Quelle star du mondial êtes-vous?</h1></div>
           <div><Answer

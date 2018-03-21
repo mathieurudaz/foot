@@ -3,11 +3,13 @@
 }
 
 .title{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     flex-direction: column;
+    z-index: 2;
 }
 
 .title h1{
