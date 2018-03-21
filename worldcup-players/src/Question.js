@@ -13,7 +13,7 @@ class Question extends Component {
     this.setState({
       selectedAnswer: id
     })
-    this.props.onAnswered(this.props.id);
+    this.props.onAnswered(this.props.id, id);
   }
 
   render() {
@@ -28,7 +28,7 @@ class Question extends Component {
                 key={index}
                 id={index}
                 label={answer}
-                faded={(this.state.selectedAnswer == index || this.state.selectedAnswer == null) ? false : true}
+                faded={(this.state.selectedAnswer === index || this.state.selectedAnswer === null) ? false : true}
                 handleChange={this.handler} />}, this)}
           </div>
         </div>

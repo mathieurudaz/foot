@@ -1,0 +1,50 @@
+.result{
+    background-color: #f5f6f7;
+    height: 100vh;
+}
+
+.result .portrait{
+  left: 0px;
+  top:0px;
+  width: 50%;
+  height: 100%;
+  background: url(./images/portrait-3.jpg);
+  background-size: cover;
+  float: left;
+}
+
+.result .resume{
+  width: 50%;
+  float: left;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.result .resume .name{
+  font-size: 90px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  line-height: 1;
+  color: #222;
+}
+
+.result .resume .country{
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  line-height: 1;
+  color: #222;
+}
+
+.result .resume .bio{
+  margin-top: 40px;
+  text-transform: none;
+  font-size: 20px;
+  font-weight: 300;
+}

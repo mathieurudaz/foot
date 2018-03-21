@@ -1,0 +1,20 @@
+.card{
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  background-color: white;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.card .inner-card{
+  margin: 15px;
+}
+
+.card .name{
+  font-size: 30px;
+}

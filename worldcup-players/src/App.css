@@ -1,15 +1,63 @@
-.App {
-    text-align: center;
-    height: 100%;
+.app {
+
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.title h1{
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    letter-spacing: 5px;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #222;
+}
+
+.templates-selector{
+  width: 100px;
+  height: 100px;
+  position: fixed;
+}
+
+.app.style-0{
+  background: #f5f6f7;
+}
+
+.app.style-1{
+  background: #31bf7d;
+}
+
+.app.style-2{
+  background-image: linear-gradient(148deg, #3391e5 37.57%, #ffffff 37.57%, #ffffff 50%, #3391e5 50%, #3391e5 87.57%, #ffffff 87.57%, #ffffff 100%);
+  background-size: 318.92px 199.28px;
+  background-attachment: fixed;
+}
+
+.app.style-3{
+  background-image: linear-gradient(90deg, #24a66e 27.24%, #22b573 27.24%, #22b573 50%, #24a66e 50%, #24a66e 77.24%, #22b573 77.24%, #22b573 100%);
+  background-size: 558.00px 558.00px;
+  background-attachment: fixed;
+}
+
+.app.style-4{
+  background-image: linear-gradient(90deg, #3391e5 27.24%, #ffffff 27.24%, #ffffff 50%, #3391e5 50%, #3391e5 77.24%, #ffffff 77.24%, #ffffff 100%);
+  background-size: 558.00px 558.00px;
+  background-attachment: fixed;
 }
 
 .questions{
-    height: 100%;
+
 }
 
 .question-container{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100%;
+    height: 100vh;
 }
