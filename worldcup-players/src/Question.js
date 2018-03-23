@@ -31,6 +31,7 @@ class Question extends Component {
                 faded={(this.state.selectedAnswer === index || this.state.selectedAnswer === null) ? false : true}
                 handleChange={this.handler} />}, this)}
           </div>
+          <div className="question-number">{this.props.id+1}/8</div>
         </div>
       </div>
     );

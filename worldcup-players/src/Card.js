@@ -5,8 +5,9 @@ class Card extends Component {
 
   constructor(props) {
     super(props);
+    this.styleId = Math.floor(Math.random()*3)
     this.style = {
-      left: Math.random() * (this.props.bounds[0] - 200),
+      left: 200 + Math.random() * (this.props.bounds[0] - 600),
       top: Math.random() * (this.props.bounds[1] - 300),
       transform: "rotate("+(Math.random()*360)+"deg)"
     }
@@ -14,9 +15,12 @@ class Card extends Component {
 
   render() {
     return (
-      <div className="card" style={this.style}>
+      <div className={"card style-"+this.styleId} style={this.style}>
         <div className="inner-card">
-          <div className="name">José Cavani</div>
+          <div className="name">
+            <div className="first-name">José</div>
+            <div className="last-name">Cavani</div>
+          </div>
         </div>
       </div>
     );

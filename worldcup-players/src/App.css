@@ -2,6 +2,10 @@
 
 }
 
+.colorized{
+  color: #22b573;
+}
+
 .title{
     position: relative;
     display: flex;
@@ -19,6 +23,8 @@
     font-size: 60px;
     text-transform: uppercase;
     color: #222;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .templates-selector{
@@ -50,6 +56,17 @@
 .app.style-4{
   background-image: linear-gradient(90deg, #3391e5 27.24%, #ffffff 27.24%, #ffffff 50%, #3391e5 50%, #3391e5 77.24%, #ffffff 77.24%, #ffffff 100%);
   background-size: 558.00px 558.00px;
+  background-attachment: fixed;
+}
+.app.style-5{
+  background-image: linear-gradient(90deg, #ffbb40 27.19%, #0e0e54 27.19%, #0e0e54 50%, #ffbb40 50%, #ffbb40 77.19%, #0e0e54 77.19%, #0e0e54 100%);
+  background-size: 570.00px 570.00px;
+  background-attachment: fixed;
+}
+
+.app.style-5{
+  background-image: linear-gradient(90deg, #333333 27.19%, #ffffff 27.19%, #ffffff 50%, #333333 50%, #333333 77.19%, #ffffff 77.19%, #ffffff 100%);
+  background-size: 570.00px 570.00px;
   background-attachment: fixed;
 }
 

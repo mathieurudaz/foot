@@ -55,13 +55,15 @@ class App extends Component {
     this.start = this.start.bind(this);
     this.questionComponents = []
   }
+
   start(){
     setTimeout(() => {scrollToComponent(this.questionComponents[0])}, 250)
   }
+
   setNextTemplate(){
-    this.setState({"currentTemplate": (this.state.currentTemplate + 1) % 5})
-    console.log((this.state.currentTemplate + 1) % 4)
+    this.setState({"currentTemplate": (this.state.currentTemplate + 1) % 7})
   }
+
   gotoNextQuestion(id){
     let nextQuestionId = (id+1) % questions.length
     let anchor = this.questionComponents[nextQuestionId]
@@ -72,6 +74,7 @@ class App extends Component {
 
     setTimeout(() => {scrollToComponent(anchor)}, 500)
   }
+
   answeredHandler(questionId, answerId) {
     console.log("Question "+questionId + " answered. " + "Answer " + answerId)
     let a = this.state.answers
@@ -80,15 +83,12 @@ class App extends Component {
     this.gotoNextQuestion(questionId)
     console.log(this.state.answers)
   }
-  componentDidMount() {
-    //scrollToComponent(this.questionComponents[7]);
-  }
+
   render() {
     return (
       <div className={"app style-" + this.state.currentTemplate}>
         <div onClick={this.setNextTemplate} className='templates-selector'></div>
         <CardsContainer cards={[
-          1,2,3,4,5,6,7,8,9,10,
           1,2,3,4,5,6,7,8,9,10,
           1,2,3,4,5,6,7,8,9,10,
           1,2,3,4,5,6,7,8,9,10,
@@ -120,7 +120,10 @@ class App extends Component {
               })
           }
         </div>
-        <Player id="0" player={players[0]} answers={this.state.answers} ref={Player => {this.player = Player}} />
+        <Player id="0"
+          player={players[0]}
+          answers={this.state.answers}
+          ref={Player => {this.player = Player}} />
       </div>
     );
   }

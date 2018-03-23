@@ -1,6 +1,11 @@
 .result{
     background-color: #f5f6f7;
     height: 100vh;
+
+
+  background-image: linear-gradient(90deg, #333333 28.33%, #ffffff 28.33%, #ffffff 50%, #333333 50%, #333333 78.33%, #ffffff 78.33%, #ffffff 100%);
+  background-size: 300.00px 300.00px;
+
 }
 
 .result .portrait{
@@ -8,9 +13,11 @@
   top:0px;
   width: 50%;
   height: 100%;
-  background: url(./images/portrait-3.jpg);
-  background-size: cover;
   float: left;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  padding: 100px;
 }
 
 .result .resume{
@@ -23,8 +30,17 @@
   display: flex;
   justify-content: center;
   height: 100vh;
-  flex-direction: column;
+  box-sizing: border-box;
+  padding: 100px;
   background-color: white;
+}
+
+.result .resume-content{
+  box-shadow: 3px 0px 8px rgba(0,0,0,0.2);
+  background-color: white;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 
 .result .resume .name{
@@ -33,6 +49,7 @@
   letter-spacing: 4px;
   line-height: 1;
   color: #222;
+  margin-bottom: 20px;
 }
 
 .result .resume .country{
@@ -48,4 +65,37 @@
   text-transform: none;
   font-size: 20px;
   font-weight: 300;
+}
+
+.portrait-content{
+  box-sizing: border-box;
+  height: 95%;
+  width: 80%;
+  background-color: white;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
+  border:24px solid white;
+  border-radius: 22px;
+  padding-top: 20px;
+}
+
+.portrait .firstname, .portrait .lastname, .portrait .country{
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 50px;
+  line-height: 1;
+}
+
+.portrait .country{
+  font-size: 20px;
+}
+
+.portrait .portrait-picture{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 300px;
+  background: url(./images/portrait-3.jpg);
+  background-size: cover;
 }
