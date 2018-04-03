@@ -20,17 +20,21 @@ const questions = [
     "title": "Dans la vie, vous pensez que...",
     "answers": ["La meilleure attaque c'est la défense", "Il faut toujours aller de l'avant", "Il faut gagner la terre du milieu", "Il ne faut rien laisser passer"]
   },{
-    "title": "Question E",
-    "answers": ["Réponse A", "Réponse B", "Réponse C", "Réponse D"]
+    "title": "Quelle est votre couleur préférée?",
+    "answers": ["Rouge", "Vert", "Jaune", "Bleu", "Blanc"]
   },{
-    "title": "Question F",
-    "answers": ["Réponse A", "Réponse B", "Réponse C"]
+    "title": "A quoi ressemble votre appartement?",
+    "answers": ["Toujours rangé", "Presque en ordre", "Je laisse libre cours à mes envies"]
   },{
-    "title": "Question G",
-    "answers": ["Réponse A", "Réponse B", "Réponse C"]
+    "title": "On vous bouscule dans la rue, que faites-vous?",
+    "answers": ["Sur de ma force, je continue comme si de rien", "Je m'arrête et fait une remarque", "je pousse l'autre immédiatement"]
   },{
-    "title": "Question H",
-    "answers": ["Réponse A", "Réponse B", "Réponse C"]
+    "title": "Etes-vous droitier ou gaucher?",
+    "answers": ["Droitier", "Gaucher"]
+  },
+  {
+    "title": "Qu'y a t il de plus important pour vous?",
+    "answers": ["Marquer", "Faire la passe juste", "Etre un bon coequipier"]
   }
 ]
 
@@ -112,6 +116,7 @@ class App extends Component {
                         <Question
                           key={index}
                           id={index}
+                          questionMax={questions.length}
                           ref={Question => {this.questionComponents[index] = Question;}}
                           onAnswered={this.answeredHandler}
                           title={question.title.toUpperCase()}

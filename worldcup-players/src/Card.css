@@ -32,6 +32,24 @@
   color: #f5f6f7;
 }
 
+.card.style-0{
+  background-image: linear-gradient(90deg, #333333 27.27%, #ffffff 27.27%, #ffffff 50%, #333333 50%, #333333 77.27%, #ffffff 77.27%, #ffffff 100%);
+  background-size: 110.00px 110.00px;
+  color: #333333;
+}
+
+.card.style-1{
+  background-image: linear-gradient(90deg, #333333 27.27%, #ffffff 27.27%, #ffffff 50%, #333333 50%, #333333 77.27%, #ffffff 77.27%, #ffffff 100%);
+  background-size: 110.00px 110.00px;
+  color: #333333;
+}
+
+.card.style-2{
+  background-image: linear-gradient(90deg, #333333 27.27%, #ffffff 27.27%, #ffffff 50%, #333333 50%, #333333 77.27%, #ffffff 77.27%, #ffffff 100%);
+  background-size: 110.00px 110.00px;
+  color: #333333;
+}
+
 .card .inner-card{
   margin: 15px;
 }
