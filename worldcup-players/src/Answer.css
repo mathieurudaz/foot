@@ -1,5 +1,5 @@
 .answer{
-    background-color: white;
+    /*background-color: white;*/
     cursor: pointer;
     padding: 10px;
     border: 2px solid #333;
@@ -7,6 +7,7 @@
     transition: transform 100ms ease-in;
     font-family: "Oswald", sans-serif;
     font-weight: 400;
+    font-size: 14px;
     margin: 5px 5px 5px 5px;
 }
 
@@ -22,4 +23,8 @@
 
 .answer:last-child{
     margin-right: 0px;
+}
+
+.answer.gif{
+    border:none;
 }

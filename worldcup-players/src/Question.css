@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
-
 .question{
   position: relative;
   display: inline-block;
@@ -22,7 +20,8 @@
   padding: 15px;
 }
 
-.question h2{  
+.question h2{ 
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 34px;
   margin-top: 0px;
@@ -31,6 +30,7 @@
 
 .question-number{
   margin-top: 20px;
+  font-size: 14px;
 }
 
 /* Small devices (tablets, 768px and up) */

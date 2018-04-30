@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
+
+
 .app {
 
 }
@@ -14,6 +20,18 @@
     height: 100vh;
     flex-direction: column;
     z-index: 2;
+    background-color: #ffce4d;
+}
+
+h1{
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    letter-spacing: 5px;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #222;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .title h1{
@@ -80,3 +98,63 @@
     justify-content: center;
     height: 100vh;
 }
+
+.shortcut{
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    opacity: 0.4;
+    margin-top: 20px;
+}
+
+.start-touch{
+    display: inline-block;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 12px 18px;
+    border: 3px solid #333;
+    transition: transform 100ms ease-in;
+}
+
+.start-touch:hover{
+    transform: translate(0px, -4px);
+}
+
+.container-zoom{ background-color: #f5f6f7; }
+.container-swiss{ background-color: #ffffff; }
+
+.container-zoom, .container-swiss{
+  padding-top: 60px;
+  margin-bottom: 90px;
+}
+
+.container-zoom p, .container-swiss p{
+  font-family: "PT Serif", Serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.start-block{
+  text-align: center;
+  margin-top: 20px;
+}
+
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .title h1{
+      font-size: 90px;
+    }
+  }
+
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+
+
+  }
+
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+
+
+  }
