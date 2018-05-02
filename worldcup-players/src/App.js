@@ -255,7 +255,10 @@ class App extends Component {
 
           <div className='ui container'>
             <div className='ui text container no-marg'>
-              <h2>Le joueur type</h2>
+              <div className="title-bloc" style={{textAlign: "center"}}>
+                <div className="section-number small">1</div>
+                <h2>Le joueur type</h2>
+              </div>
               <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
               <img className="ui fluid image" src={require("./images/joueur-03.png")} />
               <p>Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim.</p>
@@ -264,7 +267,10 @@ class App extends Component {
 
           <div className='ui container'>
             <div className='ui text container no-marg'>
-              <h2>Devenir titulaire</h2>
+              <div className="title-bloc" style={{textAlign: "center"}}>
+                <div className="section-number small">2</div>
+                <h2>Devenir titulaire</h2>
+              </div>
               <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
             </div>
           </div>  
@@ -282,7 +288,53 @@ class App extends Component {
 
           <div className='ui container'>
             <div className='ui text container no-marg'>
-              <h2>Le plus beau goal de l'équipe suisse</h2>
+              <div className="title-bloc" style={{textAlign: "center"}}>
+                <div className="section-number small">3</div>
+                <h2>Les participations</h2>
+              </div>
+              <p>(INFOG) Classement FIFA, (INFOG) Participations</p>
+              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+            </div>
+          </div>
+
+          <div className='ui container'>
+            <div className='ui text container no-marg'>
+              <div className="title-bloc" style={{textAlign: "center"}}>
+                <div className="section-number small">4</div>
+                <h2>Son premier match</h2>
+              </div>
+              <p>Score en grand avec croix Suisse et lion Pays-Bas</p>
+              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+            </div>
+          </div>
+
+          <div className='ui container'>
+            <div className='ui text container no-marg'>
+              <div className="title-bloc" style={{textAlign: "center"}}>
+                <div className="section-number small">5</div>
+                <h2>Son meilleur résultat</h2>
+              </div>
+              <p>Mixer avec 1.?</p>
+              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+            </div>
+          </div>
+
+          <div className='ui container'>
+            <div className='ui text container no-marg'>
+              <div className="title-bloc" style={{textAlign: "center"}}>
+                <div className="section-number small">6</div>
+                <h2>Le match le plus fou</h2>
+              </div>
+              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+            </div>
+          </div>
+
+          <div className='ui container'>
+            <div className='ui text container no-marg'>
+              <div className="title-bloc" style={{textAlign: "center"}}>
+                <div className="section-number small">7</div>
+                <h2>Le plus beau goal de l'équipe suisse</h2>
+              </div>
               <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
             </div>
           </div>
@@ -293,20 +345,64 @@ class App extends Component {
 
           <div className='ui container'>
             <div className='ui text container no-marg'>
-              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec lobortis mauris vitae leo condimentum pretium. Sed pharetra orci nulla, at suscipit est posuere pretium. Cras lorem sem, cursus et libero ut, iaculis tincidunt felis. Sed convallis felis ac sem maximus commodo. Quisque convallis, odio id tempus ornare, justo felis tristique dui, eget consequat mi quam vel velit. Vestibulum varius arcu eget tellus convallis, ac condimentum dui ultrices.</p>
-              <p>Aliquam at est sed leo auctor pretium eu eu nibh. Fusce lobortis ex id massa luctus efficitur. Phasellus convallis augue vel est tincidunt accumsan. Curabitur quis suscipit dolor, et rutrum nibh. Suspendisse tellus nibh, gravida ut vestibulum in, tempor vitae quam. Donec egestas, sem eu interdum imperdiet, urna libero vehicula nulla, a rhoncus nibh ipsum eget purus. Nullam id ante at tortor venenatis commodo ac tristique purus. Nunc vestibulum risus in nunc molestie, eget luctus nibh tempus. Phasellus sagittis, orci eu finibus tempus, arcu nisl convallis augue, euismod auctor augue dui vitae arcu. Pellentesque malesuada, enim sit amet consectetur fermentum, neque dolor commodo felis, quis viverra felis neque in augue. Duis elementum malesuada dolor, ut ultrices lectus cursus sit amet.</p>
-              <p>Nunc tempus dolor nisi, nec iaculis arcu tempus a. Vestibulum luctus sem ut feugiat imperdiet. In id pulvinar orci, at tempus lectus. Nullam nibh tellus, iaculis quis pharetra vitae, euismod vitae nisl. Fusce felis mauris, sodales eu lobortis et, euismod a neque. Donec quam felis, aliquam eu maximus sit amet, luctus ac massa. Quisque vel finibus tellus. Vivamus pharetra, leo id cursus egestas, nunc mauris sagittis est, sit amet feugiat nisl tellus non eros. Nulla vestibulum porttitor sapien, ac ultricies dui rhoncus ut. Phasellus mattis quam non urna varius, a ultricies sem tempor. Nullam eleifend magna mattis, tincidunt dolor nec, posuere arcu. Nunc et dolor vestibulum, sodales dolor nec, dignissim massa.</p>
-              <p>Vivamus tristique dapibus maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer at ultricies nisi. Mauris eget lectus dolor. Cras volutpat leo vitae nibh consequat, ut iaculis ante imperdiet. Vestibulum commodo mattis cursus. Pellentesque non leo mattis, rhoncus ex sed, feugiat erat.</p>
-              <p>Aliquam facilisis, ante sit amet accumsan faucibus, lectus nisi fringilla tortor, non consectetur odio tortor et quam. Sed eget mauris cursus, venenatis ligula vitae, condimentum turpis. Curabitur ultrices, neque eu lobortis ornare, diam magna auctor arcu, quis feugiat mauris nibh sit amet elit. Nullam suscipit laoreet ex, eget sodales arcu aliquet ac. Maecenas vitae egestas erat, ac ultricies sem. Curabitur in tortor sed ipsum condimentum sagittis. Mauris convallis, ipsum nec aliquet molestie, erat enim rhoncus ante, eu imperdiet urna nunc vel sem. Etiam hendrerit vestibulum mollis. Vestibulum vitae pretium augue. Maecenas et faucibus arcu. Ut gravida viverra tempus.</p>
-              <p>Donec condimentum mollis nisi. Ut ac tempor elit, sed gravida eros. Donec pretium augue nec rhoncus interdum. Aliquam ante ipsum, pellentesque at pulvinar nec, porttitor varius dui. Vestibulum malesuada nunc nibh, id ultrices sapien lobortis eu. Phasellus vitae tortor elit. Curabitur commodo mauris lectus, sed ornare nulla eleifend a. Nunc tortor turpis, tristique nec tincidunt et, venenatis ac leo. Curabitur feugiat lectus sit amet tellus iaculis consequat. Maecenas mattis finibus libero, et facilisis diam posuere a. Pellentesque et turpis ligula. Cras pretium, justo id posuere sodales, magna orci porta magna, in porttitor leo justo non tortor.</p>
-              <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce tempor luctus diam, sit amet viverra est dictum non. Maecenas viverra, velit nec elementum ultricies, nibh quam aliquet sem, at commodo ligula sapien porta enim. Nam maximus ut felis et feugiat. Maecenas blandit sed felis ut egestas. Aliquam commodo eu ipsum vitae fringilla. Duis gravida sit amet odio ut feugiat. Ut lacus ante, auctor at pharetra sollicitudin, hendrerit quis ante. Pellentesque vel enim quis ligula hendrerit varius. Cras nec nunc maximus, pellentesque leo sit amet, mollis metus. Sed felis justo, suscipit quis ullamcorper vel, venenatis ac lorem. Mauris elementum est vitae orci sodales, a sagittis diam dictum. Aenean in fermentum nisl. Pellentesque dui lorem, ultrices sed mi at, interdum egestas quam. Aenean vitae lectus at felis scelerisque ultrices at nec risus. Aliquam eleifend faucibus mattis.</p>
-              <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris convallis leo ut tempus euismod. Phasellus feugiat laoreet massa nec lacinia. Quisque facilisis sodales purus in efficitur. Nullam eleifend efficitur faucibus. Suspendisse mollis nunc eget sagittis mattis. Proin vel dolor congue, faucibus orci et, mollis ex. Proin sem orci, accumsan commodo lacinia ac, commodo id risus. Proin luctus, ipsum non lacinia pellentesque, lorem nunc tempus leo, nec porttitor magna nisl vitae nibh.</p>
-              <p>In tristique pretium odio, et pharetra quam auctor blandit. Pellentesque vulputate, sem in dignissim egestas, metus nulla maximus magna, eu pretium libero lectus nec mi. Integer pellentesque turpis vitae augue finibus auctor. Quisque tempor sodales metus quis sagittis. Curabitur vestibulum tortor ac mauris molestie, vel imperdiet ante posuere. Phasellus nulla metus, vulputate at est eu, ultrices efficitur felis. Aenean ut eleifend dolor. Aliquam viverra eros eget porta finibus.</p>
-              <p>Nunc tincidunt elementum tincidunt. Donec vulputate lorem ut dolor placerat luctus. Suspendisse tincidunt eu tellus congue scelerisque. Nulla ornare sem dui, at ullamcorper dolor feugiat vel. Etiam eu iaculis enim, ut malesuada tellus. In volutpat nibh eget sagittis interdum. Etiam porta arcu ut venenatis consequat. Nulla nisl nunc, rhoncus id elementum ut, venenatis sit amet nunc. Proin ac sem ex. Ut a urna ex. Etiam ac urna sem. Morbi suscipit, sapien ut tempor laoreet, nibh massa luctus odio, eget viverra erat libero ut metus. Cras rhoncus eget neque ac fringilla.</p>
-              <p>Aenean feugiat tellus in ipsum tempor accumsan. Donec luctus urna massa, sed blandit eros malesuada eget. Nunc maximus velit sit amet erat ornare, a sodales tortor vulputate. Praesent elit ante, blandit ut finibus at, dictum quis lorem. Morbi tristique ante eu cursus fermentum. Nulla facilisi. Sed tellus nulla, rhoncus id tincidunt nec, ornare vitae metus.</p>
-              <p>Nulla ac rhoncus sem. Integer turpis ex, varius in dui accumsan, euismod euismod ligula. Nam ac tincidunt justo. Maecenas sit amet pellentesque elit. Etiam ac turpis id lacus ultricies ornare consectetur non velit. Aenean elementum massa nunc.</p>
+              <div className="title-bloc" style={{textAlign: "center"}}>
+                <div className="section-number small">8</div>
+                <h2>Son maillot à travers les âges</h2>
+              </div>
+              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
             </div>
           </div>
+
+          <div className='ui container'>
+            <div className='ui text container no-marg'>
+              <div className="title-bloc" style={{textAlign: "center"}}>
+                <div className="section-number small">9</div>
+                <h2>Ses anecdotes croustillaaannntes</h2>
+              </div>
+              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+            </div>
+          </div>
+
+          <div className='ui container'>
+            <div className='ui text container no-marg'>
+              <div className="title-bloc" style={{textAlign: "center"}}>
+                <div className="section-number small">10</div>
+                <h2>Les romands</h2>
+              </div>
+              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+            </div>
+          </div>
+
+          <div className='ui container'>
+            <div className='ui text container no-marg'>
+              <div className="title-bloc" style={{textAlign: "center"}}>
+                <div className="section-number small">11</div>
+                <h2>Ses statistiques</h2>
+              </div>
+              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+            </div>
+          </div>
+
+          <div className='ui container'>
+            <div className='ui text container no-marg'>
+              <div className="title-bloc" style={{textAlign: "center"}}>
+                <div className="section-number small">12</div>
+                <h2>L'argent</h2>
+              </div>
+              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+            </div>
+          </div>
+
+          <div className='ui container'>
+            <div className='ui text container no-marg'>
+              <div className="title-bloc" style={{textAlign: "center"}}>
+                <div className="section-number small">13</div>
+                <h2>L'issue</h2>
+              </div>
+              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+            </div>
+          </div>
+
         </main>
 
         <footer className='ui vertical segment'>
