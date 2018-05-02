@@ -1,0 +1,34 @@
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="170.04mm" height="108.91mm" viewBox="0 0 482 308.73">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #22b573;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>intro_background</title>
+  <rect class="cls-1" x="0.24" y="-0.49" width="482" height="308.73"/>
+  <polyline class="cls-2" points="0.47 225.91 76.47 225.91 76.47 81.66 0.47 81.66"/>
+  <polyline class="cls-2" points="0.47 189.53 26.47 189.53 26.47 118.03 0.47 118.03"/>
+  <circle class="cls-3" cx="49.47" cy="153.78" r="1"/>
+  <path class="cls-2" d="M76,191.48a44.09,44.09,0,0,0,0-76.2"/>
+  <polyline class="cls-2" points="481.87 81.66 405.87 81.66 405.87 225.91 481.87 225.91"/>
+  <polyline class="cls-2" points="481.87 118.03 455.87 118.03 455.87 189.53 481.87 189.53"/>
+  <circle class="cls-3" cx="432.87" cy="153.78" r="1"/>
+  <path class="cls-2" d="M406.37,115.68a44.09,44.09,0,0,0,0,76.2"/>
+  <rect class="cls-2" x="0.24" y="-0.49" width="482" height="308.73"/>
+  <path class="cls-2" d="M0.74,8.65A9,9,0,0,0,10-.17"/>
+  <path class="cls-2" d="M472.89-.67a9,9,0,0,0,8.82,9.25"/>
+  <path class="cls-2" d="M9.06,307.8a9,9,0,0,0-8.82-9.25"/>
+  <path class="cls-2" d="M482.21,299.48A9,9,0,0,0,473,308.3"/>
+</svg>

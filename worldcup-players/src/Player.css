@@ -16,7 +16,7 @@
   box-sizing: border-box;
   padding: 20px;
   background-color: transparent;
-  padding-bottom: 0px;
+  padding-bottom: 0px !important;
   z-index: 1;
 }
 
@@ -26,7 +26,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 20px;
-  padding-top: 0px;
+  padding-top: 0px !important;
 }
 
 .result .resume-content{
@@ -125,30 +125,34 @@
   padding-bottom: 10px;
 }
 
-  /* Small devices (tablets, 768px and up) */
-  @media (min-width: 768px) {
-    .result .portrait{
-      padding-top: 20px;
-    }
-    .result .resume{
-      padding-bottom: 20px;
-    }
-    .result .resume .name{
-      font-size: 90px;
-    }
-    .stats-value img{
-      width: auto;
-    }
+.resume .ta.sharing{
+  margin-top: 60px !important;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .result .portrait{
+    padding-top: 20px;
   }
-
-  /* Medium devices (desktops, 992px and up) */
-  @media (min-width: 992px) {
-
-
+  .result .resume{
+    padding-bottom: 20px;
   }
-
-  /* Large devices (large desktops, 1200px and up) */
-  @media (min-width: 1200px) {
-
-
+  .result .resume .name{
+    font-size: 90px;
   }
+  .stats-value img{
+    width: auto;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+
+}

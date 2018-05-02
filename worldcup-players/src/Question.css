@@ -20,12 +20,14 @@
   padding: 15px;
 }
 
-.question h2{ 
+.question h2,
+.question h2:first-child{ 
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 34px;
   margin-top: 0px;
   margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
 .question-number{

@@ -3,7 +3,7 @@ import './Answer.css';
 
 class Answer extends Component {
   videoAnswer() {
-    if(this.props.label.substr(0, 4) == "http"){
+    if(this.props.label.substr(0, 4) === "http"){
       return true
     }else{
       return false

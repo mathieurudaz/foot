@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@ta-interaktiv/react-masthead": "^3.0.1",
+    "@ta-interaktiv/react-feedback-message": "^1.1.2",
+    "@ta-interaktiv/react-masthead": "^4.0.1",
+    "@ta-interaktiv/react-polymorphic-share-buttons": "^2.0.0",
+    "@ta-interaktiv/react-publication-info": "^1.0.0",
     "@ta-interaktiv/react-share-buttons": "^2.0.0",
     "@ta-interaktiv/semantic-ui": "^1.3.1",
     "react": "^16.2.0",
