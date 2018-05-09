@@ -4,7 +4,7 @@
   font-family: "Oswald", sans-serif;
   width: 80%;
   height: auto;
-  min-height: 250px;
+  /*min-height: 250px;*/
   box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
   border-radius: 5px;
   padding: 15px;
@@ -30,9 +30,11 @@
   letter-spacing: 1px;
 }
 
-.question-number{
+.question-skip{
+  text-align: center;
   margin-top: 20px;
   font-size: 14px;
+  opacity: 0.35;
 }
 
 /* Small devices (tablets, 768px and up) */

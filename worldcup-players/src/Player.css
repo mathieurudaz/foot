@@ -1,7 +1,8 @@
-.result{
+.ui.grid.result{
   background-color: #f5f6f7;
   min-height: 80vh;
   background-color: #ffce4d;
+  margin: 0px;
 }
 
 .result .resume{

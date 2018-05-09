@@ -1,0 +1,19 @@
+.pronocard{
+  display: inline-block;
+  height: 300px;
+  width: 200px;
+  background-color: white;
+  box-shadow: 3px 3px 16px -8px grey;
+  border-radius: 7px;
+  cursor: pointer;
+  margin: 50px 10px;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
+}
+
+.pronocard:hover{
+  transform: rotate(10deg);
+}
