@@ -8,6 +8,7 @@ import Masthead from '@ta-interaktiv/react-masthead'
 import Scoreboard from './Scoreboard';
 import Inlinescore from './Inlinescore';
 import Pronocard from './Pronocard';
+import GoalAnimation from './GoalAnimation';
 
 import { displayTypes } from '@ta-interaktiv/react-share-buttons'
 import FeedbackMessage from '@ta-interaktiv/react-feedback-message'
@@ -254,11 +255,10 @@ class App extends Component {
                 <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
                   <div className='story-hint inverted'>
                     <div className='icon-container'>
-                      <i className='file text medium icon' />
+                      <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
                     </div>
                     <div className='hint-container'>
-                      <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
-                      <div>Texte lien la Suisse <nobr><span className='pseudo-link'>à découvrir plus bas ou ici</span></nobr>.</div>
+                      <div>Tout savoir sur <b>la Suisse et le Mondial</b>, à découvrir plus bas <nobr><span className='pseudo-link'>ou en cliquant ici</span></nobr>.</div>
                     </div>
                   </div>
                 </a>
@@ -267,11 +267,10 @@ class App extends Component {
                 <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
                   <div className='story-hint inverted'>
                     <div className='icon-container'>
-                      <i className='file text medium icon' />
+                      <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
                     </div>
                     <div className='hint-container'>
-                      <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
-                      <div>Texte <b>la Suisse</b> à découvrir plus bas <nobr><span className='pseudo-link'>ou ici</span></nobr>.</div>
+                      <div>Tout savoir sur <b>la Suisse et le Mondial</b>, à découvrir plus bas <nobr><span className='pseudo-link'>ou en cliquant ici</span></nobr>.</div>
                     </div>
                   </div>
                 </a>
@@ -323,6 +322,32 @@ class App extends Component {
                 entre l’orgueil et la vanité, le génie vacille aussi. Comme pour Maradona, le meilleur des instincts côtoie le pire, jusqu’au dénouement
                 «inexcusé» que l’on sait face à Materazzi.
               </p>
+
+              <aside className='ui vertical very fitted segment widescreen hidden large screen hidden small' style={{marginBottom: '1em'}}>
+                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
+                  <div className='story-hint inverted'>
+                    <div className='icon-container'>
+                      <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
+                    </div>
+                    <div className='hint-container'>
+                      <div>Tout savoir sur <b>la Suisse et le Mondial</b>, à découvrir plus bas <nobr><span className='pseudo-link'>ou en cliquant ici</span></nobr>.</div>
+                    </div>
+                  </div>
+                </a>
+              </aside>
+              <aside className='ui right rail computer or lower hidden' style={{top: '15%'}}>
+                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
+                  <div className='story-hint inverted'>
+                    <div className='icon-container'>
+                      <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
+                    </div>
+                    <div className='hint-container'>
+                      <div>Tout savoir sur <b>la Suisse et le Mondial</b>, à découvrir plus bas <nobr><span className='pseudo-link'>ou en cliquant ici</span></nobr>.</div>
+                    </div>
+                  </div>
+                </a>
+              </aside>
+              
               <p>
                 Mais on pardonne tout aux légendes. Il y a comme une grâce qui les enveloppe, dont l’imperfection même garantit l’éternité. Après tout,
                 ce qui s’inscrit en marge de la performance pure, pour de bonnes ou de mauvaises raisons, n’existe que pour ramener un instant tous ces
@@ -351,7 +376,10 @@ class App extends Component {
           <div className='ui container'>
             <div className='ui text container no-marg'>
               <p className="ta lead">Nous avons analysé plus d'<b>un siècle de sélections nationales</b>. De 1908 à 2018, voici ce que l'évolution de l'équipe de Suisse nous apprend.</p>
-              <p>Plus d'un demi-millier de joueurs donec aliquam luctus velit. In lectus purus, efficitur eget gravida sit amet, vulputate in est. Suspendisse in lectus et risus fringilla dictum vitae quis nunc. Aliquam placerat, neque id pulvinar scelerisque, orci tortor consectetur dolor, vitae pretium metus mauris sit amet dui. Proin placerat rhoncus tortor. Curabitur leo orci, lobortis id sagittis eget, accumsan eget mi. Nulla neque risus, placerat nec eros at, ornare vulputate elit. Etiam id urna ac neque vestibulum maximus. Phasellus condimentum blandit elit pellentesque pulvinar. Vivamus convallis odio vitae leo imperdiet convallis. Suspendisse congue lobortis massa vitae eleifend. Aenean in urna libero.</p>
+              <p>
+                Plus d'un demi-millier de joueurs donec aliquam luctus velit. In lectus purus, efficitur eget gravida sit amet,
+                vulputate in est. Suspendisse in lectus et risus fringilla dictum vitae quis nunc. Aliquam placerat,
+                convallis. Suspendisse congue lobortis massa vitae eleifend. Aenean in urna libero.</p>
             </div>
           </div>
 
@@ -361,10 +389,18 @@ class App extends Component {
                 <div className="section-number small">1</div>
                 <h2>Le joueur type</h2>
               </div>
-              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+              <p>
+                Si vos parents avaient été zurichois, s’ils s’étaient appelé Müller et s’ils vous
+                avaient prénommé Walter, vous auriez eu plus de chances que les autres d’être
+                appelé en équipe de Suisse!
+              </p>
+              <p>
+                Ce nom et ce prénom sont en effet ceux que l’on
+                retrouve le plus souvent dans l’historique des sélectionnés. Si vous aviez ajouté
+                à cela une taille de 180 cm et une licence à Grasshopper, vous auriez
+                définitivement été le joueur parfait pour l’équipe de Suisse.
+              </p>
               <img className="ui fluid image" src={require("./images/joueur-03.png")} />
-              <p>Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim.</p>
-              <p><b>Nationalités? Origines?</b></p>
             </div>
           </div>  
 
@@ -374,27 +410,29 @@ class App extends Component {
                 <div className="section-number small">2</div>
                 <h2>Devenir titulaire</h2>
               </div>
-              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+              <p>
+                Pour être sélectionné en équipe de Suisse, il vaut donc mieux être zurichois.
+                C’est en effet, et sans grande surprise, le canton de Zurich qui a fourni le plus
+                de joueurs à l’équipe de Suisse depuis 1994 et son retour en phase finale. Plus
+                surprenant, le canton classé au deuxième rang: c’est celui du Valais.
+              </p>
             </div>
           </div>  
 
-          <div className='ui container'>
+          <div className='ui container computer or lower hidden'>
             <img className="ui fluid image" src={require("./images/dataviz-09.png")} />
           </div>
 
-          <div className='ui container'>
-            <div className='ui text container no-marg'>
-              <p>Curabitur dapibus dictum faucibus. Nunc elit mauris, ornare vel ligula id, lacinia dictum ipsum. Vestibulum mollis enim eget lacus placerat tincidunt. Ut vitae hendrerit nibh. Vestibulum in elementum purus. Maecenas dignissim felis ante, vitae commodo lacus hendrerit vel. Donec tempus augue quis enim semper, eu placerat eros aliquet. Donec pharetra vehicula aliquam. Maecenas at porta purus. Ut urna nisl, vulputate venenatis mollis vel, ultrices non nibh. Curabitur lacus justo, laoreet sodales gravida ac, sollicitudin vitae felis. Proin malesuada est massa, ut fermentum magna tempus sit amet. Morbi blandit scelerisque ex, at venenatis magna sodales id. Vestibulum varius nunc et nulla cursus, in consequat elit aliquet. In vulputate, risus non cursus viverra, risus ipsum efficitur sem, vitae egestas nunc purus vitae lorem. Etiam elit velit, vehicula eget pellentesque eu, placerat at metus.</p>
-            </div>
-          </div>
-
-          <div className='ui text container'>
-            <img className="ui fluid image" src={require("./images/dataviz-10.png")} />
+          <div className='ui container widescreen hidden large screen hidden'>
+            <img className="ui fluid image" src={require("./images/dataviz-22.png")} />
           </div>
 
           <div className='ui container'>
             <div className='ui text container no-marg'>
-              <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent quam tellus, finibus quis dictum quis, feugiat vel nulla. Morbi porta mi a tempus euismod. Integer et libero turpis. Sed eu magna venenatis, dapibus tortor vel, bibendum quam. Nunc non nibh nec felis ultricies egestas eget eu lectus. Vivamus at lobortis libero. Nullam vel aliquet nibh.</p>
+              <p>
+                Curabitur dapibus dictum faucibus. Nunc elit mauris, ornare vel ligula id, lacinia dictum ipsum.
+                Vestibulum mollis enim eget lacus placerat tincidunt. Ut vitae hendrerit nibh. Vestibulum in
+                nunc purus vitae lorem. Etiam elit velit, vehicula eget pellentesque eu, placerat at metus.</p>
             </div>
           </div>
 
@@ -417,18 +455,18 @@ class App extends Component {
                 1994).
               </p>
 
-              <img className="ui fluid image" src={require("./images/dataviz-15.png")} />
+              <img className="ui fluid image" src={require("./images/dataviz-19.png")} />
 
               <p>
                 Absente en France en 1998, puis au Japon et en Corée du Sud en 2002,
-                <b>la Suisse a, depuis, toujours réussi à se qualifier</b> (Allemagne 2006, Afrique du
+                <b> la Suisse a, depuis, toujours réussi à se qualifier</b> (Allemagne 2006, Afrique du
                 Sud 2010, Brésil 2014 et Russie 2018).
               </p>
             </div>
           </div>
 
           <div className='ui container stat-bloc'>
-            <div className='ui text container no-marg'>
+            <div className='ui text container no-marg' style={{position:"relative"}}>
               <div className="title-bloc" style={{textAlign: "center"}}>
                 <div className="section-number small">4</div>
                 <h2>Le premier match</h2>
@@ -451,12 +489,36 @@ class App extends Component {
                 joueur non sélectionnable, <b>la Suisse dispute son tout premier match de phase
                 finale le 27 mai 1934 à Milan</b>, face aux Pays-Bas.
               </p>
-              <Scoreboard score={[3,2]} />
+
+              <Scoreboard score={[3,2]} teams={["Suisse", "Pays-Bas"]}/>
+
+              <aside className='ui vertical very fitted segment widescreen hidden large screen hidden small' style={{marginBottom: '1em'}}>
+                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
+                  <div className='story-hint quote'>
+                    <div className='hint-container'>
+                      <div><p>Qualifiée pour la Coupe du monde 1934, La Suisse bat les Pays-Bas et se qualifie pour les quart de finale.</p></div>
+                    </div>
+                  </div>
+                </a>
+              </aside>
+              <aside className='ui right rail computer or lower hidden' style={{top: '30%'}}>
+                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
+                  <div className='story-hint quote'>
+                    <div className='hint-container'>
+                      <div><p>Qualifiée pour la Coupe du monde 1934, La Suisse bat les Pays-Bas et se qualifie pour les quart de finale.</p></div>
+                    </div>
+                  </div>
+                </a>
+              </aside>
+
               <p>
                 Le tournoi réunissant 16
                 équipes, ce premier tour n’est autre qu’un huitième de finale. Les Néerlandais
                 sont plus nombreux dans les gradins (7000, contre 2000 Suisses environ), mais
-                inférieurs sur le terrain. Ce jour-là, Trello Abegglen fait feu de tout bois. Après
+                inférieurs sur le terrain.
+              </p>
+              <p>
+                Ce jour-là, Trello Abegglen fait feu de tout bois. Après
                 avoir offert les deux premiers buts à Kielholz sur des services d’une précision
                 folle (7e et 44e minutes), il inscrit lui-même le troisième but (72 e ). <b>La Suisse bat
                 les Pays-Bas</b> <Inlinescore className="score" score={[3,2]} /> et se qualifie pour les quart de finale, où elle sera battue par la
@@ -479,30 +541,36 @@ class App extends Component {
                 depuis le passage à 24, puis 32 équipes.
               </p>
             </div>
-            <div className='ui container center aligned'>
-                <br/><br/>
-                <div>1934</div>
-                <span className="special">Italie</span>
-                <div>1/4 de final</div><br/><br/>
-
-                <div>1938</div>
-                <span className="special">France</span>
-                <div>1/4 de final</div><br/><br/>
-
-                <div>1954</div>
-                <span className="special">Suisse</span>
-                <div>1/4 de final</div><br/><br/><br/>
-
+            <div className='ui container center aligned' style={{margin: "60px 0px"}}>
+                <div className="special-panel">
+                  <div className="special-dot"></div>
+                  <div>1934</div>
+                  <span className="special">Italie</span>
+                <div><span className="special">1/4 de final</span></div><br/>
+                </div>
+                <br/>
+                <div className="special-panel">
+                  <div className="special-dot"></div>
+                  <div>1938</div>
+                  <span className="special">France</span>
+                  <div><span className="special">1/4 de final</span></div><br/>
+                </div>
+                <div className="special-panel">
+                  <div className="special-dot"></div>
+                  <div>1954</div>
+                  <span className="special">Suisse</span>
+                  <div><span className="special">1/4 de final</span></div><br/>
+                </div>
             </div>
             <div className='ui text container no-marg'>
               <p>
                 Elle a été huitième de finaliste à trois
-                reprises depuis son grand retour parmi l’élite. En 1994, la Suisse était
-                sèchement battue <Inlinescore className="score" score={[0,3]} /> par l’Espagne à Washington. En 2006, face à l’Ukraine,
+                reprises depuis son grand retour parmi l’élite. En <b>1994</b>, la Suisse était
+                sèchement battue <Inlinescore className="score" score={[0,3]} /> par l’Espagne à Washington. En <b>2006</b>, face à l’Ukraine,
                 c’est aux tirs au but qu’elle est éliminée (<Inlinescore className="score" score={[0,0]} /> après 120 minutes de jeu). Marco
                 Streller, Tranquillo Barnetta et Ricardo Cabanas manquent tous leur affaire des
 
-                onze mètres. Enfin, en 2014, elle pousse l’Argentine de Lionel Messi aux
+                onze mètres. Enfin, en <b>2014</b>, elle pousse l’Argentine de Lionel Messi aux
                 prolongations. Elle encaisse l’ouverture du score (Di Maria) à la 118 e minute,
                 Dzemaili manquant de peu arracher la séance de tirs au but (tête sur le poteau
                 à la 120e).
@@ -511,13 +579,56 @@ class App extends Component {
           </div>
 
           <div className='ui container stat-bloc'>
-            <div className='ui text container no-marg'>
+            <div className='ui text container no-marg' style={{position:"relative"}}>
               <div className="title-bloc" style={{textAlign: "center"}}>
                 <div className="section-number small">6</div>
                 <h2>Le match le plus fou</h2>
               </div>
-              <Scoreboard score={[5,7]} />
-              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+              <Scoreboard score={[7,5]} teams={["Autriche", "Suisse"]} />
+              <p>
+                Il s’agit sans conteste du fameux quart de finale Suisse – Autriche, le <b>26 juin
+                1954</b>. On est à Lausanne, et le stade de la Pontaise affiche complet (35&#39;000
+                spectateurs).
+              </p>
+              <p>
+                La Suisse inscrit trois buts (Ballaman, 2 x Hügi) en trois minutes,
+                pour mener <Inlinescore className="score" score={[3,9]} /> à la 19 e . Mais une commotion passagère (chute et coup de
+                chaleur) prive Bocquet de sa lucidité. Totalement ailleurs, incapable de
+                commander sa défense, il laisse son gardien se débattre seul face aux
+                attaquants autrichiens.
+              </p>
+
+              <aside className='ui vertical very fitted segment widescreen hidden large screen hidden small' style={{marginBottom: '1em'}}>
+                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
+                  <div className='story-hint quote'>
+                    <div className='hint-container'>
+                      <div><p>Une commotion prive Bocquet de sa lucidité. Incapable de commander sa défense, il laisse son gardien Parlier se débattre seul.</p></div>
+                    </div>
+                  </div>
+                </a>
+              </aside>
+              <aside className='ui right rail computer or lower hidden' style={{top: '50%'}}>
+                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
+                  <div className='story-hint quote'>
+                    <div className='hint-container'>
+                      <div><p>Une commotion prive Bocquet de sa lucidité. Incapable de commander sa défense, il laisse son gardien Parlier se débattre seul.</p></div>
+                    </div>
+                  </div>
+                </a>
+              </aside>
+
+              <p>
+                Résultat: en neuf minutes, de la 25 e à la 34 e , l’Autriche
+                inscrit cinq buts et renverse la vapeur! Ballaman réduit l’écart avant la pause
+                (<Inlinescore className="score" score={[4,5]} /> à la 39 e ) avant que Hügi n’inscrive son troisième but personnel (<Inlinescore className="score" score={[5,6]} /> à la
+                60 e ), mais la Suisse ne réussit pas à retourner la situation.
+              </p>
+              <p>
+                Score final: <Inlinescore className="score" score={[7,5]} /> pour
+                l’Autriche, qui prive la Suisse d’une demi-finale à domicile qui lui tendait les
+                bras. Cette rencontre de légende est toujours dans le livre des records: <b>jamais il
+                n’a été marqué autant de buts (douze) en une seule rencontre de phase finale</b>.
+              </p>
             </div>
           </div>
 
@@ -527,12 +638,37 @@ class App extends Component {
                 <div className="section-number small">7</div>
                 <h2>Le plus beau goal</h2>
               </div>
-              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+              <p>
+                Un choix forcément subjectif, mais on a opté pour le but de <b>Haris Seferovic </b>
+                contre l’Équateur, à Brasilia, lors de l’entrée en lice de la Suisse dans le <b>Mondial
+                2014</b>, au Brésil (<Inlinescore className="score" score={[2,1]} /> à la 93 e minute).
+              </p>
             </div>
           </div>
 
-          <div className='ui container' style={{perspective: '816px'}}>
-            <img className="ui fluid image" style={{transform: 'rotatex(50deg)'}} src={require("./images/best_goal_1-08.png")} />
+          <GoalAnimation />
+
+          <div className='ui container stat-bloc'>
+            <div className='ui text container no-marg'>
+              <p>
+                <b>La première</b>: cette volée directe offrait à la Suisse une victoire décisive dans
+                l’optique de la qualification pour les huitièmes de finale.
+              </p>
+              <p><b>La deuxième</b>: il
+                symbolise à merveille la volonté de la Suisse, à témoin le tacle salvateur de
+                Valon Behrami dans sa surface avant son raid époustouflant.
+              </p>
+              <p>
+                <b>La troisième</b>: il a
+                été inscrit après un modèle de contre-attaque. Après avoir écarté une balle de
+                but – et évité un penalty – devant Arroyo, Behrami est parti à l’abordage.
+                Projeté au sol par Arboleda, il s’est relevé après une roulade et a continué sa
+                course folle, avant d’ouvrir sur Seferovic (déjà) à mi-terrain. L’attaquant a
+                changé le jeu pour lancer Ricardo Rodriguez sur le côté gauche, avant de venir
+                piquer au centre et de convertir le service du latéral, meilleur homme sur le
+                terrain ce jour-là.
+              </p>
+            </div>
           </div>
 
           <div className='ui container stat-bloc'>
@@ -541,13 +677,48 @@ class App extends Component {
                 <div className="section-number small">8</div>
                 <h2>Le maillot à travers les âges</h2>
               </div>
-              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+              <p>
+                Croix suisse blanche sur un maillot rouge: le graphisme des maillots de l’équipe
+                de Suisse semble évident. Il y eut pourtant des exceptions.
+              </p>
+              <p>
+                En 1990, la Suisse est sous contrat avec Blacky, qui propose une ligne novatrice.
+                La croix suisse occupe la quasi-totalité du devant du maillot, qui plus est ornée
+                de parements noirs. Scandale: comment peut-on jouer sans avoir le symbole du
+                pays – qui plus est dénaturé - sur le cœur? C’est pourtant avec ce maillot que
+                l’équipe de Suisse du renouveau (celle de Chapuisat, Knup, etc.) obtiendra ses
+                premiers résultats de référence, avant de passer chez Lotto pour la campagne
+                menant à la phase finale américaine de la World Cup 1994, puis chez Puma en
+                1998.
+              </p>
             </div>
           </div>
 
           <div className='ui container'>
             <img className="ui fluid image" src={require("./images/dataviz-18.png")} />
           </div>
+
+          <div className='ui container'>
+            <div className='ui text container no-marg'>
+              <p>
+                En 2008, juste avant l’Euro qui se dispute en Suisse et en Autriche, c’est
+                justement Puma qui déclenche la polémique au moment de la présentation du
+                nouveau maillot: la croix suisse, qui est simplement suggérée par les traits du
+                logo de l’Association suisse de football, est jugée «pas assez visible». C’est
+                malgré tout avec cet équipement que la Suisse disputera «son» tournoi.
+              </p>
+              <p>
+                Le drapeau suisse fera son retour sur le cœur pour la Coupe du monde 2010 en
+                Afrique du Sud, le logo de l’ASF glissant sur le côté droit du maillot.
+                Et puis, impossible de parler des maillots suisses sans rappeler l’épisode
+                survenu le 19 juin 2016 contre la France, lors du dernier match de groupe de
+                l’Euro: les shirts de Mehmedi, Embolo, Dzemaili et Xhaka avaient fini en
+                lambeaux. Là, il ne s’agissait pas de graphisme, mais bien d’une erreur de
+                fabrication, comme l’a reconnu Puma le lendemain.
+              </p>
+            </div>
+          </div>
+
 
           <div className='ui container stat-bloc'>
             <div className='ui text container no-marg'>
@@ -577,7 +748,46 @@ class App extends Component {
                 <div className="section-number small">11</div>
                 <h2>Les statistiques</h2>
               </div>
-              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+              <p>
+                L’équipe de Suisse a disputé à ce jour 33 matches en phase finale de Coupe du
+                monde. Son bilan global est négatif: 11 victoires, 6 matches nuls et 16 défaites
+                pour une différence de buts de – 14 (45 buts marqués, 59 encaissés).
+              </p>
+              <p>
+                La Suisse s’est imposée à trois reprises par trois buts d’écart: <Inlinescore className="score" score={[4,1]} /> contre l’Italie
+                en 1954, <Inlinescore className="score" score={[4,1]} /> contre la Roumanie en 1994 et <Inlinescore className="score" score={[3,0]} /> contre le Honduras en 2014.
+              </p>
+              <p>
+                A l’inverse, elle s’est inclinée une fois par cinq buts d’écart (<Inlinescore className="score" score={[0,5]} /> contre
+                l’Allemagne en 1966) et quatre fois par trois buts d’écart (<Inlinescore className="score" score={[0,3]} /> contre la
+                Yougoslavie en 1950, <Inlinescore className="score" score={[0,3]} /> contre l’Italie en 1962, <Inlinescore className="score" score={[0,3]} /> contre l’Espagne en 1994
+                et <Inlinescore className="score" score={[2,5]} /> contre la France en 2014).
+              </p>
+              <p>
+                Le match dans lequel elle a mis le plus de buts est le fameux quart de finale
+                contre l’Autriche en 1954: elle a fait trembler les filets à cinq reprises!
+                Paradoxalement, elle s’est inclinée <Inlinescore className="score" score={[5,7]} />.
+              </p>
+              <p>
+                La Suisse a dû attendre la Coupe du monde 2006 en Allemagne (et son 23 e
+                match en phase finale) pour boucler une rencontre sans encaisser de but: <Inlinescore className="score" score={[0,0]} />
+                contre la France. Elle a enchaîné avec trois autres blanchissages cette année-là
+                (<Inlinescore className="score" score={[2,0]} /> contre le Togo, <Inlinescore className="score" score={[2,0]} /> contre la Corée du Sud, <Inlinescore className="score" score={[0,0]} /> ap contre l’Ukraine en 8 e de
+                finale) pour devenir la seule équipe au monde à avoir été éliminée sans avoir
+                encaissé le moindre but dans le jeu (défaite <Inlinescore className="score" score={[0,3]} /> aux tirs au but contre l’Ukraine
+                en 8 e ).
+              </p>
+              <p>
+                Le meilleur buteur de la Suisse en phase finale est Sepp Hügi (6 buts), qui
+                devance André Abegglen et Robert Ballaman (chacun 4). Suivent Jacky Fatton,
+                Leopold Kielholz et Xherdan Shaqiri (3), Alexander Frei et Adrian Knup (2), et
+                enfin 18 autres joueurs ayant chacun marqué un but.
+              </p>
+              <p>
+                Sepp Hügi (lors de la défaite <Inlinescore className="score" score={[5,7]} /> contre l’Autriche en 1954) et Xherdan Shaqiri
+                (à l’occasion du succès <Inlinescore className="score" score={[3,0]} /> contre le Honduras en 2014) sont les seuls joueurs
+                suisses à avoir réussi le coup du chapeau en phase finale.
+              </p>
             </div>
           </div>
 
@@ -587,7 +797,26 @@ class App extends Component {
                 <div className="section-number small">12</div>
                 <h2>L'argent</h2>
               </div>
-              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+              <p>
+                La FIFA a considérablement augmenté sa dotation par rapport au Mondial
+                brésilien d’il y a quatre ans. En Russie, le 32 pays qualifiés se partageront la
+                somme de 400 millions de dollars, ce qui représente une augmentation de 12%
+                par rapport aux 358 millions dollars de l’édition 2014.
+              </p>
+              <p>
+
+                <b>[INFOG PRIMES]</b>
+
+                Chaque pays qualifié recevra une prime de 8 millions de dollars. Les huitièmes
+                de finalistes toucheront 9 millions de dollars, les quarts de finalistes 14 millions,
+                le quatrième 20 millions, le troisième 22 millions, le finaliste 25 millions et le
+                champion du monde 35 millions.
+              </p>
+              <p>
+                Outre ces sommes qui seront donc allouées aux Fédérations en fonction de leur
+                parcours en Russie, la FIFA a d’ores et déjà dédommagé les équipes qualifiées
+                pour leur frais de préparation à hauteur de 1,5 million de dollars par nation.
+              </p>
             </div>
           </div>
 
@@ -606,7 +835,7 @@ class App extends Component {
               <Pronocard title="Jeux vidéos" candidates={["Belgique", "France", "Brésil", "Espagne", "Allemagne"]} switzerland="0 fois"/>
               <Pronocard title="Mathématiques" />
               <Pronocard title="Bookmakers" />
-              <Pronocard title="Journalistes" />
+              <Pronocard title="Nos journalistes" />
               <Pronocard title="La chèvre" />
             </div>
           </div>

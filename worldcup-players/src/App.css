@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css?family=Archivo+Narrow');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
 
+.masthead-component.masthead-component + * > *:first-child > *:first-child:before{
+  height: 0px;
+}
 
 .app {
 
@@ -86,6 +89,7 @@ h2, h2:first-child, h2:last-child{
 
 p{
   font-family: "PT Serif";
+  line-height: 1.55em;
 }
 
 .authors{
@@ -98,8 +102,8 @@ p{
 span.special{
   font-family: "Oswald", sans-serif;
   font-weight: 500;
-  letter-spacing: 3px;
-  font-size: 30px;
+  letter-spacing: 0px;
+  font-size: 16px;
   text-transform: uppercase;
   color: #222;
   text-align: center;
@@ -248,6 +252,40 @@ span.special{
 }
 .story-hint.inverted{
   color:white;
+}
+.story-hint.quote p{
+  font-family: "Oswald", sans-serif;
+  line-height: 1.1em;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #f5f6f7;
+  display: inline;
+  background-color: #333;
+  font-weight: 300;
+  box-shadow: -8px 0 0 #333, 8px 0 0 #333;
+}
+
+.special-panel{
+  font-family: "Oswald", sans-serif;
+  margin: 20px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #f5f6f7;
+  box-shadow: 0px 2px 4px -2px grey; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 150px;
+  display: inline-block;
+}
+
+.special-dot{
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #ffce4d;
+  display: none;
 }
 
 /* FOOTER ADJUSTMENTS */

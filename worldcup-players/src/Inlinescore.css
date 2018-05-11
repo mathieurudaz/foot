@@ -4,8 +4,9 @@
 
 .inlinescore .panel{
   font-family: "Oswald", sans-serif;
+  font-size: 14px;
   font-weight: 600;
-  padding: 3px 7px;
+  padding: 0px 4px;
   display: inline-block;
   background-color: white;
   border-radius: 5px;
@@ -14,14 +15,14 @@
 }
 
 .inlinescore .scorevs{
-  width: 10px;
+  width: 6px;
   text-align: center;
   margin: 0px 1px;
-  height: 16px;
+  height: 14px;
 }
 
 .inlinescore .scorevs .dot{
   width: 3px;
   height: 3px;
-  margin:4px 3px;
+  margin:3px 1px;
 }

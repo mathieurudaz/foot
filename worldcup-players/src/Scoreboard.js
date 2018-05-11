@@ -6,8 +6,8 @@ class Flipboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      newNum: 0,//(new Date).getSeconds() === 0 ? 9 : (new Date).getSeconds(),
-      oldNum: 0,//(new Date).getSeconds() - 1 === -1 ? 8 : (new Date).getSeconds() - 1,
+      newNum: 0,
+      oldNum: 0,
       change: true
     }
   }
@@ -44,7 +44,7 @@ class Flipboard extends Component {
 
       if( this.state.newNum >= this.props.score ){
         clearInterval(this.timerID);
-        setTimeout(() => {this.reset(); this.timerID = setInterval(() => this.tick(), 500 );}, 2000)
+        setTimeout(() => {this.reset(); this.timerID = setInterval(() => this.tick(), 500 );}, 4000)
       }
 
     }
@@ -59,18 +59,21 @@ class Flipboard extends Component {
     const number2 = !change ? oldNum : newNum;
 
     return (
-      <div className={'flipCounter'}>
-        <div className={'upperCard'}>
-          <span>{newNum}</span>
-        </div>
-        <div className={'lowerCard'}>
-          <span>{oldNum}</span>
-        </div>
-        <div className={`flipCard first ${animation1}`}>
-          <span>{number1}</span>
-        </div>
-        <div className={`flipCard second ${animation2}`}>
-          <span>{number2}</span>
+      <div style={{display:"inline-block", margin:"40px 0px 30px 0px"}}>
+        <div><span className="special">{this.props.team}</span></div>
+        <div className={'flipCounter'}>
+          <div className={'upperCard'}>
+            <span>{newNum}</span>
+          </div>
+          <div className={'lowerCard'}>
+            <span>{oldNum}</span>
+          </div>
+          <div className={`flipCard first ${animation1}`}>
+            <span>{number1}</span>
+          </div>
+          <div className={`flipCard second ${animation2}`}>
+            <span>{number2}</span>
+          </div>
         </div>
       </div>
     );
@@ -78,15 +81,55 @@ class Flipboard extends Component {
 }
 
 class Scoreboard extends Component {
+
+  /*constructor(props) {
+    super(props);
+    this.state = {
+      newNum: 0,
+      oldNum: 0,
+      change: true
+    }
+  }
+
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      500
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    const newNum = this.state.oldNum + 1;
+    if( this.state.newNum !== newNum) {
+      const oldNum = newNum;
+      const change = !this.state.change;
+      this.setState({
+        newNum,
+        oldNum,
+        change
+      });
+
+      if( this.state.newNum >= this.props.score ){
+        clearInterval(this.timerID);
+        setTimeout(() => {this.reset(); this.timerID = setInterval(() => this.tick(), 500 );}, 4000)
+      }
+
+    }
+  }*/
+
   render() {
     return(
       <div className="scoreboard">
-        <Flipboard score={this.props.score[0]} />
+        <Flipboard team={this.props.teams[0]} score={this.props.score[0]} scoremax={Math.max(...this.props.score)} />
         <div className="scorevs">
           <div className="dot dot-1"></div>
           <div className="dot dot-2"></div>
         </div>
-        <Flipboard score={this.props.score[1]} />
+        <Flipboard team={this.props.teams[1]} score={this.props.score[1]} scoremax={Math.max(...this.props.score)} />
       </div>
     )
   }
