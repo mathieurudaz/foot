@@ -26,6 +26,7 @@ import '@ta-interaktiv/semantic-ui/semantic/dist/components/image.css'
 import '@ta-interaktiv/semantic-ui/semantic/dist/components/rail.css'
 
 import './App.css';
+import './videoWrapper.css'
 
 
 const questions = [
@@ -191,8 +192,9 @@ class App extends Component {
                 <h2 className="surtitre">Coupe du monde 2018 </h2>
                 <h1>Quel joueur de légende êtes-vous?</h1>
               </div>
-              <div className="start-block"><div className="start-touch" onClick={this.start}>Commencer</div>
-                    <div className="shortcut">Ou en lire plus sans répondre aux questions</div>
+              <div className="start-block">
+                <div className="start-touch" onClick={this.start}>Commencer</div>
+                <a className="shortcut" href="#section-1">Ou en lire plus sans répondre aux questions</a>
               </div>
             </div>
           </div>
@@ -209,7 +211,7 @@ class App extends Component {
                           onAnswered={this.answeredHandler}
                           title={question.title.toUpperCase()}
                           answers={question.videoAnswers ? question.videoAnswers : question.answers} />
-                        <div className="question-skip">Passer les prochaines questions</div>
+                        <div className="question-skip" onClick={() => setTimeout(() => {scrollToComponent(this.player, {align:"top"})}, 200)}>Passer les prochaines questions</div>
                       </div>
                       )
               })
@@ -223,10 +225,11 @@ class App extends Component {
           ref={Player => {this.player = Player}} />
         
         { /* First section */ }
-        <main className='ui vertical very inverted fitted segment text-chapter'>
+        <main id="section-1" className='ui vertical very inverted fitted segment text-chapter'>
+          <div className="downbait inverted"></div>
           <div className='ui container'>
             <div className='ui text container no-marg aligned center' style={{textAlign: "center"}}>
-              <div className="section-number">1</div>
+              <img className="ui fluid image section-stars" src={require("./images/stars-01.png")} />
               <h1>Entrer dans la légende, porter l’émotion</h1>
               <div className="authors"><b>Texte:</b> Daniel Visentini</div>
             </div>
@@ -234,21 +237,23 @@ class App extends Component {
           <div className='ui container'>
             <div className='ui text container no-marg' style={{position:"relative"}}>
               <p className="ta lead">
-                De ces deux tas de jaquettes ramassés en boule, on pourrait tout dire. Qu’ils ont été jetés au hasard,
-                sans projet. Mais le chaos n’existe pas ici: la fausse impression de désordre est trompeuse, ces deux piles-là
-                délimitent un but de football dont les dimensions ont minutieusement été calculées, à pied de fourmi.
-                Et puis le doute se dissipe, en même temps que cette odeur d’herbe sauvage fraîchement piétinée: c’est
-                un terrain de foot qui dessine ses contours fantastiques. Sans public, sans arbitre, sans stade autour. Mais
-                avec deux équipes faramineuses composées des plus extraordinaires joueurs de tous les temps.
+                C’est le moment préféré de tous les gamins du monde. Après avoir soigneusement délimité, à pas de
+                fourmi, deux poteaux symbolisés par des tas de vêtement soigneusement roulés en boule, le décor prend
+                forme: c’est un terrain de foot qui dessine ses contours fantastiques et sur lequel se jouera une finale de
+                Mondial, d’Euro ou de Ligue des champions. Sans public, sans arbitre, sans stade autour, peu importe.
+                Mais avec bientôt deux équipes faramineuses composées des plus extraordinaires joueurs de tous les
+                temps, puisque chaque gosse sera la star qu’il veut l’espace de ce match.
               </p>
+
               <p>
-                Il y a là Pelé qui ressuscite Cruyff le temps d’une passe magique; il y a Maradona qui défie Yachine par-delà les âges;
-                il y a Platini et Puskas, main dans la main, qui déboulent ensemble pour affronter Beckenbauer, ou encore le docteur Socrates,
-                drapé dans son élégance féline, qui voit Zidane se démarquer avant de se raviser pour alerter Baggio, mieux placé; tiens: il y a
-                même là-bas Shaqiri et Chapuisat et Crisitiano Ronaldo qui s’associent pour déconcerter Iker Casillas, pendant que Van Basten demande
-                le ballon. Il y en a tant d’autres, tous convoqués, tous immortels. Tous des légendes, qu’une ribambelle de gamins joyeux incarne pour
-                toujours, à chaque fois qu’une cage s’improvise sur un talus et que chacun annonce aussitôt, fièrement, qui il a choisi d’être à
-                l’intérieur de cette parenthèse enchantée.
+                Alors d’un seul coup, il y a là Pelé qui ressuscite Cruyff le temps d’une passe magique; il y a Maradona qui
+                défie Yachine par-delà les âges; il y a Platini et Puskas, main dans la main, qui déboulent ensemble pour
+                affronter Beckenbauer, ou encore le docteur Socrates, drapé dans son élégance féline, qui voit Zidane se
+                démarquer avant de se raviser pour alerter Baggio, mieux placé; tiens: il y a même là-bas Shaqiri et
+                Chapuisat et Crisitiano Ronaldo qui s’associent pour déconcerter Iker Casillas, pendant que Van Basten
+                demande le ballon. Il y en a tant d’autres, tous convoqués, tous immortels. Tous des légendes, qu’une
+                ribambelle de gamins joyeux incarne pour toujours, à chaque fois qu’une cage s’improvise sur un talus et
+                que chacun annonce aussitôt, fièrement, qui il a choisi d’être à l’intérieur de cette parenthèse enchantée.
               </p>
 
               <aside className='ui vertical very fitted segment widescreen hidden large screen hidden small' style={{marginBottom: '1em'}}>
@@ -258,69 +263,56 @@ class App extends Component {
                       <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
                     </div>
                     <div className='hint-container'>
-                      <div>Tout savoir sur <b>la Suisse et le Mondial</b>, à découvrir plus bas <nobr><span className='pseudo-link'>ou en cliquant ici</span></nobr>.</div>
+                      <div>Tout savoir sur <b>la Suisse et le Mondial</b>, à découvrir plus bas <nobr><a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.</div>
                     </div>
                   </div>
                 </a>
               </aside>
-              <aside className='ui right rail computer or lower hidden' style={{top: '15%'}}>
+              <aside className='ui right rail computer or lower hidden' style={{top: '7%'}}>
                 <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
                   <div className='story-hint inverted'>
                     <div className='icon-container'>
                       <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
                     </div>
                     <div className='hint-container'>
-                      <div>Tout savoir sur <b>la Suisse et le Mondial</b>, à découvrir plus bas <nobr><span className='pseudo-link'>ou en cliquant ici</span></nobr>.</div>
+                      <div>Tout savoir sur <b>la Suisse et le Mondial</b>, à découvrir plus bas <nobr><a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.</div>
                     </div>
                   </div>
                 </a>
               </aside>
 
+              <img className="ui fluid image" src={require("./images/dataviz-25.png")} />
+
               <p>
-                Une légende du football c’est quoi, sinon ce nom qu’un gosse s’approprie, comme s’il devait revêtir par cette douce usurpation d’identité
-                tous les attributs de son héros? Bien sûr, le talent façonne l’hagiographie, sculpte le mythe, le précède en le rendant possible. Mais il y
-                a autre chose, un supplément d’âme, sûrement, pour élever celui qui est déjà star au firmament des élus. Les gloires et les accomplissements
-                inscrivent sur le papier un palmarès comptable qui se partage avec tout un contingent. Un seul pourtant, souvent, s’échappe de l’inventaire
-                pour peupler l’imaginaire collectif. C’est injuste. On dit la France de Zidane ou de Platini, l’Argentine de Maradona ou de Messi, le Portugal
-                de Cristiano Ronaldo ou d’Eusébio, le Brésil de Pelé ou de Neymar, l’Allemagne de Beckenbauer ou de Matthäus: à chacun sa génération, mais pour
-                tous la distinction.
+                Une légende du football c’est quoi, sinon ce nom qu’un gosse s’approprie, comme s’il devait revêtir par
+                cette douce usurpation d’identité tous les attributs de son héros? Bien sûr, le talent façonne
+                l’hagiographie, sculpte le mythe, le précède en le rendant possible. Mais il y a autre chose, un supplément
+                d’âme, sûrement, pour élever celui qui est déjà star au firmament des élus. Les gloires et les
+                accomplissements inscrivent sur le papier un palmarès comptable qui se partage avec tout un contingent.
+                Un seul pourtant, souvent, s’échappe de l’inventaire pour peupler l’imaginaire collectif. C’est injuste. On
+                dit la France de Zidane ou de Platini, l’Argentine de Maradona ou de Messi, le Portugal de Cristiano
+                Ronaldo ou d’Eusébio, le Brésil de Pelé ou de Neymar, l’Allemagne de Beckenbauer ou de Matthäus: à
+                chacun sa génération, mais pour tous la distinction.
               </p>
 
               <p>
-                Devenir une légende, c’est sans doute être meilleur que les autres. Mais pour beaucoup de raisons, dont certaines débordent le cadre
-                du seul terrain. Si le football est une tragédie grecque - unité de temps, unité de lieu, unité d’action -, il y a, en marge de l’acteur,
-                l’homme derrière le rôle. Tenir sa place, dans le théâtre du spectacle programmé, lors d’un Mondial ou en club, c’est la tâche de chacun.
-                Occuper la scène jusqu’à en éclipser les autres, pour le bonheur, paradoxalement, de tous les siens, c’est le destin des génies, de ceux
-                qui entrent justement dans la légende. Mais comment?
+                Devenir une légende, c’est sans doute être meilleur que les autres. Mais pour beaucoup de raisons, dont
+                certaines débordent le cadre du seul terrain. Si le football est une tragédie grecque - unité de temps,
+                unité de lieu, unité d’action -, il y a, en marge de l’acteur, l’homme derrière le rôle. Tenir sa place, dans le
+                théâtre du spectacle programmé, lors d’un Mondial ou en club, c’est la tâche de chacun. Occuper la scène
+                jusqu’à en éclipser les autres, pour le bonheur, paradoxalement, de tous les siens, c’est le destin des
+                génies, de ceux qui entrent justement dans la légende. Mais comment?
               </p>
-              
-              <img className="ui fluid image" src={require("./images/graph-invert-13.png")} />
 
               <p>
-                C’est Beckenbauer qui termine sa demi-finale du Mondial 1970 contre l’Italie le bras bandé en écharpe, blessé durant de folles prolongations,
-                meurtri mais debout, éliminé mais déjà Kaiser, son futur surnom. C’est le jeune Edson Arantes do Nascimento, autrement dit Pelé, 17 ans, qui
-                emmène le Brésil vers sa première Coupe du Monde en 1958, en Suède: il en gagnera trois, seul joueur à cette altitude, dont celle de 1962 où
-                il ne jouera pratiquement pas (un match contre le Mexique et 25 minutes avant de se blesser contre la Tchécoslovaquie). Au Chili, c’est grâce
-                à Garrincha, ce «petit oiseau» aux pattes bizarres, que le Brésil s’impose, mais l’histoire a la mémoire sélective quand on touche à ses
-                légendes, alors pour tous, Pelé l’a aussi gagné, ce Mondial-là…
-              </p>
-              <p>
-                La légende, ce n’est pas que la bravoure indicible ou le récit merveilleux, c’est aussi la geste. C’est l’exceptionnel talent de Maradona,
-                qui porte l’Argentine à lui tout seul au titre en 1986 au Mexique. Mais avec cette dualité brutale en quart de finale contre l’Angleterre:
-                il triche en marquant un but de la main que seul l’arbitre ne voit pas - la fameuse «main de Dieu» -, avant d’inscrire l’un des plus
-                fabuleux buts de l’histoire, passant en revue toute l’équipe anglaise dans un solo inouï de virtuosité technique. C’est toujours ce même
-                Maradona, star ultime mais génie froissé, qui quittera la sélection argentine lors de la World Cup 94 aux Etats-Unis, convaincu de dopage.
-                Il faut croire qu’entre le bon Dieu et le mauvais démiurge, la cohabitation n’est pas toujours facile.
-              </p>
-              <p>
-                Demandez à Zinédine Zidane. Le héros de toute la France en 1998, pour ce titre mondial qu’il offre aux Bleus avec ses deux têtes en finale
-                contre le Brésil. On en oublierait presque son expulsion pour une réaction épidermique dès le deuxième match de la compétition, contre l’Arabie
-                saoudite. Ce vilain travers le suit jusqu’en 2006, lors de la finale contre l’Italie, à Berlin: c’est le «coup de boule» sur Materazzi,
-                durant les prolongations, avant des tirs au but qu’il suivra des vestiaires, après avoir été logiquement expulsé. Il avait pourtant commencé
-                par ouvrir le score, sur un penalty qu’il décidait historique, puisqu’il avait choisi une «Panenka» (un tir risqué au milieu en lob, du nom du
-                joueur tchécoslovaque qui l’a inventé, une autre légende pour cette seule inspiration) afin de porter sa griffe définitive sur son parcours:
-                entre l’orgueil et la vanité, le génie vacille aussi. Comme pour Maradona, le meilleur des instincts côtoie le pire, jusqu’au dénouement
-                «inexcusé» que l’on sait face à Materazzi.
+                C’est Beckenbauer qui termine sa demi-finale du Mondial 1970 contre l’Italie le bras bandé en écharpe,
+                blessé durant de folles prolongations, meurtri mais debout, éliminé mais déjà Kaiser, son futur surnom.
+                C’est le jeune Edson Arantes do Nascimento, autrement dit Pelé, 17 ans, qui emmène le Brésil vers sa
+                première Coupe du Monde en 1958, en Suède: il en gagnera trois, seul joueur à cette altitude, dont celle
+                de 1962 où il ne jouera pratiquement pas (un match contre le Mexique et 25 minutes avant de se blesser
+                contre la Tchécoslovaquie). Au Chili, c’est grâce à Garrincha, ce «petit oiseau» aux pattes bizarres, que le
+                Brésil s’impose, mais l’histoire a la mémoire sélective quand on touche à ses légendes, alors pour tous,
+                Pelé l’a aussi gagné, ce Mondial-là…
               </p>
 
               <aside className='ui vertical very fitted segment widescreen hidden large screen hidden small' style={{marginBottom: '1em'}}>
@@ -330,45 +322,106 @@ class App extends Component {
                       <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
                     </div>
                     <div className='hint-container'>
-                      <div>Tout savoir sur <b>la Suisse et le Mondial</b>, à découvrir plus bas <nobr><span className='pseudo-link'>ou en cliquant ici</span></nobr>.</div>
+                      <div>Les souvenirs des <b>vieilles gloires</b> de l'équipe de Suisse, à découvrir plus bas <nobr><a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.</div>
                     </div>
                   </div>
                 </a>
               </aside>
-              <aside className='ui right rail computer or lower hidden' style={{top: '15%'}}>
+              <aside className='ui right rail computer or lower hidden' style={{top: '67%'}}>
                 <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
                   <div className='story-hint inverted'>
                     <div className='icon-container'>
                       <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
                     </div>
                     <div className='hint-container'>
-                      <div>Tout savoir sur <b>la Suisse et le Mondial</b>, à découvrir plus bas <nobr><span className='pseudo-link'>ou en cliquant ici</span></nobr>.</div>
+                      <div>Les souvenirs des <b>vieilles gloires</b> de l'équipe de Suisse, à découvrir plus bas <nobr><a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.</div>
                     </div>
                   </div>
                 </a>
               </aside>
-              
+
+              <img className="ui fluid image" src={require("./images/dataviz-27.png")} />
+
               <p>
-                Mais on pardonne tout aux légendes. Il y a comme une grâce qui les enveloppe, dont l’imperfection même garantit l’éternité. Après tout,
-                ce qui s’inscrit en marge de la performance pure, pour de bonnes ou de mauvaises raisons, n’existe que pour ramener un instant tous ces
-                génies à hauteur d’homme, avant qu’ils ne s’évadent encore au détour d’un dribble improbable, d’une volée irréelle, d’une feinte vertigineuse.
+                La légende, ce n’est pas que la bravoure indicible ou le récit merveilleux, c’est aussi la geste. C’est
+                l’exceptionnel talent de Maradona, qui porte l’Argentine à lui tout seul au titre en 1986 au Mexique. Mais
+                avec cette dualité brutale en quart de finale contre l’Angleterre: il triche en marquant un but de la main
+                que seul l’arbitre ne voit pas - la fameuse «main de Dieu» -, avant d’inscrire l’un des plus fabuleux buts
+                de l’histoire, passant en revue toute l’équipe anglaise dans un solo inouï de virtuosité technique. C’est
+                toujours ce même Maradona, star ultime mais génie froissé, qui quittera la sélection argentine lors de la
+                World Cup 94 aux Etats-Unis, convaincu de dopage. Il faut croire qu’entre le bon Dieu et le mauvais
+                démiurge, la cohabitation n’est pas toujours facile.
               </p>
+
               <p>
-                Cet été et après encore, au-delà de ce Mondial russe, les stars deviendront légendes dans un cortège où personne ne chasse l’autre. Et l’on
-                peut déjà deviner les gamins de demain, réunis autour du ballon, juste avant leur match fantastique mais si réel, plus Cristiano que Ronaldo,
-                plus Neymar que Zico, plus Shaqiri que Sutter, plus De Bruyne que Pfaff, ou alors par Hazard. Il suffira d’un geste, d’un éclat, d’un miroitement
-                pour que d’autres encore se joignent à cette dance.
+               Demandez à Zinédine Zidane. Le héros de toute la France en 1998, pour ce titre mondial qu’il offre aux
+                Bleus avec ses deux têtes en finale contre le Brésil. On en oublierait presque son expulsion pour une
+                réaction épidermique dès le deuxième match de la compétition, contre l’Arabie saoudite. Ce vilain travers
+                le suit jusqu’en 2006, lors de la finale contre l’Italie, à Berlin: c’est le «coup de boule» sur Materazzi,
+                durant les prolongations, avant des tirs au but qu’il suivra des vestiaires, après avoir été logiquement
+                expulsé. Il avait pourtant commencé par ouvrir le score, sur un penalty qu’il décidait historique, puisqu’il
+                avait choisi une «Panenka» (un tir risqué au milieu en lob, du nom du joueur tchécoslovaque qui l’a
+                inventé, une autre légende pour cette seule inspiration) afin de porter sa griffe définitive sur son
+                parcours: entre l’orgueil et la vanité, le génie vacille aussi. Comme pour Maradona, le meilleur des
+                instincts côtoie le pire, jusqu’au dénouement «inexcusé» que l’on sait face à Materazzi.
               </p>
+
+              <aside className='ui vertical very fitted segment widescreen hidden large screen hidden small' style={{marginBottom: '1em'}}>
+                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
+                  <div className='story-hint inverted'>
+                    <div className='icon-container'>
+                      <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
+                    </div>
+                    <div className='hint-container'>
+                      <div>Le <b>match le plus fou</b> de l'équipe de Suisse, à découvrir plus bas <nobr><a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.</div>
+                    </div>
+                  </div>
+                </a>
+              </aside>
+              <aside className='ui right rail computer or lower hidden' style={{top: '36%'}}>
+                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
+                  <div className='story-hint inverted'>
+                    <div className='icon-container'>
+                      <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
+                    </div>
+                    <div className='hint-container'>
+                      <div>Le <b>match le plus fou</b> de l'équipe de Suisse, à découvrir plus bas <nobr><a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.</div>
+                    </div>
+                  </div>
+                </a>
+              </aside>
+
+              <img className="ui fluid image" src={require("./images/dataviz-28.png")} />
+
               <p>
-                Etre une légende, c’est peut-être susciter cette émotion-là, qui allume les yeux des enfants, grands et petits.
+                Mais on pardonne tout aux légendes. Il y a comme une grâce qui les enveloppe, dont l’imperfection même
+                garantit l’éternité. Après tout, ce qui s’inscrit en marge de la performance pure, pour de bonnes ou de
+                mauvaises raisons, n’existe que pour ramener un instant tous ces génies à hauteur d’homme, avant qu’ils
+                ne s’évadent encore au détour d’un dribble improbable, d’une volée irréelle, d’une feinte vertigineuse.
+              </p>
+
+              <p>
+                Cet été et après encore, au-delà de ce Mondial russe, les stars deviendront légendes dans un cortège où
+                personne ne chasse l’autre. Et l’on peut déjà deviner les gamins de demain, réunis autour du ballon, juste
+                avant leur match fantastique mais si réel, plus Cristiano que Ronaldo, plus Neymar que Zico, plus Shaqiri
+                que Sutter, plus De Bruyne que Pfaff, ou alors par Hazard. Il suffira d’un geste, d’un éclat, d’un
+                miroitement pour que d’autres encore se joignent à cette dance.
+              </p>
+
+              <p>
+                Etre une légende, c’est peut-être susciter cette émotion-là, qui allume les yeux des enfants, grands et
+                petits.
               </p>
             </div>
           </div>
         </main>
-        <main className='ui vertical very fitted segment text-chapter'>
+
+        { /* Last section */ }
+        <main id="section-2" className='ui vertical very fitted segment text-chapter'>
+          <div className="downbait"></div>
           <div className='ui container'>
             <div className='ui text container no-marg aligned center' style={{textAlign: "center"}}>
-              <div className="section-number">2</div>
+              <img className="ui fluid image section-stars" src={require("./images/stars-03.png")} />
               <h1>La Suisse et le mondial</h1>
               <div className="authors"><b>Texte:</b> Renaud Tschoumy</div>
             </div>
@@ -424,7 +477,7 @@ class App extends Component {
           </div>
 
           <div className='ui container widescreen hidden large screen hidden'>
-            <img className="ui fluid image" src={require("./images/dataviz-22.png")} />
+            <img className="ui fluid image" src={require("./images/dataviz-18.png")} />
           </div>
 
           <div className='ui container'>
@@ -434,6 +487,27 @@ class App extends Component {
                 Vestibulum mollis enim eget lacus placerat tincidunt. Ut vitae hendrerit nibh. Vestibulum in
                 nunc purus vitae lorem. Etiam elit velit, vehicula eget pellentesque eu, placerat at metus.</p>
             </div>
+          </div>
+
+          <div className='ui container stat-bloc'>
+            <div className='ui text container no-marg'>
+              <div className="title-bloc" style={{textAlign: "center"}}>
+                <div className="section-number small">9</div>
+                <h2>Les souvenirs des vieilles gloires</h2>
+              </div>
+              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam.</p>
+            </div>
+          
+            <div className='videoWrapper'>
+              <iframe
+                className='externalNNIFrame'
+                src='https://www.lematin.ch/extern/videoplayer/videoplayer-nn.html?params=client@tagesanzeiger|videoId@338508|showLogo@1|autoStart@0|mute@0|showAds@false|previewPath@https://server025.newsnetz.tv/338508/frame-1-338508.jpg|platform@desktop'
+                allowFullScreen='true'
+                scrolling='no'
+                frameBorder='no'
+              />
+            </div>
+
           </div>
 
           <div className='ui container stat-bloc'>
@@ -455,7 +529,7 @@ class App extends Component {
                 1994).
               </p>
 
-              <img className="ui fluid image" src={require("./images/dataviz-19.png")} />
+              <img className="ui fluid image" src={require("./images/dataviz_participations.png")} />
 
               <p>
                 Absente en France en 1998, puis au Japon et en Corée du Sud en 2002,
@@ -485,7 +559,7 @@ class App extends Component {
 
               <p>
                 Qualifiée pour la Coupe du monde 1934 après un match nul contre la
-                Yougoslavie et un victoire par forfait contre la Roumanie, qui avait aligné un
+                Yougoslavie et une victoire par forfait contre la Roumanie, qui avait aligné un
                 joueur non sélectionnable, <b>la Suisse dispute son tout premier match de phase
                 finale le 27 mai 1934 à Milan</b>, face aux Pays-Bas.
               </p>
@@ -496,7 +570,7 @@ class App extends Component {
                 <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
                   <div className='story-hint quote'>
                     <div className='hint-container'>
-                      <div><p>Qualifiée pour la Coupe du monde 1934, La Suisse bat les Pays-Bas et se qualifie pour les quart de finale.</p></div>
+                      <div><p>Trello Abegglen fait feu de tout bois. Après avoir offert les deux premiers buts à Kielholz, il inscrit lui-même le troisième.</p></div>
                     </div>
                   </div>
                 </a>
@@ -505,7 +579,7 @@ class App extends Component {
                 <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
                   <div className='story-hint quote'>
                     <div className='hint-container'>
-                      <div><p>Qualifiée pour la Coupe du monde 1934, La Suisse bat les Pays-Bas et se qualifie pour les quart de finale.</p></div>
+                      <div><p>Trello Abegglen fait feu de tout bois. Après avoir offert les deux premiers buts à Kielholz, il inscrit lui-même le troisième.</p></div>
                     </div>
                   </div>
                 </a>
@@ -540,29 +614,34 @@ class App extends Component {
                 se qualifier pour les quarts de finale, ce que la Suisse n’a jamais réussi à faire
                 depuis le passage à 24, puis 32 équipes.
               </p>
-            </div>
+            { /*</div>
+            
             <div className='ui container center aligned' style={{margin: "60px 0px"}}>
                 <div className="special-panel">
                   <div className="special-dot"></div>
                   <div>1934</div>
                   <span className="special">Italie</span>
-                <div><span className="special">1/4 de final</span></div><br/>
+                <div><span className="special">1/4 de finale</span></div><br/>
                 </div>
                 <br/>
                 <div className="special-panel">
                   <div className="special-dot"></div>
                   <div>1938</div>
                   <span className="special">France</span>
-                  <div><span className="special">1/4 de final</span></div><br/>
+                  <div><span className="special">1/4 de finale</span></div><br/>
                 </div>
                 <div className="special-panel">
                   <div className="special-dot"></div>
                   <div>1954</div>
                   <span className="special">Suisse</span>
-                  <div><span className="special">1/4 de final</span></div><br/>
+                  <div><span className="special">1/4 de finale</span></div><br/>
                 </div>
             </div>
-            <div className='ui text container no-marg'>
+
+            <div className='ui text container no-marg'>*/}
+
+              <img className="ui fluid image" src={require("./images/issue-07.png")} />
+
               <p>
                 Elle a été huitième de finaliste à trois
                 reprises depuis son grand retour parmi l’élite. En <b>1994</b>, la Suisse était
@@ -618,10 +697,10 @@ class App extends Component {
               </aside>
 
               <p>
-                Résultat: en neuf minutes, de la 25 e à la 34 e , l’Autriche
+                Résultat: en neuf minutes, de la 25&nbsp;e à la 34&nbsp;e, l’Autriche
                 inscrit cinq buts et renverse la vapeur! Ballaman réduit l’écart avant la pause
-                (<Inlinescore className="score" score={[4,5]} /> à la 39 e ) avant que Hügi n’inscrive son troisième but personnel (<Inlinescore className="score" score={[5,6]} /> à la
-                60 e ), mais la Suisse ne réussit pas à retourner la situation.
+                (<Inlinescore className="score" score={[4,5]} /> à la 39&nbsp;e ) avant que Hügi n’inscrive son troisième but personnel (<Inlinescore className="score" score={[5,6]} /> à la
+                60&nbsp;e ), mais la Suisse ne réussit pas à retourner la situation.
               </p>
               <p>
                 Score final: <Inlinescore className="score" score={[7,5]} /> pour
@@ -643,11 +722,10 @@ class App extends Component {
                 contre l’Équateur, à Brasilia, lors de l’entrée en lice de la Suisse dans le <b>Mondial
                 2014</b>, au Brésil (<Inlinescore className="score" score={[2,1]} /> à la 93 e minute).
               </p>
+              <GoalAnimation />
             </div>
           </div>
-
-          <GoalAnimation />
-
+          {/*
           <div className='ui container stat-bloc'>
             <div className='ui text container no-marg'>
               <p>
@@ -670,6 +748,7 @@ class App extends Component {
               </p>
             </div>
           </div>
+        */}
 
           <div className='ui container stat-bloc'>
             <div className='ui text container no-marg'>
@@ -691,7 +770,10 @@ class App extends Component {
                 menant à la phase finale américaine de la World Cup 1994, puis chez Puma en
                 1998.
               </p>
-            </div>
+
+              <img className="ui fluid image" src={require("./images/dataviz-18.png")} />
+
+            {/*</div>
           </div>
 
           <div className='ui container'>
@@ -699,7 +781,7 @@ class App extends Component {
           </div>
 
           <div className='ui container'>
-            <div className='ui text container no-marg'>
+            <div className='ui text container no-marg'>*/}
               <p>
                 En 2008, juste avant l’Euro qui se dispute en Suisse et en Autriche, c’est
                 justement Puma qui déclenche la polémique au moment de la présentation du
@@ -719,18 +801,6 @@ class App extends Component {
             </div>
           </div>
 
-
-          <div className='ui container stat-bloc'>
-            <div className='ui text container no-marg'>
-              <div className="title-bloc" style={{textAlign: "center"}}>
-                <div className="section-number small">9</div>
-                <h2>Les souvenirs des vieilles gloires</h2>
-              </div>
-              <p><b>Vidéo Pascal et Frédéric</b></p>
-              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
-            </div>
-          </div>
-
           <div className='ui container stat-bloc'>
             <div className='ui text container no-marg'>
               <div className="title-bloc" style={{textAlign: "center"}}>
@@ -738,7 +808,20 @@ class App extends Component {
                 <h2>Les romands</h2>
               </div>
               <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
-              <img className="ui fluid image" src={require("./images/dataviz-17.png")} />
+            </div>
+          </div>  
+
+          <div className='ui container computer or lower hidden'>
+            <img className="ui fluid image" src={require("./images/dataviz-24.png")} />
+          </div>
+
+          <div className='ui container widescreen hidden large screen hidden'>
+            <img className="ui fluid image" src={require("./images/dataviz-25.png")} />
+          </div>
+
+          <div className='ui container'>
+            <div className='ui text container no-marg'>
+              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
             </div>
           </div>
 
@@ -800,22 +883,31 @@ class App extends Component {
               <p>
                 La FIFA a considérablement augmenté sa dotation par rapport au Mondial
                 brésilien d’il y a quatre ans. En Russie, le 32 pays qualifiés se partageront la
-                somme de 400 millions de dollars, ce qui représente une augmentation de 12%
+                somme de <b>400 millions de dollars</b>, ce qui représente une augmentation de 12%
                 par rapport aux 358 millions dollars de l’édition 2014.
               </p>
               <p>
-
-                <b>[INFOG PRIMES]</b>
-
+                <b>[INFOG] </b>
                 Chaque pays qualifié recevra une prime de 8 millions de dollars. Les huitièmes
                 de finalistes toucheront 9 millions de dollars, les quarts de finalistes 14 millions,
                 le quatrième 20 millions, le troisième 22 millions, le finaliste 25 millions et le
                 champion du monde 35 millions.
+                En plus de ces sommes qui seront donc allouées aux Fédérations en fonction de
+                leur parcours en Russie, la FIFA a d’ores et déjà dédommagé les équipes
+                qualifiées pour leur frais de préparation, à hauteur de 1,5 million de dollars par
+                nation.
               </p>
               <p>
-                Outre ces sommes qui seront donc allouées aux Fédérations en fonction de leur
-                parcours en Russie, la FIFA a d’ores et déjà dédommagé les équipes qualifiées
-                pour leur frais de préparation à hauteur de 1,5 million de dollars par nation.
+                En Russie, les frais d’hôtel et de transports sont pris en charge dans leur entier
+                par la FIFA, jusqu’à concurrence de 50 personnes. Dans le cas de la Suisse, la
+                FIFA payera l’aller-retour Zurich – Samara (aéroport le plus proche du camp de
+                base de la Nati à Togliatti) et les transferts internes pour rallier les villes dans
+                lesquelles jouera la Suisse, plus évidemment toutes les nuitées du séjour.
+                La délégation de l’Association suisse de football (ASF) sera composée de <b>55
+                personnes</b>, soit 23 joueurs et 32 accompagnants (staff technique et médical,
+                dirigeants, officiels, cuisiniers, cellule médias, analyste vidéo). L’ASF devra donc
+                prendre à son compte les frais de ces cinq personnes supplémentaires (et
+                d’éventuels autres invités ponctuels).
               </p>
             </div>
           </div>
@@ -830,20 +922,13 @@ class App extends Component {
             </div>
           </div>
 
-          <div className='ui container'>
-            <div className='ui container no-marg'>
-              <Pronocard title="Jeux vidéos" candidates={["Belgique", "France", "Brésil", "Espagne", "Allemagne"]} switzerland="0 fois"/>
-              <Pronocard title="Mathématiques" />
-              <Pronocard title="Bookmakers" />
-              <Pronocard title="Nos journalistes" />
-              <Pronocard title="La chèvre" />
-            </div>
-          </div>
-
-          <div className='ui container'>
-            <div className='ui text container no-marg'>
-              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
-            </div>
+          <div className='ui container pronocards-container'>
+            <div><span className="special">Retournez les cartes pour découvrir le pronostic</span></div>
+            <Pronocard title="Jeux vidéos" candidates={["Belgique", "France", "Brésil", "Espagne", "Allemagne"]} switzerland="0 fois"/>
+            <Pronocard title="Mathématiques" candidates={["Brésil", "Allemagne", "Argentine", "Espagne", "Belgique"]} switzerland="1,4%" />
+            <Pronocard title="Bookmakers" candidates={["Allemagne", "France", "Espagne", "Brésil", "Argentine"]} switzerland="26" />
+            <Pronocard title="Nos journalistes" candidates={["XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX"]} switzerland="16" />
+            <Pronocard title="La chèvre" candidates={["Belgique", "France"]} switzerland="" />
           </div>
 
         </main>

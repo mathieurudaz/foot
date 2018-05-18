@@ -35,6 +35,8 @@
   margin-top: 20px;
   font-size: 14px;
   opacity: 0.35;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /* Small devices (tablets, 768px and up) */

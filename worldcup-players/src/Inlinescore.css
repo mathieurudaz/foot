@@ -19,10 +19,13 @@
   text-align: center;
   margin: 0px 1px;
   height: 14px;
+  display: inline-block;
+  line-height: 0px;
 }
 
 .inlinescore .scorevs .dot{
+  display: inline-block;
   width: 3px;
   height: 3px;
-  margin:3px 1px;
+  margin:1px 1px;
 }

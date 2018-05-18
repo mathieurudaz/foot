@@ -20,6 +20,7 @@ function NoMatchedPlayerMsg(props){
 
 function getImage(id){
   return require('./images/portrait-'+ id +'.jpg')
+  //return require('./images/portrait-test.jpg')
 }
 
 function getPosition(positionId){
@@ -36,8 +37,8 @@ class Card extends Component {
     return (
       <div>
         <NoMatchedPlayerMsg exactMatch={this.props.exactMatch}/>
-        <div className='result ui two column doubling stackable grid'>
-            <div className="resume column">
+        <div className='result'>
+            <div className="resume">
               <div className="resume-content" style={{backgroundImage: "url("+getImage(this.props.player.id)+")"}}>
                 <div className='ui center aligned container'>
                   <div className='ui'>
@@ -70,8 +71,27 @@ class Card extends Component {
                 return <p key={index}>{"Question " + index + ": " + answer}</p>
               })*/}
             </div>
-            <div className="portrait column">
+            <div className="portrait">
               <div className='portrait-content'>
+
+                <div className="stats-bloc">
+                  <div className="row stats-label">
+                    Années de participation
+                  </div>
+                  <div className="row stats-value">
+                    {this.props.player.years}
+                  </div>
+                </div>
+
+                <div className="stats-bloc">
+                  <div className="row stats-label">
+                    Etoiles
+                  </div>
+                  <div className="row stats-value">
+                    {this.props.player.worldcup}
+                  </div>
+                </div>
+
                 <div className="stats ui two column doubling stackable grid">
                   <div className="column">
                     <div className="stats-bloc">
@@ -100,44 +120,44 @@ class Card extends Component {
                     </div>
                     <div className="stats-bloc">
                       <div className="row stats-label">
-                        Nombre de matchs au mondial
+                        Nombre de matchs
                       </div>
                       <div className="row stats-value">
-                        {getPosition(this.props.player.position)}
+                        {this.props.player.matches}
                       </div>
                     </div>
                   </div>
                   <div className="column">
                     <div className="stats-bloc">
                       <div className="row stats-label">
-                        Buts marqués au mondial
+                        Buts marqués
                       </div>
                       <div className="row stats-value">
-                        {getPosition(this.props.player.position)}
+                        {this.props.player.goals}
                       </div>
                     </div>
                     <div className="stats-bloc">
                       <div className="row stats-label">
-                        Matchs gagnés au mondial
+                        Matchs gagnés
                       </div>
                       <div className="row stats-value">
-                        {getPosition(this.props.player.position)}
+                        {this.props.player.win}
                       </div>
                     </div>
                     <div className="stats-bloc">
                       <div className="row stats-label">
-                        Années de participation
+                        Cartons jaunes
                       </div>
                       <div className="row stats-value">
-                        {getPosition(this.props.player.position)}
+                        {this.props.player.yellow}
                       </div>
                     </div>
                     <div className="stats-bloc">
                       <div className="row stats-label">
-                        Cartons
+                        Cartons rouges
                       </div>
                       <div className="row stats-value">
-                        {getPosition(this.props.player.position)}
+                        {this.props.player.red}
                       </div>
                     </div>
                   </div>

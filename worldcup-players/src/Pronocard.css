@@ -3,7 +3,7 @@
   height: 300px;
   width: 200px;
   background-color: white;
-  box-shadow: 3px 3px 16px -8px grey;
+  box-shadow: 3px 3px 16px -8px grey, 0px 8px 0px rgba(0,0,0,0.1);
   border-radius: 7px;
   cursor: pointer;
   margin: 50px 10px;
@@ -11,9 +11,76 @@
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+  transition: .05s ease-in transform;
+
+  position: relative;
+  box-sizing: border-box;
+
+}
+
+.pronocard:nth-child(2){ transform: rotate(2deg); }
+.pronocard:nth-child(3){ transform: rotate(-2deg); }
+.pronocard:nth-child(4){ transform: rotate(1deg); }
+.pronocard:nth-child(5){ transform: rotate(3deg); }
+.pronocard:nth-child(6){ transform: rotate(-2deg); }
+
+.card-title{
   padding: 20px;
+  color: #222222;
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 120px;
+}
+
+.pronocard ul, .pronocard ul li{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 .pronocard:hover{
-  transform: rotate(10deg);
+  transform: rotate(10deg) translate(0px, -50px);
+}
+
+.cardface {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.cardface_back ul li:first-child{
+  font-weight: 800;
+}
+
+.cardface_front {
+  background-size: 60%;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.cardface_back {
+  transform: rotateY( 180deg );
+}
+
+.pronocard.is-flipped {
+  transition: transform .45s;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+
+.pronocard:nth-child(2) .cardface_front{
+  background-image: url( "./images/issue-04.png" );
+}
+.pronocard:nth-child(3) .cardface_front{
+  background-image: url( "./images/issue-05.png" );
+}
+.pronocard:nth-child(4) .cardface_front{
+  background-image: url( "./images/issue-06.png" );
+}
+.pronocard:nth-child(5) .cardface_front{
+  background-image: url( "./images/issue-04.png" );
+}
+.pronocard:nth-child(6) .cardface_front{
+  background-image: url( "./images/issue-04.png" );
 }
