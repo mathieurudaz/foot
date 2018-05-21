@@ -11,6 +11,13 @@
 
 }
 
+.intro-image{
+  display: inline-block;
+  width: 200px;
+  margin-bottom: 20px;
+  margin-top: 90px;
+}
+
 .colorized{
   color: #22b573;
 }
@@ -27,13 +34,17 @@
     min-height: 100vh;
     flex-direction: column;
     z-index: 2;
-    background-color: #ffce4d;
+    background-color: #fbd249;
     /*background-color: #22b573;*/
 
     /*background-image: url(./images/intro_background-07.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;*/
+}
+
+.title-special{
+  text-decoration: underline;
 }
 
 h1{
@@ -56,27 +67,29 @@ h1{
     font-family: "Oswald", sans-serif;
     font-weight: 500;
     letter-spacing: 5px;
-    font-size: 60px;
+    font-size: 50px;
     text-transform: uppercase;
     color: #222;
     text-align: center;
     margin-bottom: 40px;
+    margin-top: 20px;
     line-height: 1.15em;
 
     /*color: #22b573;*/
-    letter-spacing: 0px;
+    letter-spacing: -2px;
     font-weight: 500;
 }
 
 .title h2.surtitre{
-    font-size: 30px;
+    font-size: 25px;
     font-family: "Oswald", sans-serif;
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: #222;
     text-align: center;
     font-weight: 400;
+    margin-bottom: 0px;
 }
 
 h2, h2:first-child, h2:last-child{
@@ -566,8 +579,15 @@ footer .copyright {
 
   /* Small devices (tablets, 768px and up) */
   @media (min-width: 768px) {
+
+    .intro-image{
+      width: 300px;
+      margin-top: 0px;
+      margin-bottom: 20px;
+    }
+
     .title h1{
-      font-size: 90px;
+      font-size: 60px;
     }
     .question-container{
       border-bottom:1px solid rgba( 0,0,0,0.1 );

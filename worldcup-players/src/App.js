@@ -189,8 +189,10 @@ class App extends Component {
           <div className='ui container center aligned'>
             <div className='ui'>
               <div>
+                <img className="intro-image" src={require("./images/player.png")} />
+                {/*<img className="intro-image section-stars" src={require("./images/stars-02.png")} />*/}
                 <h2 className="surtitre">Coupe du monde 2018 </h2>
-                <h1>Quel joueur de légende êtes-vous?</h1>
+                <h1>Quel <span className="title-special">joueur de légende</span> êtes-vous?</h1>
               </div>
               <div className="start-block">
                 <div className="start-touch" onClick={this.start}>Commencer</div>
@@ -281,7 +283,7 @@ class App extends Component {
                 </a>
               </aside>
 
-              <img className="ui fluid image" src={require("./images/dataviz-25.png")} />
+              <img className="ui fluid image" src={require("./images/dataviz_legends-maradona.png")} />
 
               <p>
                 Une légende du football c’est quoi, sinon ce nom qu’un gosse s’approprie, comme s’il devait revêtir par
@@ -340,7 +342,7 @@ class App extends Component {
                 </a>
               </aside>
 
-              <img className="ui fluid image" src={require("./images/dataviz-27.png")} />
+              <img className="ui fluid image" src={require("./images/dataviz_legends-pele.png")} />
 
               <p>
                 La légende, ce n’est pas que la bravoure indicible ou le récit merveilleux, c’est aussi la geste. C’est
@@ -391,7 +393,7 @@ class App extends Component {
                 </a>
               </aside>
 
-              <img className="ui fluid image" src={require("./images/dataviz-28.png")} />
+              <img className="ui fluid image" src={require("./images/dataviz_legends-zidane.png")} />
 
               <p>
                 Mais on pardonne tout aux légendes. Il y a comme une grâce qui les enveloppe, dont l’imperfection même
@@ -466,8 +468,7 @@ class App extends Component {
               <p>
                 Pour être sélectionné en équipe de Suisse, il vaut donc mieux être zurichois.
                 C’est en effet, et sans grande surprise, le canton de Zurich qui a fourni le plus
-                de joueurs à l’équipe de Suisse depuis 1994 et son retour en phase finale. Plus
-                surprenant, le canton classé au deuxième rang: c’est celui du Valais.
+                de joueurs à l’équipe de Suisse depuis 1994 et son retour en phase finale.
               </p>
             </div>
           </div>  
@@ -483,37 +484,60 @@ class App extends Component {
           <div className='ui container'>
             <div className='ui text container no-marg'>
               <p>
-                Curabitur dapibus dictum faucibus. Nunc elit mauris, ornare vel ligula id, lacinia dictum ipsum.
-                Vestibulum mollis enim eget lacus placerat tincidunt. Ut vitae hendrerit nibh. Vestibulum in
-                nunc purus vitae lorem. Etiam elit velit, vehicula eget pellentesque eu, placerat at metus.</p>
+                La base de données est parfois incomplète et il n’est pas toujours aisé de trouver des
+                informations fiables sur les anciens internationaux. Des tendances se dégagent pourtant.
+                <br/>Au fil des années, on constate ainsi que la taille des joueurs augmente. Avant 1944, la moyenne
+                était de 175 cm. Elle est passée à 178 cm entre 1944 et 1980 puis à 182 cm après 1980.
+                <br/>L’«espérance de vie» des joueurs en sélection est également en hausse. Logique dès lors
+                qu’une carrière croît en même temps que le progrès s’exerce dans tous les domaines d’activité
+                (entraînement, nutrition, préparation mentale et physique).</p>
             </div>
-          </div>
-
-          <div className='ui container stat-bloc'>
-            <div className='ui text container no-marg'>
-              <div className="title-bloc" style={{textAlign: "center"}}>
-                <div className="section-number small">9</div>
-                <h2>Les souvenirs des vieilles gloires</h2>
-              </div>
-              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam.</p>
-            </div>
-          
-            <div className='videoWrapper'>
-              <iframe
-                className='externalNNIFrame'
-                src='https://www.lematin.ch/extern/videoplayer/videoplayer-nn.html?params=client@tagesanzeiger|videoId@338508|showLogo@1|autoStart@0|mute@0|showAds@false|previewPath@https://server025.newsnetz.tv/338508/frame-1-338508.jpg|platform@desktop'
-                allowFullScreen='true'
-                scrolling='no'
-                frameBorder='no'
-              />
-            </div>
-
           </div>
 
           <div className='ui container stat-bloc'>
             <div className='ui text container no-marg'>
               <div className="title-bloc" style={{textAlign: "center"}}>
                 <div className="section-number small">3</div>
+                <h2>Les souvenirs des vieilles gloires</h2>
+              </div>
+              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam.</p>
+            </div>
+          
+            <div class="ui stackable two column grid">
+              <div class="column">
+                2006
+                L'Énergie de Pont
+                <div className='videoWrapper'>
+                  <iframe
+                    className='externalNNIFrame'
+                    src='https://www.lematin.ch/extern/videoplayer/videoplayer-nn.html?params=client@tagesanzeiger|videoId@339408|showLogo@1|autoStart@0|mute@0|showAds@false|previewPath@https://server025.newsnetz.tv/338508/frame-1-338508.jpg|platform@desktop'
+                    allowFullScreen='true'
+                    scrolling='no'
+                    frameBorder='no'
+                  />
+                </div>
+              </div>
+              <div class="column">
+                1994
+                Hottiger et le rêve américain
+                <div className='videoWrapper'>
+                  <iframe
+                    className='externalNNIFrame'
+                    src='https://www.lematin.ch/extern/videoplayer/videoplayer-nn.html?params=client@tagesanzeiger|videoId@339410|showLogo@1|autoStart@0|mute@0|showAds@false|previewPath@https://server025.newsnetz.tv/338508/frame-1-338508.jpg|platform@desktop'
+                    allowFullScreen='true'
+                    scrolling='no'
+                    frameBorder='no'
+                  />
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div className='ui container stat-bloc'>
+            <div className='ui text container no-marg'>
+              <div className="title-bloc" style={{textAlign: "center"}}>
+                <div className="section-number small">4</div>
                 <h2>Les participations</h2>
               </div>
               <p>
@@ -542,8 +566,8 @@ class App extends Component {
           <div className='ui container stat-bloc'>
             <div className='ui text container no-marg' style={{position:"relative"}}>
               <div className="title-bloc" style={{textAlign: "center"}}>
-                <div className="section-number small">4</div>
-                <h2>Le premier match</h2>
+                <div className="section-number small">5</div>
+                <h2>Le premier match : 1934</h2>
               </div>
 
               {/*<div class="ui text container no-marg grid equal width">
@@ -604,7 +628,7 @@ class App extends Component {
           <div className='ui container stat-bloc'>
             <div className='ui text container no-marg'>
               <div className="title-bloc" style={{textAlign: "center"}}>
-                <div className="section-number small">5</div>
+                <div className="section-number small">6</div>
                 <h2>Le meilleur résultat</h2>
               </div>
               <p>
@@ -614,31 +638,6 @@ class App extends Component {
                 se qualifier pour les quarts de finale, ce que la Suisse n’a jamais réussi à faire
                 depuis le passage à 24, puis 32 équipes.
               </p>
-            { /*</div>
-            
-            <div className='ui container center aligned' style={{margin: "60px 0px"}}>
-                <div className="special-panel">
-                  <div className="special-dot"></div>
-                  <div>1934</div>
-                  <span className="special">Italie</span>
-                <div><span className="special">1/4 de finale</span></div><br/>
-                </div>
-                <br/>
-                <div className="special-panel">
-                  <div className="special-dot"></div>
-                  <div>1938</div>
-                  <span className="special">France</span>
-                  <div><span className="special">1/4 de finale</span></div><br/>
-                </div>
-                <div className="special-panel">
-                  <div className="special-dot"></div>
-                  <div>1954</div>
-                  <span className="special">Suisse</span>
-                  <div><span className="special">1/4 de finale</span></div><br/>
-                </div>
-            </div>
-
-            <div className='ui text container no-marg'>*/}
 
               <img className="ui fluid image" src={require("./images/issue-07.png")} />
 
@@ -660,9 +659,10 @@ class App extends Component {
           <div className='ui container stat-bloc'>
             <div className='ui text container no-marg' style={{position:"relative"}}>
               <div className="title-bloc" style={{textAlign: "center"}}>
-                <div className="section-number small">6</div>
-                <h2>Le match le plus fou</h2>
+                <div className="section-number small">7</div>
+                <h2>Le match le plus fou : 1954</h2>
               </div>
+              {/*<div className="dateyear">1954</div>*/}
               <Scoreboard score={[7,5]} teams={["Autriche", "Suisse"]} />
               <p>
                 Il s’agit sans conteste du fameux quart de finale Suisse – Autriche, le <b>26 juin
@@ -714,7 +714,7 @@ class App extends Component {
           <div className='ui container stat-bloc'>
             <div className='ui text container no-marg'>
               <div className="title-bloc" style={{textAlign: "center"}}>
-                <div className="section-number small">7</div>
+                <div className="section-number small">8</div>
                 <h2>Le plus beau goal</h2>
               </div>
               <p>
@@ -753,7 +753,7 @@ class App extends Component {
           <div className='ui container stat-bloc'>
             <div className='ui text container no-marg'>
               <div className="title-bloc" style={{textAlign: "center"}}>
-                <div className="section-number small">8</div>
+                <div className="section-number small">9</div>
                 <h2>Le maillot à travers les âges</h2>
               </div>
               <p>
@@ -771,17 +771,8 @@ class App extends Component {
                 1998.
               </p>
 
-              <img className="ui fluid image" src={require("./images/dataviz-18.png")} />
+              <img className="ui fluid image" src={require("./images/dataviz_maillots.png")} />
 
-            {/*</div>
-          </div>
-
-          <div className='ui container'>
-            <img className="ui fluid image" src={require("./images/dataviz-18.png")} />
-          </div>
-
-          <div className='ui container'>
-            <div className='ui text container no-marg'>*/}
               <p>
                 En 2008, juste avant l’Euro qui se dispute en Suisse et en Autriche, c’est
                 justement Puma qui déclenche la polémique au moment de la présentation du
@@ -852,16 +843,16 @@ class App extends Component {
                 Paradoxalement, elle s’est inclinée <Inlinescore className="score" score={[5,7]} />.
               </p>
               <p>
-                La Suisse a dû attendre la Coupe du monde 2006 en Allemagne (et son 23 e
+                La Suisse a dû attendre la Coupe du monde 2006 en Allemagne (et son 23e
                 match en phase finale) pour boucler une rencontre sans encaisser de but: <Inlinescore className="score" score={[0,0]} />
                 contre la France. Elle a enchaîné avec trois autres blanchissages cette année-là
                 (<Inlinescore className="score" score={[2,0]} /> contre le Togo, <Inlinescore className="score" score={[2,0]} /> contre la Corée du Sud, <Inlinescore className="score" score={[0,0]} /> ap contre l’Ukraine en 8 e de
                 finale) pour devenir la seule équipe au monde à avoir été éliminée sans avoir
                 encaissé le moindre but dans le jeu (défaite <Inlinescore className="score" score={[0,3]} /> aux tirs au but contre l’Ukraine
-                en 8 e ).
+                en 8e).
               </p>
               <p>
-                Le meilleur buteur de la Suisse en phase finale est Sepp Hügi (6 buts), qui
+                Le <b>meilleur buteur</b> de la Suisse en phase finale est Sepp Hügi (6 buts), qui
                 devance André Abegglen et Robert Ballaman (chacun 4). Suivent Jacky Fatton,
                 Leopold Kielholz et Xherdan Shaqiri (3), Alexander Frei et Adrian Knup (2), et
                 enfin 18 autres joueurs ayant chacun marqué un but.
@@ -869,7 +860,7 @@ class App extends Component {
               <p>
                 Sepp Hügi (lors de la défaite <Inlinescore className="score" score={[5,7]} /> contre l’Autriche en 1954) et Xherdan Shaqiri
                 (à l’occasion du succès <Inlinescore className="score" score={[3,0]} /> contre le Honduras en 2014) sont les seuls joueurs
-                suisses à avoir réussi le coup du chapeau en phase finale.
+                suisses à avoir réussi le <b>coup du chapeau</b> en phase finale.
               </p>
             </div>
           </div>
@@ -886,12 +877,20 @@ class App extends Component {
                 somme de <b>400 millions de dollars</b>, ce qui représente une augmentation de 12%
                 par rapport aux 358 millions dollars de l’édition 2014.
               </p>
-              <p>
-                <b>[INFOG] </b>
+            {/*<p>
                 Chaque pays qualifié recevra une prime de 8 millions de dollars. Les huitièmes
                 de finalistes toucheront 9 millions de dollars, les quarts de finalistes 14 millions,
                 le quatrième 20 millions, le troisième 22 millions, le finaliste 25 millions et le
                 champion du monde 35 millions.
+                En plus de ces sommes qui seront donc allouées aux Fédérations en fonction de
+                leur parcours en Russie, la FIFA a d’ores et déjà dédommagé les équipes
+                qualifiées pour leur frais de préparation, à hauteur de 1,5 million de dollars par
+                nation.
+              </p>*/}
+
+              <img className="ui fluid image" src={require("./images/dataviz_argent.png")} />
+
+              <p>
                 En plus de ces sommes qui seront donc allouées aux Fédérations en fonction de
                 leur parcours en Russie, la FIFA a d’ores et déjà dédommagé les équipes
                 qualifiées pour leur frais de préparation, à hauteur de 1,5 million de dollars par
@@ -902,7 +901,7 @@ class App extends Component {
                 par la FIFA, jusqu’à concurrence de 50 personnes. Dans le cas de la Suisse, la
                 FIFA payera l’aller-retour Zurich – Samara (aéroport le plus proche du camp de
                 base de la Nati à Togliatti) et les transferts internes pour rallier les villes dans
-                lesquelles jouera la Suisse, plus évidemment toutes les nuitées du séjour.
+                lesquelles jouera la Suisse, plus évidemment toutes les nuitées du séjour.<br/>
                 La délégation de l’Association suisse de football (ASF) sera composée de <b>55
                 personnes</b>, soit 23 joueurs et 32 accompagnants (staff technique et médical,
                 dirigeants, officiels, cuisiniers, cellule médias, analyste vidéo). L’ASF devra donc

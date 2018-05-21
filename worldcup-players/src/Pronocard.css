@@ -4,9 +4,9 @@
   width: 200px;
   background-color: white;
   box-shadow: 3px 3px 16px -8px grey, 0px 8px 0px rgba(0,0,0,0.1);
-  border-radius: 7px;
+  border-radius: 2px;
   cursor: pointer;
-  margin: 50px 10px;
+  margin: 10px 10px;
   font-family: "Oswald", sans-serif;
   font-size: 20px;
   text-transform: uppercase;
@@ -15,14 +15,7 @@
 
   position: relative;
   box-sizing: border-box;
-
 }
-
-.pronocard:nth-child(2){ transform: rotate(2deg); }
-.pronocard:nth-child(3){ transform: rotate(-2deg); }
-.pronocard:nth-child(4){ transform: rotate(1deg); }
-.pronocard:nth-child(5){ transform: rotate(3deg); }
-.pronocard:nth-child(6){ transform: rotate(-2deg); }
 
 .card-title{
   padding: 20px;
@@ -44,8 +37,6 @@
 
 .cardface {
   position: absolute;
-  height: 100%;
-  width: 100%;
   backface-visibility: hidden;
 }
 
@@ -57,10 +48,12 @@
   background-size: 60%;
   background-position: center top;
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 .cardface_back {
   transform: rotateY( 180deg );
+  width: 100%;
 }
 
 .pronocard.is-flipped {

@@ -72,26 +72,27 @@ class Card extends Component {
               })*/}
             </div>
             <div className="portrait">
+
+                <div className='stats-header'>
+                  <div className="stats-bloc">
+                    <div className="row stats-label">
+                      Années de participation
+                    </div>
+                    <div className="row stats-value">
+                      {this.props.player.years}
+                    </div>
+                  </div>
+                  <div className="stats-bloc">
+                    <div className="row stats-label">
+                      Champion du Monde
+                    </div>
+                    <div className="row stats-value">
+                      {this.props.player.worldcup}
+                    </div>
+                  </div>
+                </div>
+
               <div className='portrait-content'>
-
-                <div className="stats-bloc">
-                  <div className="row stats-label">
-                    Années de participation
-                  </div>
-                  <div className="row stats-value">
-                    {this.props.player.years}
-                  </div>
-                </div>
-
-                <div className="stats-bloc">
-                  <div className="row stats-label">
-                    Etoiles
-                  </div>
-                  <div className="row stats-value">
-                    {this.props.player.worldcup}
-                  </div>
-                </div>
-
                 <div className="stats ui two column doubling stackable grid">
                   <div className="column">
                     <div className="stats-bloc">
@@ -120,7 +121,7 @@ class Card extends Component {
                     </div>
                     <div className="stats-bloc">
                       <div className="row stats-label">
-                        Nombre de matchs
+                        Matchs joués
                       </div>
                       <div className="row stats-value">
                         {this.props.player.matches}
