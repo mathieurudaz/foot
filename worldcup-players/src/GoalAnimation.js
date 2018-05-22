@@ -2,11 +2,17 @@ import React, { Component } from 'react';
 import './GoalAnimation.css';
 
 class GoalAnimation extends Component {
+
   render() {
     return(
       <div className='goalanimation ui container'>
-        <div className="">Texte </div>
-        <img className="ui fluid image" src={require("./images/best_goal_1-08.png")} />
+          <div className='ui container computer or lower hidden'>
+              <img className="ui fluid" src={require("./images/best_goal_desktop.gif")} />
+          </div>
+
+          <div className='ui container widescreen hidden large screen hidden'>
+              <img className="ui fluid" src={require("./images/best_goal_desktop.gif")} />
+          </div>
       </div>
     )
   }

@@ -1,3 +1,8 @@
 .goalanimation{
   margin-top: 60px;
+  position: relative;
+}
+
+.goalanimation img{
+  width: 100%;
 }

@@ -425,16 +425,21 @@ class App extends Component {
             <div className='ui text container no-marg aligned center' style={{textAlign: "center"}}>
               <img className="ui fluid image section-stars" src={require("./images/stars-03.png")} />
               <h1>La Suisse et le mondial</h1>
-              <div className="authors"><b>Texte:</b> Renaud Tschoumy</div>
+              <div className="authors"><b>Textes:</b> Renaud Tschoumy, Frédéric Thomasset</div>
             </div>
           </div>
           <div className='ui container'>
             <div className='ui text container no-marg'>
-              <p className="ta lead">Nous avons analysé plus d'<b>un siècle de sélections nationales</b>. De 1908 à 2018, voici ce que l'évolution de l'équipe de Suisse nous apprend.</p>
+              <p className="ta lead">
+                Quelle est la taille moyenne d’un joueur de l’équipe de Suisse? Quel canton, quel club, sont les plus
+                grands pourvoyeurs de la Nati? Vous souvenez-vous de chaque maillot, chaque campagne en Coupe du monde?
+                Des matches les plus fous, les plus prolifiques, comme des défaites les plus dures à avaler?
+              </p>
               <p>
-                Plus d'un demi-millier de joueurs donec aliquam luctus velit. In lectus purus, efficitur eget gravida sit amet,
-                vulputate in est. Suspendisse in lectus et risus fringilla dictum vitae quis nunc. Aliquam placerat,
-                convallis. Suspendisse congue lobortis massa vitae eleifend. Aenean in urna libero.</p>
+                Autant de questions - et bien d’autres encore - auxquelles nous avons décidé de répondre, en analysant
+                les données disponibles sur l’équipe nationale. Une démarche exhaustive, couvrant <b>plus d’un siècle de
+                football</b> et pas moins d’un <b>demi-millier de joueurs</b>. Une autre manière de raconter la grande histoire de
+                la Nati, et de revoir ses gammes avant le coup d’envoi de la Coupe du monde en Russie.</p>
             </div>
           </div>
 
@@ -444,18 +449,18 @@ class App extends Component {
                 <div className="section-number small">1</div>
                 <h2>Le joueur type</h2>
               </div>
-              <p>
+              <p>Une compilation de statistiques a permis de définir les contours et de cerner les traits de <b>l’international helvétique de référence</b>.
                 Si vos parents avaient été zurichois, s’ils s’étaient appelé Müller et s’ils vous
                 avaient prénommé Walter, vous auriez eu plus de chances que les autres d’être
                 appelé en équipe de Suisse!
               </p>
+              <img className="ui fluid image" src={require("./images/joueur-03.png")} />
               <p>
                 Ce nom et ce prénom sont en effet ceux que l’on
                 retrouve le plus souvent dans l’historique des sélectionnés. Si vous aviez ajouté
                 à cela une taille de 180 cm et une licence à Grasshopper, vous auriez
-                définitivement été le joueur parfait pour l’équipe de Suisse.
+                définitivement été le <b>joueur parfait</b> pour l’équipe de Suisse.
               </p>
-              <img className="ui fluid image" src={require("./images/joueur-03.png")} />
             </div>
           </div>  
 
@@ -500,13 +505,19 @@ class App extends Component {
                 <div className="section-number small">3</div>
                 <h2>Les souvenirs des vieilles gloires</h2>
               </div>
-              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam.</p>
+              <p>
+                Sur le banc comme sur le terrain, ils ont été les acteurs et témoins privilégiés de la vie en Coupe du monde. De
+                leurs campagnes américaine pour l’un, allemande pour l’autre, <b>le latéral droit Marc Hottiger</b> et <b>l’entraîneur assistant
+                Michel Pont</b> ont ramené quelques maillots, des histoires de coup de tête, des anecdotes de coiffeur, les regrets d’une
+                défaite, mais surtout le sentiment d’avoir participé à quelque chose d’unique.</p>
+                <p>Avec un plaisir non dissimulé, et un amour
+                profond du public suisse, <b>ils ont accepté d’ouvrir leurs boîtes à souvenirs</b>.
+              </p>
             </div>
           
             <div class="ui stackable two column grid">
               <div class="column">
-                2006
-                L'Énergie de Pont
+                {/*<span className="special">2006: L'Énergie de Pont</span>*/}
                 <div className='videoWrapper'>
                   <iframe
                     className='externalNNIFrame'
@@ -518,8 +529,7 @@ class App extends Component {
                 </div>
               </div>
               <div class="column">
-                1994
-                Hottiger et le rêve américain
+                {/*<span className="special">1994: Hottiger et le rêve américain</span>*/}
                 <div className='videoWrapper'>
                   <iframe
                     className='externalNNIFrame'
@@ -563,10 +573,10 @@ class App extends Component {
             </div>
           </div>
 
-          <div className='ui container stat-bloc'>
+          <div className='ui container stat-bloc pronocards-container'>
             <div className='ui text container no-marg' style={{position:"relative"}}>
               <div className="title-bloc" style={{textAlign: "center"}}>
-                <div className="section-number small">5</div>
+                <div className="section-number small inverted">5</div>
                 <h2>Le premier match : 1934</h2>
               </div>
 
@@ -663,7 +673,6 @@ class App extends Component {
                 <h2>Le match le plus fou : 1954</h2>
               </div>
               {/*<div className="dateyear">1954</div>*/}
-              <Scoreboard score={[7,5]} teams={["Autriche", "Suisse"]} />
               <p>
                 Il s’agit sans conteste du fameux quart de finale Suisse – Autriche, le <b>26 juin
                 1954</b>. On est à Lausanne, et le stade de la Pontaise affiche complet (35&#39;000
@@ -676,6 +685,7 @@ class App extends Component {
                 commander sa défense, il laisse son gardien se débattre seul face aux
                 attaquants autrichiens.
               </p>
+              {/*<Scoreboard score={[7,5]} teams={["Autriche", "Suisse"]} />*/}
 
               <aside className='ui vertical very fitted segment widescreen hidden large screen hidden small' style={{marginBottom: '1em'}}>
                 <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
@@ -696,12 +706,15 @@ class App extends Component {
                 </a>
               </aside>
 
+              <img className="ui fluid image" src={require("./images/match-1954.jpg")} style={{margin: "20px 0px 30px 0px"}}/>
+
               <p>
                 Résultat: en neuf minutes, de la 25&nbsp;e à la 34&nbsp;e, l’Autriche
                 inscrit cinq buts et renverse la vapeur! Ballaman réduit l’écart avant la pause
                 (<Inlinescore className="score" score={[4,5]} /> à la 39&nbsp;e ) avant que Hügi n’inscrive son troisième but personnel (<Inlinescore className="score" score={[5,6]} /> à la
                 60&nbsp;e ), mais la Suisse ne réussit pas à retourner la situation.
               </p>
+
               <p>
                 Score final: <Inlinescore className="score" score={[7,5]} /> pour
                 l’Autriche, qui prive la Suisse d’une demi-finale à domicile qui lui tendait les
@@ -711,7 +724,7 @@ class App extends Component {
             </div>
           </div>
 
-          <div className='ui container stat-bloc'>
+          {/*<div className='ui container stat-bloc'>
             <div className='ui text container no-marg'>
               <div className="title-bloc" style={{textAlign: "center"}}>
                 <div className="section-number small">8</div>
@@ -722,9 +735,25 @@ class App extends Component {
                 contre l’Équateur, à Brasilia, lors de l’entrée en lice de la Suisse dans le <b>Mondial
                 2014</b>, au Brésil (<Inlinescore className="score" score={[2,1]} /> à la 93 e minute).
               </p>
-              <GoalAnimation />
             </div>
+          </div>*/}
+
+          <div className='ui container pronocards-container'>
+            <div className='ui text container no-marg'>
+              <div className="title-bloc" style={{textAlign: "center"}}>
+                <div className="section-number small inverted">8</div>
+                <h2>Le plus beau goal</h2>
+              </div>
+              <p>
+                Un choix forcément subjectif, mais on a opté pour le but de <b>Haris Seferovic </b>
+                contre l’Équateur, à Brasilia, lors de l’entrée en lice de la Suisse dans le <b>Mondial
+                2014</b>, au Brésil (<Inlinescore className="score" score={[2,1]} /> à la 93e minute).
+              </p>
+            </div>
+
+            <GoalAnimation />
           </div>
+
           {/*
           <div className='ui container stat-bloc'>
             <div className='ui text container no-marg'>
@@ -837,6 +866,9 @@ class App extends Component {
                 Yougoslavie en 1950, <Inlinescore className="score" score={[0,3]} /> contre l’Italie en 1962, <Inlinescore className="score" score={[0,3]} /> contre l’Espagne en 1994
                 et <Inlinescore className="score" score={[2,5]} /> contre la France en 2014).
               </p>
+
+              <img className="ui fluid image" src={require("./images/dataviz_stats.png")} />
+
               <p>
                 Le match dans lequel elle a mis le plus de buts est le fameux quart de finale
                 contre l’Autriche en 1954: elle a fait trembler les filets à cinq reprises!
@@ -911,17 +943,16 @@ class App extends Component {
             </div>
           </div>
 
-          <div className='ui container stat-bloc'>
+          <div className='ui container pronocards-container' style={{textAlign: "center"}}>
+
             <div className='ui text container no-marg'>
               <div className="title-bloc" style={{textAlign: "center"}}>
-                <div className="section-number small">13</div>
+                <div className="section-number small inverted">13</div>
                 <h2>Le pronostic</h2>
               </div>
               <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
             </div>
-          </div>
 
-          <div className='ui container pronocards-container'>
             <div><span className="special">Retournez les cartes pour découvrir le pronostic</span></div>
             <Pronocard title="Jeux vidéos" candidates={["Belgique", "France", "Brésil", "Espagne", "Allemagne"]} switzerland="0 fois"/>
             <Pronocard title="Mathématiques" candidates={["Brésil", "Allemagne", "Argentine", "Espagne", "Belgique"]} switzerland="1,4%" />

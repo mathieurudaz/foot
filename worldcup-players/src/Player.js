@@ -76,18 +76,10 @@ class Card extends Component {
                 <div className='stats-header'>
                   <div className="stats-bloc">
                     <div className="row stats-label">
-                      Années de participation
+                      Année(s) de participation
                     </div>
                     <div className="row stats-value">
                       {this.props.player.years}
-                    </div>
-                  </div>
-                  <div className="stats-bloc">
-                    <div className="row stats-label">
-                      Champion du Monde
-                    </div>
-                    <div className="row stats-value">
-                      {this.props.player.worldcup}
                     </div>
                   </div>
                 </div>
@@ -127,6 +119,14 @@ class Card extends Component {
                         {this.props.player.matches}
                       </div>
                     </div>
+                  <div className="stats-bloc">
+                    <div className="row stats-label">
+                      Champion du Monde
+                    </div>
+                    <div className="row stats-value">
+                      {this.props.player.worldcup}
+                    </div>
+                  </div>
                   </div>
                   <div className="column">
                     <div className="stats-bloc">
