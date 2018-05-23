@@ -21,7 +21,7 @@
   background-color: transparent;
   padding-bottom: 0px;
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
   /*z-index: 1;*/
 }
 
@@ -47,9 +47,13 @@
   background-size: cover;
   background-position: center;
   color: #f5f6f7;
-  height: 100%;
-  background-image: none !important;
-  background-color: #333;
+  height: 80vh;
+  /*background-image: none !important;
+  background-color: #333;*/
+}
+
+.result .resume-content i.icon{
+  font-size: 40px;
 }
 
 .result .resume .name{
@@ -110,11 +114,11 @@
 }
 
 .stats-header{
-  background-color: #f5f6f7;
+  background-color: #ffffff;
   color: #333;
   text-align: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 25px;
 }
 
 .stats-header .stats-label{
@@ -168,11 +172,19 @@
   margin-top: 60px !important;
 }
 
+span.bullet{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #333;
+  display: inline-block;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
   .stats-header .stats-value{
-    font-size: 70px;
+    font-size: 50px;
   }
 
   .result{

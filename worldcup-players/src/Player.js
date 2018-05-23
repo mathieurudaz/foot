@@ -28,6 +28,15 @@ function getPosition(positionId){
   return positions[positionId]
 }
 
+function getYears(yearsString){
+  console.log(yearsString)
+  let y = yearsString.replace(/ /g, "")
+  console.log(y)
+  let years = y.split(",");
+  //return years
+  return y.replace(/,/g, "∙")
+}
+
 class Card extends Component {
   render() {
     if (!this.props.player) {
@@ -79,13 +88,16 @@ class Card extends Component {
                       Année(s) de participation
                     </div>
                     <div className="row stats-value">
-                      {this.props.player.years}
+                      {/*getYears(this.props.player.years).map((year, index) => {
+                        return <div style={{display: 'inline-block'}}>{year} <span className='bullet'></span></div>
+                      })*/}
+                      {getYears(this.props.player.years)}
                     </div>
                   </div>
                 </div>
 
               <div className='portrait-content'>
-                <div className="stats ui two column doubling stackable grid">
+                <div className="stats ui two column grid">
                   <div className="column">
                     <div className="stats-bloc">
                       <div className="row stats-label">
@@ -119,14 +131,6 @@ class Card extends Component {
                         {this.props.player.matches}
                       </div>
                     </div>
-                  <div className="stats-bloc">
-                    <div className="row stats-label">
-                      Champion du Monde
-                    </div>
-                    <div className="row stats-value">
-                      {this.props.player.worldcup}
-                    </div>
-                  </div>
                   </div>
                   <div className="column">
                     <div className="stats-bloc">
