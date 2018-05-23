@@ -42,7 +42,7 @@ class Card extends Component {
               <div className="resume-content" style={{backgroundImage: "url("+getImage(this.props.player.id)+")"}}>
                 <div className='ui center aligned container'>
                   <div className='ui'>
-                    <div>Votre joueur</div>
+                    <div>Votre joueur de légende</div>
                     <div className="name">
                       <div className="firstname">
                         {this.props.player.firstname}

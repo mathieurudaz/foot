@@ -13,8 +13,8 @@
 
 .intro-image{
   display: inline-block;
-  width: 200px;
-  margin-bottom: 20px;
+  width: 100px;
+  margin-bottom: 0px;
   margin-top: 40px;
 }
 
@@ -606,7 +606,7 @@ footer .copyright {
     }
 
     .title h1{
-      font-size: 80px;
+      font-size: 60px;
     }
     .question-container{
       border-bottom:1px solid rgba( 0,0,0,0.1 );
@@ -615,12 +615,16 @@ footer .copyright {
 
   /* Medium devices (desktops, 992px and up) */
   @media (min-width: 992px) {
-
-
+    .title h1{
+      font-size: 70px;
+    }
   }
 
   /* Large devices (large desktops, 1200px and up) */
   @media (min-width: 1200px) {
 
+    .title h1{
+      font-size: 70px;
+    }
 
   }

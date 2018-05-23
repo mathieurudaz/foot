@@ -196,7 +196,7 @@ class App extends Component {
               </div>
               <div className="start-block">
                 <div className="start-touch" onClick={this.start}>Commencer</div>
-                <a className="shortcut" href="#section-1">Ou en lire plus sans répondre aux questions</a>
+                <a className="shortcut" href="#section-1">Lire directement notre dossier</a>
               </div>
             </div>
           </div>
@@ -577,7 +577,7 @@ class App extends Component {
             <div className='ui text container no-marg' style={{position:"relative"}}>
               <div className="title-bloc" style={{textAlign: "center"}}>
                 <div className="section-number small inverted">5</div>
-                <h2>Le premier match : 1934</h2>
+                <h2>En 1934, le premier match</h2>
               </div>
 
               {/*<div class="ui text container no-marg grid equal width">
@@ -670,7 +670,7 @@ class App extends Component {
             <div className='ui text container no-marg' style={{position:"relative"}}>
               <div className="title-bloc" style={{textAlign: "center"}}>
                 <div className="section-number small">7</div>
-                <h2>Le match le plus fou : 1954</h2>
+                <h2>En 1954, le match le plus fou</h2>
               </div>
               {/*<div className="dateyear">1954</div>*/}
               <p>
@@ -751,6 +751,7 @@ class App extends Component {
               </p>
             </div>
 
+            [Photo]
             <GoalAnimation />
           </div>
 
@@ -867,6 +868,7 @@ class App extends Component {
                 et <Inlinescore className="score" score={[2,5]} /> contre la France en 2014).
               </p>
 
+              En phase finale
               <img className="ui fluid image" src={require("./images/dataviz_stats.png")} />
 
               <p>
