@@ -190,7 +190,6 @@ class App extends Component {
             <div className='ui'>
               <div>
                 <img className="intro-image" src={require("./images/player.png")} />
-                {/*<img className="intro-image section-stars" src={require("./images/stars-02.png")} />*/}
                 <h2 className="surtitre">Coupe du monde 2018 </h2>
                 <h1>Quel <span className="title-special">joueur de légende</span> êtes-vous?</h1>
               </div>
@@ -231,7 +230,7 @@ class App extends Component {
           <div className="downbait inverted"></div>
           <div className='ui container'>
             <div className='ui text container no-marg aligned center' style={{textAlign: "center"}}>
-              <img className="ui fluid image section-stars" src={require("./images/stars-01.png")} />
+              <img className="ui fluid image section-stars" src={require("./images/stars_colorized_shadow.png")} />
               <h1>Entrer dans la légende, porter l’émotion</h1>
               <div className="authors"><b>Texte:</b> Daniel Visentini</div>
             </div>
@@ -423,7 +422,7 @@ class App extends Component {
           <div className="downbait"></div>
           <div className='ui container'>
             <div className='ui text container no-marg aligned center' style={{textAlign: "center"}}>
-              <img className="ui fluid image section-stars" src={require("./images/stars-03.png")} />
+              <img className="ui fluid image section-stars" src={require("./images/stars_colorized.png")} />
               <h1>La Suisse et le mondial</h1>
               <div className="authors"><b>Textes:</b> Renaud Tschoumy, Frédéric Thomasset</div>
             </div>
@@ -932,7 +931,7 @@ class App extends Component {
             <Pronocard title="Jeux vidéos" candidates={["Belgique", "France", "Brésil", "Espagne", "Allemagne"]} switzerland="0 fois"/>
             <Pronocard title="Mathématiques" candidates={["Brésil", "Allemagne", "Argentine", "Espagne", "Belgique"]} switzerland="1,4%" />
             <Pronocard title="Bookmakers" candidates={["Allemagne", "France", "Espagne", "Brésil", "Argentine"]} switzerland="26" />
-            <Pronocard title="Nos journalistes" candidates={["XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX"]} switzerland="16" />
+            <Pronocard title="Nos journalistes" candidates={["XXXXXXX", "XXXXXXX"]} switzerland="16" />
             <Pronocard title="La chèvre" candidates={["Belgique", "France"]} switzerland="" />
           </div>
 
@@ -942,7 +941,7 @@ class App extends Component {
               <div className="title-bloc" style={{textAlign: "center"}}>
                 <img className="ui fluid image" src={require("./images/quiz_impossible-02.png")}  style={{width: "200px", display:"inline-block"}}/>
               </div>
-              <p><b>La réponse du quiz impossible #1:</b> Nom du Joueur</p>
+              <p><b>La réponse du quiz de l'impossible</b><br/>Nom du Joueur</p>
             </div>
           </div>
 

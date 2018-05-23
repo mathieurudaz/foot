@@ -25,7 +25,10 @@ class Pronocard extends Component {
             <div className="card-title">{this.props.title}</div>
           </div>
           <div class="cardface cardface_back">
-            <div className=""><ul>{this.props.candidates.map((candidate, index) => {return <li>{index+1}. {candidate}</li>;})}</ul></div>
+            <div style={{marginTop: "60px"}}>
+              <img src={require("./images/stars_single.png")} style={{width: "60px"}}/>
+              <ul>{this.props.candidates.map((candidate, index) => {return <li>{index+1}. {candidate}</li>;})}</ul>
+            </div>
           </div>
 
       </div>

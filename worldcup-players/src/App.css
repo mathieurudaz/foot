@@ -13,7 +13,7 @@
 
 .intro-image{
   display: inline-block;
-  width: 100px;
+  width: 140px;
   margin-bottom: 0px;
   margin-top: 40px;
 }
@@ -79,11 +79,10 @@ h1{
 
     /*color: #22b573;*/
     letter-spacing: 1px;
-    font-weight: 500;
 }
 
 .title h2.surtitre{
-    font-size: 25px;
+    font-size: 20px;
     font-family: "Oswald", sans-serif;
     font-weight: 500;
     letter-spacing: 2px;
@@ -256,10 +255,12 @@ span.special{
 }
 
 .section-number.small.inverted{
-    background-color: #3a362e;
-    color: #f5f6f7 !important;
+    background-color: transparent;
+    color: #333 !important;
+    border: 2px solid #333;
 }
 
+/*
 .downbait{
   width: 90px;
   height: 120px;
@@ -284,6 +285,7 @@ span.special{
   background-color: #252525;
   background-image: url("./images/ui-02.png")
 }
+*/
 
 #section-1{
   padding-bottom: 90px;
@@ -333,11 +335,11 @@ span.special{
   line-height: 1.1em;
   font-size: 30px;
   text-transform: uppercase;
-  color: #f5f6f7;
+  color: #333;
   display: inline;
-  background-color: #333;
-  font-weight: 300;
-  box-shadow: -8px 0 0 #333, 8px 0 0 #333;
+  background-color: #f5f6f7;
+  font-weight: 400;
+  box-shadow: -8px 0 0 #f5f6f7, 8px 0 0 #f5f6f7;
 }
 
 .story-hint .section-number{
@@ -593,21 +595,26 @@ footer .copyright {
   /* Small devices (tablets, 768px and up) */
   @media (min-width: 768px) {
 
-    .title-special{
+    /*.title-special{
         line-height: 1;
         border-bottom: 3px solid #222222;
         display: inline-block;
-    }
+    }*/
 
     .intro-image{
       width: 300px;
-      margin-top: 0px;
+      margin-top: 40px;
       margin-bottom: 20px;
     }
 
     .title h1{
-      font-size: 60px;
+      font-size: 90px;
     }
+
+    .title h2.surtitre{
+      font-size: 25px;
+    }
+
     .question-container{
       border-bottom:1px solid rgba( 0,0,0,0.1 );
     }
@@ -616,7 +623,7 @@ footer .copyright {
   /* Medium devices (desktops, 992px and up) */
   @media (min-width: 992px) {
     .title h1{
-      font-size: 70px;
+      font-size: 80px;
     }
   }
 
@@ -624,7 +631,7 @@ footer .copyright {
   @media (min-width: 1200px) {
 
     .title h1{
-      font-size: 70px;
+      font-size: 90px;
     }
 
   }
