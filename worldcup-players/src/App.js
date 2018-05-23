@@ -479,11 +479,11 @@ class App extends Component {
           </div>  
 
           <div className='ui container computer or lower hidden'>
-            <img className="ui fluid image" src={require("./images/dataviz-09.png")} />
+            <img className="ui fluid image" src={require("./images/dataviz_titulaire-desktop.png")} />
           </div>
 
           <div className='ui container widescreen hidden large screen hidden'>
-            <img className="ui fluid image" src={require("./images/dataviz-18.png")} />
+            <img className="ui fluid image" src={require("./images/dataviz_titulaire-mobile.png")} />
           </div>
 
           <div className='ui container'>
@@ -515,10 +515,9 @@ class App extends Component {
               </p>
             </div>
           
-            <div class="ui stackable two column grid">
+            <div class="ui stackable two column grid" style={{margin: "20px 0px 0px 0px"}}>
               <div class="column">
-                {/*<span className="special">2006: L'Énergie de Pont</span>*/}
-                <div className='videoWrapper'>
+                <div className='videoWrapper' style={{marginTop: "20px"}}>
                   <iframe
                     className='externalNNIFrame'
                     src='https://www.lematin.ch/extern/videoplayer/videoplayer-nn.html?params=client@tagesanzeiger|videoId@339408|showLogo@1|autoStart@0|mute@0|showAds@false|previewPath@https://server025.newsnetz.tv/338508/frame-1-338508.jpg|platform@desktop'
@@ -527,10 +526,10 @@ class App extends Component {
                     frameBorder='no'
                   />
                 </div>
+                <p><b>2006: L'Énergie de Pont</b></p>
               </div>
               <div class="column">
-                {/*<span className="special">1994: Hottiger et le rêve américain</span>*/}
-                <div className='videoWrapper'>
+                <div className='videoWrapper' style={{marginTop: "20px"}}>
                   <iframe
                     className='externalNNIFrame'
                     src='https://www.lematin.ch/extern/videoplayer/videoplayer-nn.html?params=client@tagesanzeiger|videoId@339410|showLogo@1|autoStart@0|mute@0|showAds@false|previewPath@https://server025.newsnetz.tv/338508/frame-1-338508.jpg|platform@desktop'
@@ -539,6 +538,7 @@ class App extends Component {
                     frameBorder='no'
                   />
                 </div>
+                <p><b>1994: Hottiger et le rêve américain</b></p>
               </div>
             </div>
 
@@ -680,7 +680,7 @@ class App extends Component {
               </p>
               <p>
                 La Suisse inscrit trois buts (Ballaman, 2 x Hügi) en trois minutes,
-                pour mener <Inlinescore className="score" score={[3,9]} /> à la 19 e . Mais une commotion passagère (chute et coup de
+                pour mener <Inlinescore className="score" score={[3,0]} /> à la 19e . Mais une commotion passagère (chute et coup de
                 chaleur) prive Bocquet de sa lucidité. Totalement ailleurs, incapable de
                 commander sa défense, il laisse son gardien se débattre seul face aux
                 attaquants autrichiens.
@@ -724,20 +724,6 @@ class App extends Component {
             </div>
           </div>
 
-          {/*<div className='ui container stat-bloc'>
-            <div className='ui text container no-marg'>
-              <div className="title-bloc" style={{textAlign: "center"}}>
-                <div className="section-number small">8</div>
-                <h2>Le plus beau goal</h2>
-              </div>
-              <p>
-                Un choix forcément subjectif, mais on a opté pour le but de <b>Haris Seferovic </b>
-                contre l’Équateur, à Brasilia, lors de l’entrée en lice de la Suisse dans le <b>Mondial
-                2014</b>, au Brésil (<Inlinescore className="score" score={[2,1]} /> à la 93 e minute).
-              </p>
-            </div>
-          </div>*/}
-
           <div className='ui container pronocards-container'>
             <div className='ui text container no-marg'>
               <div className="title-bloc" style={{textAlign: "center"}}>
@@ -750,35 +736,8 @@ class App extends Component {
                 2014</b>, au Brésil (<Inlinescore className="score" score={[2,1]} /> à la 93e minute).
               </p>
             </div>
-
-            [Photo]
             <GoalAnimation />
           </div>
-
-          {/*
-          <div className='ui container stat-bloc'>
-            <div className='ui text container no-marg'>
-              <p>
-                <b>La première</b>: cette volée directe offrait à la Suisse une victoire décisive dans
-                l’optique de la qualification pour les huitièmes de finale.
-              </p>
-              <p><b>La deuxième</b>: il
-                symbolise à merveille la volonté de la Suisse, à témoin le tacle salvateur de
-                Valon Behrami dans sa surface avant son raid époustouflant.
-              </p>
-              <p>
-                <b>La troisième</b>: il a
-                été inscrit après un modèle de contre-attaque. Après avoir écarté une balle de
-                but – et évité un penalty – devant Arroyo, Behrami est parti à l’abordage.
-                Projeté au sol par Arboleda, il s’est relevé après une roulade et a continué sa
-                course folle, avant d’ouvrir sur Seferovic (déjà) à mi-terrain. L’attaquant a
-                changé le jeu pour lancer Ricardo Rodriguez sur le côté gauche, avant de venir
-                piquer au centre et de convertir le service du latéral, meilleur homme sur le
-                terrain ce jour-là.
-              </p>
-            </div>
-          </div>
-        */}
 
           <div className='ui container stat-bloc'>
             <div className='ui text container no-marg'>
@@ -828,21 +787,36 @@ class App extends Component {
                 <div className="section-number small">10</div>
                 <h2>Les romands</h2>
               </div>
-              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+              <p>
+                Entre les joueurs romands et l’équipe de Suisse, cela n’a pas toujours été une
+                folle histoire d’amour. <b>Les «Welsches» sont cependant montés en puissance
+                dans les années nonante</b> – comme par hasard, en même temps que l’équipe de
+                Suisse. C’est la génération dorée des Pascolo, Geiger, Hottiger, Ohrel et
+                Chapuisat (entre autres). Le record de présence allait être atteint en l’an 2000,
+                17 joueurs romands ayant porté le maillot rouge à croix banche cette année-là.
+                Depuis, la tendance est à la baisse, à l’exception de deux pics en 2005 (14) et
+                2007 (15).
+              </p>
             </div>
           </div>  
 
           <div className='ui container computer or lower hidden'>
-            <img className="ui fluid image" src={require("./images/dataviz-24.png")} />
+            <img className="ui fluid image" src={require("./images/dataviz_romands-desktop.png")} />
           </div>
 
           <div className='ui container widescreen hidden large screen hidden'>
-            <img className="ui fluid image" src={require("./images/dataviz-25.png")} />
+            <img className="ui fluid image" src={require("./images/dataviz_romands-mobile.png")} />
           </div>
 
           <div className='ui container'>
             <div className='ui text container no-marg'>
-              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+              <p>
+                Quant aux cantons romands pourvoyeurs de l’équipe nationale, ils sont
+                majoritairement trois, sans grande surprise: Vaud (de 2000 à 2010), Genève
+                (particulièrement de 2005 à 2014) et le Valais (de 1994 à l’an 2000 surtout)
+                sont loin devant Fribourg, Neuchâtel et le Jura, qui ne fournissent
+                qu’épisodiquement le cadre national.
+              </p>
             </div>
           </div>
 
@@ -868,7 +842,6 @@ class App extends Component {
                 et <Inlinescore className="score" score={[2,5]} /> contre la France en 2014).
               </p>
 
-              En phase finale
               <img className="ui fluid image" src={require("./images/dataviz_stats.png")} />
 
               <p>
@@ -963,6 +936,16 @@ class App extends Component {
             <Pronocard title="La chèvre" candidates={["Belgique", "France"]} switzerland="" />
           </div>
 
+          <div className='ui container' style={{textAlign: "center"}}>
+
+            <div className='ui text container no-marg'>
+              <div className="title-bloc" style={{textAlign: "center"}}>
+                <img className="ui fluid image" src={require("./images/quiz_impossible-02.png")}  style={{width: "200px", display:"inline-block"}}/>
+              </div>
+              <p><b>La réponse du quiz impossible #1:</b> Nom du Joueur</p>
+            </div>
+          </div>
+
         </main>
 
         <footer className='ui vertical segment'>
@@ -981,13 +964,7 @@ class App extends Component {
                   <table className='ui definition very basic small infographic table'>
                     <tbody>
                       <tr>
-                        <td>Idée</td>
-                        <td>
-                          DED WCH
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Texte et recherches</td>
+                        <td>Textes</td>
                         <td>Renaud Tschoumy, Daniel Visentini</td>
                       </tr>
                       <tr>
