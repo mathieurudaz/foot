@@ -579,17 +579,6 @@ class App extends Component {
                 <h2>En 1934, le premier match</h2>
               </div>
 
-              {/*<div class="ui text container no-marg grid equal width">
-                <div class="row">
-                  <div class="column">
-                    <img className="blason_img" src={require("./images/blason_netherland.png")} />
-                  </div>
-                  <div class="column">
-                    <img className="blason_img" src={require("./images/blason_switzerland.png")} />
-                  </div>
-                </div>
-              </div>*/}
-
               <p>
                 Qualifiée pour la Coupe du monde 1934 après un match nul contre la
                 Yougoslavie et une victoire par forfait contre la Roumanie, qui avait aligné un
@@ -927,7 +916,7 @@ class App extends Component {
               <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
             </div>
 
-            <div><span className="special">Retournez les cartes pour découvrir le pronostic</span></div>
+            <div style={{marginTop: "60px"}}><span className="special">Retournez les cartes pour découvrir le pronostic</span></div>
             <Pronocard title="Jeux vidéos" candidates={["Belgique", "France", "Brésil", "Espagne", "Allemagne"]} switzerland="0 fois"/>
             <Pronocard title="Mathématiques" candidates={["Brésil", "Allemagne", "Argentine", "Espagne", "Belgique"]} switzerland="1,4%" />
             <Pronocard title="Bookmakers" candidates={["Allemagne", "France", "Espagne", "Brésil", "Argentine"]} switzerland="26" />
