@@ -226,7 +226,7 @@ class App extends Component {
           <div className='ui container'>
             <div className='ui text container no-marg aligned center' style={{textAlign: "center"}}>
               <img className="ui fluid image section-stars" src={require("./images/stars_colorized_shadow.png")} alt="" />
-              <h1>Entrer dans la légende, porter l’émotion</h1>
+              <h1>Pour l’éternité, être un joueur de légende</h1>
               <div className="authors"><b>Texte:</b> Daniel Visentini</div>
             </div>
           </div>
@@ -558,7 +558,19 @@ class App extends Component {
                 1994).
               </p>
 
-              <img className="ui fluid image" src={require("./images/dataviz_participations.png")} alt="" />
+            </div>
+          </div>  
+
+          <div className='ui container computer or lower hidden'>
+            <img className="ui fluid image" src={require("./images/dataviz_participations-desktop.png")} alt="" />
+          </div>
+
+          <div className='ui container widescreen hidden large screen hidden'>
+            <img className="ui fluid image" src={require("./images/dataviz_participations-mobile.png")} alt=""/>
+          </div>
+
+          <div className='ui container'>
+            <div className='ui text container no-marg'>
 
               <p>
                 Absente en France en 1998, puis au Japon et en Corée du Sud en 2002,
