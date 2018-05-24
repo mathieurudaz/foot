@@ -65,3 +65,17 @@
   transform-style: preserve-3d;
   transform: rotateY(180deg);
 }
+
+small.prono-source{
+  font-family: Benton Sans Cond,Source Sans Pro,Helvetica Neue,Arial,Helvetica,sans-serif;
+  opacity: 0.55;
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  text-transform: none;
+  font-size: 12px;
+  line-height: 1em;
+}

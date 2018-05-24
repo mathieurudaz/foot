@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import scrollToComponent from 'react-scroll-to-component';
 import Player from './Player';
 import Question from './Question';
-import Answer from './Answer';
 import PlayersDb from './data/data.json';
 import Masthead from '@ta-interaktiv/react-masthead'
 import Scoreboard from './Scoreboard';
@@ -61,17 +60,13 @@ class App extends Component {
       matchedPlayer: null
     };
     this.answeredHandler = this.answeredHandler.bind(this);
-    this.setNextTemplate = this.setNextTemplate.bind(this);
     this.start = this.start.bind(this);
     this.questionComponents = []
   }
 
   start(){
+    // Scroll to the first question
     setTimeout(() => {scrollToComponent(this.questionComponents[0])}, 250)
-  }
-
-  setNextTemplate(){
-    this.setState({"currentTemplate": (this.state.currentTemplate + 1) % 7})
   }
 
   gotoNextQuestion(id){
@@ -171,7 +166,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-      console.log( PlayersDb )
+      //console.log( PlayersDb )
   }
 
   render() {
@@ -182,14 +177,14 @@ class App extends Component {
           defaultLanguage="fr"
           mediaName='24heures'
           homepage='//www.24heures.ch'
-          articleId='20417500'
+          articleId='29787437'
           fullMediaName='24 heures'
           hashtags={['24heuresch']} />
         <div className="ui vertical very fitted title">
           <div className='ui container center aligned'>
             <div className='ui'>
               <div>
-                <img className="intro-image" src={require("./images/player.png")} />
+                <img className="intro-image" src={require("./images/player.png")} alt="" />
                 <h2 className="surtitre">Coupe du monde 2018 </h2>
                 <h1>Quel <span className="title-special">joueur de légende</span> êtes-vous?</h1>
               </div>
@@ -230,7 +225,7 @@ class App extends Component {
           <div className="downbait inverted"></div>
           <div className='ui container'>
             <div className='ui text container no-marg aligned center' style={{textAlign: "center"}}>
-              <img className="ui fluid image section-stars" src={require("./images/stars_colorized_shadow.png")} />
+              <img className="ui fluid image section-stars" src={require("./images/stars_colorized_shadow.png")} alt="" />
               <h1>Entrer dans la légende, porter l’émotion</h1>
               <div className="authors"><b>Texte:</b> Daniel Visentini</div>
             </div>
@@ -239,18 +234,18 @@ class App extends Component {
             <div className='ui text container no-marg' style={{position:"relative"}}>
               <p className="ta lead">
                 C’est le moment préféré de tous les gamins du monde. Après avoir soigneusement délimité, à pas de
-                fourmi, deux poteaux symbolisés par des tas de vêtement soigneusement roulés en boule, le décor prend
+                fourmi, deux poteaux symbolisés par des tas de vêtements soigneusement roulés en boule, le décor prend
                 forme: c’est un terrain de foot qui dessine ses contours fantastiques et sur lequel se jouera une finale de
                 Mondial, d’Euro ou de Ligue des champions. Sans public, sans arbitre, sans stade autour, peu importe.
-                Mais avec bientôt deux équipes faramineuses composées des plus extraordinaires joueurs de tous les
+                Mais avec bientôt deux équipes fabuleuses composées des plus extraordinaires joueurs de tous les
                 temps, puisque chaque gosse sera la star qu’il veut l’espace de ce match.
               </p>
 
               <p>
                 Alors d’un seul coup, il y a là Pelé qui ressuscite Cruyff le temps d’une passe magique; il y a Maradona qui
                 défie Yachine par-delà les âges; il y a Platini et Puskas, main dans la main, qui déboulent ensemble pour
-                affronter Beckenbauer, ou encore le docteur Socrates, drapé dans son élégance féline, qui voit Zidane se
-                démarquer avant de se raviser pour alerter Baggio, mieux placé; tiens: il y a même là-bas Shaqiri et
+                affronter Beckenbauer, ou encore le «docteur» Socrates, drapé dans son élégance féline, qui voit Zidane se
+                démarquer avant de se raviser pour alerter Baggio, mieux placé; tiens, il y a même là-bas Shaqiri et
                 Chapuisat et Crisitiano Ronaldo qui s’associent pour déconcerter Iker Casillas, pendant que Van Basten
                 demande le ballon. Il y en a tant d’autres, tous convoqués, tous immortels. Tous des légendes, qu’une
                 ribambelle de gamins joyeux incarne pour toujours, à chaque fois qu’une cage s’improvise sur un talus et
@@ -258,31 +253,30 @@ class App extends Component {
               </p>
 
               <aside className='ui vertical very fitted segment widescreen hidden large screen hidden small' style={{marginBottom: '1em'}}>
-                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
-                  <div className='story-hint inverted'>
-                    <div className='icon-container'>
-                      <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
-                    </div>
-                    <div className='hint-container'>
-                      <div>Tout savoir sur <b>la Suisse et le Mondial</b>, à découvrir plus bas <nobr><a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.</div>
-                    </div>
+                <div className='story-hint inverted'>
+                  <div className='icon-container'>
+                    <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
                   </div>
-                </a>
-              </aside>
-              <aside className='ui right rail computer or lower hidden' style={{top: '7%'}}>
-                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
-                  <div className='story-hint inverted'>
-                    <div className='icon-container'>
-                      <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
-                    </div>
-                    <div className='hint-container'>
-                      <div>Tout savoir sur <b>la Suisse et le Mondial</b>, à découvrir plus bas <nobr><a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.</div>
-                    </div>
+                  <div className='hint-container'>
+                    Tout savoir sur <b>la Suisse et le Mondial</b>, à découvrir plus bas <nobr>
+                    <a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.
                   </div>
-                </a>
+                </div>
               </aside>
 
-              <img className="ui fluid image" src={require("./images/dataviz_legends-maradona.png")} />
+              <aside className='ui right rail computer or lower hidden' style={{top: '7%'}}>
+                <div className='story-hint inverted'>
+                  <div className='icon-container'>
+                    <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
+                  </div>
+                  <div className='hint-container'>
+                    Tout savoir sur <b>la Suisse et le Mondial</b>, à découvrir plus bas <nobr>
+                    <a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.
+                  </div>
+                </div>
+              </aside>
+
+              <img className="ui fluid image" src={require("./images/dataviz_legends-maradona.png")} alt="" />
 
               <p>
                 Une légende du football c’est quoi, sinon ce nom qu’un gosse s’approprie, comme s’il devait revêtir par
@@ -298,8 +292,8 @@ class App extends Component {
 
               <p>
                 Devenir une légende, c’est sans doute être meilleur que les autres. Mais pour beaucoup de raisons, dont
-                certaines débordent le cadre du seul terrain. Si le football est une tragédie grecque - unité de temps,
-                unité de lieu, unité d’action -, il y a, en marge de l’acteur, l’homme derrière le rôle. Tenir sa place, dans le
+                certaines débordent le cadre du seul terrain. Si le football est une tragédie grecque — unité de temps,
+                unité de lieu, unité d’action —, il y a, en marge de l’acteur, l’homme derrière le rôle. Tenir sa place, dans le
                 théâtre du spectacle programmé, lors d’un Mondial ou en club, c’est la tâche de chacun. Occuper la scène
                 jusqu’à en éclipser les autres, pour le bonheur, paradoxalement, de tous les siens, c’est le destin des
                 génies, de ceux qui entrent justement dans la légende. Mais comment?
@@ -307,9 +301,9 @@ class App extends Component {
 
               <p>
                 C’est Beckenbauer qui termine sa demi-finale du Mondial 1970 contre l’Italie le bras bandé en écharpe,
-                blessé durant de folles prolongations, meurtri mais debout, éliminé mais déjà Kaiser, son futur surnom.
+                blessé durant de folles prolongations, meurtri mais debout, éliminé mais déjà «Kaiser», son futur surnom.
                 C’est le jeune Edson Arantes do Nascimento, autrement dit Pelé, 17 ans, qui emmène le Brésil vers sa
-                première Coupe du Monde en 1958, en Suède: il en gagnera trois, seul joueur à cette altitude, dont celle
+                première Coupe du monde en 1958, en Suède; il en gagnera trois, seul joueur à cette altitude, dont celle
                 de 1962 où il ne jouera pratiquement pas (un match contre le Mexique et 25 minutes avant de se blesser
                 contre la Tchécoslovaquie). Au Chili, c’est grâce à Garrincha, ce «petit oiseau» aux pattes bizarres, que le
                 Brésil s’impose, mais l’histoire a la mémoire sélective quand on touche à ses légendes, alors pour tous,
@@ -317,31 +311,30 @@ class App extends Component {
               </p>
 
               <aside className='ui vertical very fitted segment widescreen hidden large screen hidden small' style={{marginBottom: '1em'}}>
-                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
-                  <div className='story-hint inverted'>
-                    <div className='icon-container'>
-                      <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
-                    </div>
-                    <div className='hint-container'>
-                      <div>Les souvenirs des <b>vieilles gloires</b> de l'équipe de Suisse, à découvrir plus bas <nobr><a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.</div>
-                    </div>
+                <div className='story-hint inverted'>
+                  <div className='icon-container'>
+                    <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
                   </div>
-                </a>
-              </aside>
-              <aside className='ui right rail computer or lower hidden' style={{top: '67%'}}>
-                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
-                  <div className='story-hint inverted'>
-                    <div className='icon-container'>
-                      <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
-                    </div>
-                    <div className='hint-container'>
-                      <div>Les souvenirs des <b>vieilles gloires</b> de l'équipe de Suisse, à découvrir plus bas <nobr><a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.</div>
-                    </div>
+                  <div className='hint-container'>
+                    Les souvenirs des <b>vieilles gloires</b> de l'équipe de Suisse, à découvrir plus bas <nobr>
+                    <a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.
                   </div>
-                </a>
+                </div>
               </aside>
 
-              <img className="ui fluid image" src={require("./images/dataviz_legends-pele.png")} />
+              <aside className='ui right rail computer or lower hidden' style={{top: '67%'}}>
+                <div className='story-hint inverted'>
+                  <div className='icon-container'>
+                    <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
+                  </div>
+                  <div className='hint-container'>
+                    Les souvenirs des <b>vieilles gloires</b> de l'équipe de Suisse, à découvrir plus bas <nobr>
+                    <a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.
+                  </div>
+                </div>
+              </aside>
+
+              <img className="ui fluid image" src={require("./images/dataviz_legends-pele.png")} alt="" />
 
               <p>
                 La légende, ce n’est pas que la bravoure indicible ou le récit merveilleux, c’est aussi la geste. C’est
@@ -350,12 +343,12 @@ class App extends Component {
                 que seul l’arbitre ne voit pas - la fameuse «main de Dieu» -, avant d’inscrire l’un des plus fabuleux buts
                 de l’histoire, passant en revue toute l’équipe anglaise dans un solo inouï de virtuosité technique. C’est
                 toujours ce même Maradona, star ultime mais génie froissé, qui quittera la sélection argentine lors de la
-                World Cup 94 aux Etats-Unis, convaincu de dopage. Il faut croire qu’entre le bon Dieu et le mauvais
+                World Cup 94 aux États-Unis, convaincu de dopage. Il faut croire qu’entre le bon Dieu et le mauvais
                 démiurge, la cohabitation n’est pas toujours facile.
               </p>
 
               <p>
-               Demandez à Zinédine Zidane. Le héros de toute la France en 1998, pour ce titre mondial qu’il offre aux
+                Demandez à Zinédine Zidane. Le héros de toute la France en 1998, pour ce titre mondial qu’il offre aux
                 Bleus avec ses deux têtes en finale contre le Brésil. On en oublierait presque son expulsion pour une
                 réaction épidermique dès le deuxième match de la compétition, contre l’Arabie saoudite. Ce vilain travers
                 le suit jusqu’en 2006, lors de la finale contre l’Italie, à Berlin: c’est le «coup de boule» sur Materazzi,
@@ -368,31 +361,30 @@ class App extends Component {
               </p>
 
               <aside className='ui vertical very fitted segment widescreen hidden large screen hidden small' style={{marginBottom: '1em'}}>
-                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
-                  <div className='story-hint inverted'>
-                    <div className='icon-container'>
-                      <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
-                    </div>
-                    <div className='hint-container'>
-                      <div>Le <b>match le plus fou</b> de l'équipe de Suisse, à découvrir plus bas <nobr><a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.</div>
-                    </div>
+                <div className='story-hint inverted'>
+                  <div className='icon-container'>
+                    <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
                   </div>
-                </a>
-              </aside>
-              <aside className='ui right rail computer or lower hidden' style={{top: '36%'}}>
-                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
-                  <div className='story-hint inverted'>
-                    <div className='icon-container'>
-                      <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
-                    </div>
-                    <div className='hint-container'>
-                      <div>Le <b>match le plus fou</b> de l'équipe de Suisse, à découvrir plus bas <nobr><a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.</div>
-                    </div>
+                  <div className='hint-container'>
+                    Le <b>match le plus fou</b> de l'équipe de Suisse, à découvrir plus bas <nobr>
+                    <a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.
                   </div>
-                </a>
+                </div>
               </aside>
 
-              <img className="ui fluid image" src={require("./images/dataviz_legends-zidane.png")} />
+              <aside className='ui right rail computer or lower hidden' style={{top: '36%'}}>
+                <div className='story-hint inverted'>
+                  <div className='icon-container'>
+                    <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
+                  </div>
+                  <div className='hint-container'>
+                    Le <b>match le plus fou</b> de l'équipe de Suisse, à découvrir plus bas <nobr>
+                    <a href="#section-2" className='pseudo-link'>ou en cliquant ici</a></nobr>.
+                  </div>
+                </div>
+              </aside>
+
+              <img className="ui fluid image" src={require("./images/dataviz_legends-zidane.png")} alt="" />
 
               <p>
                 Mais on pardonne tout aux légendes. Il y a comme une grâce qui les enveloppe, dont l’imperfection même
@@ -406,11 +398,11 @@ class App extends Component {
                 personne ne chasse l’autre. Et l’on peut déjà deviner les gamins de demain, réunis autour du ballon, juste
                 avant leur match fantastique mais si réel, plus Cristiano que Ronaldo, plus Neymar que Zico, plus Shaqiri
                 que Sutter, plus De Bruyne que Pfaff, ou alors par Hazard. Il suffira d’un geste, d’un éclat, d’un
-                miroitement pour que d’autres encore se joignent à cette dance.
+                miroitement pour que d’autres encore se joignent à cette danse.
               </p>
 
               <p>
-                Etre une légende, c’est peut-être susciter cette émotion-là, qui allume les yeux des enfants, grands et
+                Être une légende, c’est peut-être susciter cette émotion-là, qui allume les yeux des enfants, grands et
                 petits.
               </p>
             </div>
@@ -422,7 +414,7 @@ class App extends Component {
           <div className="downbait"></div>
           <div className='ui container'>
             <div className='ui text container no-marg aligned center' style={{textAlign: "center"}}>
-              <img className="ui fluid image section-stars" src={require("./images/stars_colorized.png")} />
+              <img className="ui fluid image section-stars" src={require("./images/stars_colorized.png")} alt="" />
               <h1>La Suisse et le mondial</h1>
               <div className="authors"><b>Textes:</b> Renaud Tschoumy, Frédéric Thomasset</div>
             </div>
@@ -448,12 +440,14 @@ class App extends Component {
                 <div className="section-number small">1</div>
                 <h2>Le joueur type</h2>
               </div>
-              <p>Une compilation de statistiques a permis de définir les contours et de cerner les traits de <b>l’international helvétique de référence</b>.
-                Si vos parents avaient été zurichois, s’ils s’étaient appelé Müller et s’ils vous
-                avaient prénommé Walter, vous auriez eu plus de chances que les autres d’être
+              <p>
+                Une compilation de statistiques a permis de définir les contours et de cerner les traits
+                de <b>l’international helvétique de référence</b>.
+                Si vos parents avaient été Zurichois, s’ils s’étaient appelé Müller et s’ils vous
+                avaient prénommé Walter, vous auriez eu plus de chance que les autres d’être
                 appelé en équipe de Suisse!
               </p>
-              <img className="ui fluid image" src={require("./images/joueur-03.png")} />
+              <img className="ui fluid image" src={require("./images/joueur-03.png")} alt="" />
               <p>
                 Ce nom et ce prénom sont en effet ceux que l’on
                 retrouve le plus souvent dans l’historique des sélectionnés. Si vous aviez ajouté
@@ -470,7 +464,7 @@ class App extends Component {
                 <h2>Devenir titulaire</h2>
               </div>
               <p>
-                Pour être sélectionné en équipe de Suisse, il vaut donc mieux être zurichois.
+                Pour être sélectionné en équipe de Suisse, il vaut donc mieux être Zurichois.
                 C’est en effet, et sans grande surprise, le canton de Zurich qui a fourni le plus
                 de joueurs à l’équipe de Suisse depuis 1994 et son retour en phase finale.
               </p>
@@ -478,11 +472,11 @@ class App extends Component {
           </div>  
 
           <div className='ui container computer or lower hidden'>
-            <img className="ui fluid image" src={require("./images/dataviz_titulaire-desktop.png")} />
+            <img className="ui fluid image" src={require("./images/dataviz_titulaire-desktop.png")} alt="" />
           </div>
 
           <div className='ui container widescreen hidden large screen hidden'>
-            <img className="ui fluid image" src={require("./images/dataviz_titulaire-mobile.png")} />
+            <img className="ui fluid image" src={require("./images/dataviz_titulaire-mobile.png")} alt=""/>
           </div>
 
           <div className='ui container'>
@@ -514,8 +508,8 @@ class App extends Component {
               </p>
             </div>
           
-            <div class="ui stackable two column grid" style={{margin: "20px 0px 0px 0px"}}>
-              <div class="column">
+            <div className="ui stackable two column grid" style={{margin: "20px 0px 0px 0px"}}>
+              <div className="column">
                 <div className='videoWrapper' style={{marginTop: "20px"}}>
                   <iframe
                     className='externalNNIFrame'
@@ -523,11 +517,12 @@ class App extends Component {
                     allowFullScreen='true'
                     scrolling='no'
                     frameBorder='no'
+                    title='Michel Pont video'
                   />
                 </div>
                 <p><b>2006: L'Énergie de Pont</b></p>
               </div>
-              <div class="column">
+              <div className="column">
                 <div className='videoWrapper' style={{marginTop: "20px"}}>
                   <iframe
                     className='externalNNIFrame'
@@ -535,6 +530,7 @@ class App extends Component {
                     allowFullScreen='true'
                     scrolling='no'
                     frameBorder='no'
+                    title='Marc Hottiger video'
                   />
                 </div>
                 <p><b>1994: Hottiger et le rêve américain</b></p>
@@ -557,12 +553,12 @@ class App extends Component {
               </p>
 
               <p>
-                S’est ensuivie une longue période de disette (28 ans, soit six
+                S’ensuivit une longue période de disette (28 ans, soit six
                 phases finales), jusqu’à la qualification des boys de Roy Hodgson (États-Unis
                 1994).
               </p>
 
-              <img className="ui fluid image" src={require("./images/dataviz_participations.png")} />
+              <img className="ui fluid image" src={require("./images/dataviz_participations.png")} alt="" />
 
               <p>
                 Absente en France en 1998, puis au Japon et en Corée du Sud en 2002,
@@ -589,22 +585,28 @@ class App extends Component {
               <Scoreboard score={[3,2]} teams={["Suisse", "Pays-Bas"]}/>
 
               <aside className='ui vertical very fitted segment widescreen hidden large screen hidden small' style={{marginBottom: '1em'}}>
-                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
                   <div className='story-hint quote'>
                     <div className='hint-container'>
-                      <div><p>Trello Abegglen fait feu de tout bois. Après avoir offert les deux premiers buts à Kielholz, il inscrit lui-même le troisième.</p></div>
+                      <div>
+                        <p>
+                          Trello Abegglen fait feu de tout bois. Après avoir offert les deux premiers buts à
+                          Kielholz, il inscrit lui-même le troisième.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </a>
               </aside>
               <aside className='ui right rail computer or lower hidden' style={{top: '30%'}}>
-                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
                   <div className='story-hint quote'>
                     <div className='hint-container'>
-                      <div><p>Trello Abegglen fait feu de tout bois. Après avoir offert les deux premiers buts à Kielholz, il inscrit lui-même le troisième.</p></div>
+                      <div>
+                        <p>
+                          Trello Abegglen fait feu de tout bois. Après avoir offert les deux premiers buts à
+                          Kielholz, il inscrit lui-même le troisième.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </a>
               </aside>
 
               <p>
@@ -617,8 +619,9 @@ class App extends Component {
                 Ce jour-là, Trello Abegglen fait feu de tout bois. Après
                 avoir offert les deux premiers buts à Kielholz sur des services d’une précision
                 folle (7e et 44e minutes), il inscrit lui-même le troisième but (72 e ). <b>La Suisse bat
-                les Pays-Bas</b> <Inlinescore className="score" score={[3,2]} /> et se qualifie pour les quart de finale, où elle sera battue par la
-                Tchécoslovaquie, futur finaliste (<Inlinescore className="score" score={[2,3]} />).
+                les Pays-Bas</b> <Inlinescore className="score" score={[3,2]} /> et se qualifie pour les
+                quarts de finale, où elle sera battue par la Tchécoslovaquie, future finaliste
+                (<Inlinescore className="score" score={[2,3]} />).
               </p>
             </div>
           </div>
@@ -637,7 +640,7 @@ class App extends Component {
                 depuis le passage à 24, puis 32 équipes.
               </p>
 
-              <img className="ui fluid image" src={require("./images/issue-07.png")} />
+              <img className="ui fluid image" src={require("./images/dataviz_results.png")} alt="" />
 
               <p>
                 Elle a été huitième de finaliste à trois
@@ -662,12 +665,12 @@ class App extends Component {
               </div>
               {/*<div className="dateyear">1954</div>*/}
               <p>
-                Il s’agit sans conteste du fameux quart de finale Suisse – Autriche, le <b>26 juin
+                Il s’agit sans conteste du fameux quart de finale Suisse - Autriche, le <b>26 juin
                 1954</b>. On est à Lausanne, et le stade de la Pontaise affiche complet (35&#39;000
                 spectateurs).
               </p>
               <p>
-                La Suisse inscrit trois buts (Ballaman, 2 x Hügi) en trois minutes,
+                La Suisse inscrit trois buts (Ballaman, Hügi deux fois) en trois minutes,
                 pour mener <Inlinescore className="score" score={[3,0]} /> à la 19e . Mais une commotion passagère (chute et coup de
                 chaleur) prive Bocquet de sa lucidité. Totalement ailleurs, incapable de
                 commander sa défense, il laisse son gardien se débattre seul face aux
@@ -676,37 +679,44 @@ class App extends Component {
               {/*<Scoreboard score={[7,5]} teams={["Autriche", "Suisse"]} />*/}
 
               <aside className='ui vertical very fitted segment widescreen hidden large screen hidden small' style={{marginBottom: '1em'}}>
-                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
                   <div className='story-hint quote'>
                     <div className='hint-container'>
-                      <div><p>Une commotion prive Bocquet de sa lucidité. Incapable de commander sa défense, il laisse son gardien Parlier se débattre seul.</p></div>
+                      <div>
+                        <p>
+                          Une commotion prive Bocquet de sa lucidité. Incapable de commander sa défense,
+                          il laisse son gardien Parlier se débattre seul.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </a>
               </aside>
               <aside className='ui right rail computer or lower hidden' style={{top: '50%'}}>
-                <a onClick={this.toggleSidestory} data-story='Gewinne von US-Konzernen' data-target='paneOne'>
                   <div className='story-hint quote'>
                     <div className='hint-container'>
-                      <div><p>Une commotion prive Bocquet de sa lucidité. Incapable de commander sa défense, il laisse son gardien Parlier se débattre seul.</p></div>
+                      <div>
+                        <p>
+                          Une commotion prive Bocquet de sa lucidité. Incapable de commander sa défense,
+                          il laisse son gardien Parlier se débattre seul.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </a>
               </aside>
 
-              <img className="ui fluid image" src={require("./images/match-1954.jpg")} style={{margin: "20px 0px 30px 0px"}}/>
+              <img className="ui fluid image" src={require("./images/match-1954.jpg")} style={{margin: "20px 0px 30px 0px"}} alt="" />
 
               <p>
                 Résultat: en neuf minutes, de la 25&nbsp;e à la 34&nbsp;e, l’Autriche
                 inscrit cinq buts et renverse la vapeur! Ballaman réduit l’écart avant la pause
-                (<Inlinescore className="score" score={[4,5]} /> à la 39&nbsp;e ) avant que Hügi n’inscrive son troisième but personnel (<Inlinescore className="score" score={[5,6]} /> à la
+                (<Inlinescore className="score" score={[4,5]} /> à la 39&nbsp;e ) avant que Hügi
+                n’inscrive son troisième but personnel (<Inlinescore className="score" score={[5,6]} /> à la
                 60&nbsp;e ), mais la Suisse ne réussit pas à retourner la situation.
               </p>
 
               <p>
                 Score final: <Inlinescore className="score" score={[7,5]} /> pour
                 l’Autriche, qui prive la Suisse d’une demi-finale à domicile qui lui tendait les
-                bras. Cette rencontre de légende est toujours dans le livre des records: <b>jamais il
+                bras. Cette rencontre de légende est toujours dans le Livre des records: <b>jamais il
                 n’a été marqué autant de buts (douze) en une seule rencontre de phase finale</b>.
               </p>
             </div>
@@ -741,14 +751,14 @@ class App extends Component {
                 En 1990, la Suisse est sous contrat avec Blacky, qui propose une ligne novatrice.
                 La croix suisse occupe la quasi-totalité du devant du maillot, qui plus est ornée
                 de parements noirs. Scandale: comment peut-on jouer sans avoir le symbole du
-                pays – qui plus est dénaturé - sur le cœur? C’est pourtant avec ce maillot que
+                pays – qui plus est dénaturé – sur le cœur? C’est pourtant avec ce maillot que
                 l’équipe de Suisse du renouveau (celle de Chapuisat, Knup, etc.) obtiendra ses
                 premiers résultats de référence, avant de passer chez Lotto pour la campagne
                 menant à la phase finale américaine de la World Cup 1994, puis chez Puma en
                 1998.
               </p>
 
-              <img className="ui fluid image" src={require("./images/dataviz_maillots.png")} />
+              <img className="ui fluid image" src={require("./images/dataviz_maillots.png")} alt="" />
 
               <p>
                 En 2008, juste avant l’Euro qui se dispute en Suisse et en Autriche, c’est
@@ -789,11 +799,11 @@ class App extends Component {
           </div>  
 
           <div className='ui container computer or lower hidden'>
-            <img className="ui fluid image" src={require("./images/dataviz_romands-desktop.png")} />
+            <img className="ui fluid image" src={require("./images/dataviz_romands-desktop.png")} alt="" />
           </div>
 
           <div className='ui container widescreen hidden large screen hidden'>
-            <img className="ui fluid image" src={require("./images/dataviz_romands-mobile.png")} />
+            <img className="ui fluid image" src={require("./images/dataviz_romands-mobile.png")} alt="" />
           </div>
 
           <div className='ui container'>
@@ -817,20 +827,20 @@ class App extends Component {
               <p>
                 L’équipe de Suisse a disputé à ce jour 33 matches en phase finale de Coupe du
                 monde. Son bilan global est négatif: 11 victoires, 6 matches nuls et 16 défaites
-                pour une différence de buts de – 14 (45 buts marqués, 59 encaissés).
+                pour une différence de buts de -14 (45 buts marqués, 59 encaissés).
               </p>
               <p>
                 La Suisse s’est imposée à trois reprises par trois buts d’écart: <Inlinescore className="score" score={[4,1]} /> contre l’Italie
                 en 1954, <Inlinescore className="score" score={[4,1]} /> contre la Roumanie en 1994 et <Inlinescore className="score" score={[3,0]} /> contre le Honduras en 2014.
               </p>
               <p>
-                A l’inverse, elle s’est inclinée une fois par cinq buts d’écart (<Inlinescore className="score" score={[0,5]} /> contre
+                À l’inverse, elle s’est inclinée une fois par cinq buts d’écart (<Inlinescore className="score" score={[0,5]} /> contre
                 l’Allemagne en 1966) et quatre fois par trois buts d’écart (<Inlinescore className="score" score={[0,3]} /> contre la
                 Yougoslavie en 1950, <Inlinescore className="score" score={[0,3]} /> contre l’Italie en 1962, <Inlinescore className="score" score={[0,3]} /> contre l’Espagne en 1994
                 et <Inlinescore className="score" score={[2,5]} /> contre la France en 2014).
               </p>
 
-              <img className="ui fluid image" src={require("./images/dataviz_stats.png")} />
+              <img className="ui fluid image" src={require("./images/dataviz_stats.png")} alt="" />
 
               <p>
                 Le match dans lequel elle a mis le plus de buts est le fameux quart de finale
@@ -844,7 +854,7 @@ class App extends Component {
                 (<Inlinescore className="score" score={[2,0]} /> contre le Togo, <Inlinescore className="score" score={[2,0]} /> contre la Corée du Sud, <Inlinescore className="score" score={[0,0]} /> ap contre l’Ukraine en 8 e de
                 finale) pour devenir la seule équipe au monde à avoir été éliminée sans avoir
                 encaissé le moindre but dans le jeu (défaite <Inlinescore className="score" score={[0,3]} /> aux tirs au but contre l’Ukraine
-                en 8e).
+                en huitième).
               </p>
               <p>
                 Le <b>meilleur buteur</b> de la Suisse en phase finale est Sepp Hügi (6 buts), qui
@@ -868,9 +878,9 @@ class App extends Component {
               </div>
               <p>
                 La FIFA a considérablement augmenté sa dotation par rapport au Mondial
-                brésilien d’il y a quatre ans. En Russie, le 32 pays qualifiés se partageront la
+                brésilien d’il y a quatre ans. En Russie, les 32 pays qualifiés se partageront la
                 somme de <b>400 millions de dollars</b>, ce qui représente une augmentation de 12%
-                par rapport aux 358 millions dollars de l’édition 2014.
+                par rapport aux 358 millions de dollars de l’édition 2014.
               </p>
             {/*<p>
                 Chaque pays qualifié recevra une prime de 8 millions de dollars. Les huitièmes
@@ -883,18 +893,17 @@ class App extends Component {
                 nation.
               </p>*/}
 
-              <img className="ui fluid image" src={require("./images/dataviz_argent.png")} />
+              <img className="ui fluid image" src={require("./images/dataviz_argent.png")} alt="" />
 
               <p>
-                En plus de ces sommes qui seront donc allouées aux Fédérations en fonction de
+                En plus de ces sommes qui seront donc allouées aux fédérations en fonction de
                 leur parcours en Russie, la FIFA a d’ores et déjà dédommagé les équipes
-                qualifiées pour leur frais de préparation, à hauteur de 1,5 million de dollars par
-                nation.
+                qualifiées pour leur frais de préparation, à hauteur de 1,5 million de dollars chacune.
               </p>
               <p>
-                En Russie, les frais d’hôtel et de transports sont pris en charge dans leur entier
+                En Russie, les frais d’hôtel et de transport sont pris en charge dans leur entier
                 par la FIFA, jusqu’à concurrence de 50 personnes. Dans le cas de la Suisse, la
-                FIFA payera l’aller-retour Zurich – Samara (aéroport le plus proche du camp de
+                FIFA payera l’aller-retour Zurich - Samara (aéroport le plus proche du camp de
                 base de la Nati à Togliatti) et les transferts internes pour rallier les villes dans
                 lesquelles jouera la Suisse, plus évidemment toutes les nuitées du séjour.<br/>
                 La délégation de l’Association suisse de football (ASF) sera composée de <b>55
@@ -906,7 +915,7 @@ class App extends Component {
             </div>
           </div>
 
-          <div className='ui container pronocards-container' style={{textAlign: "center"}}>
+          <div className='ui container pronocards-container' style={{textAlign: "center"}} alt="" >
 
             <div className='ui text container no-marg'>
               <div className="title-bloc" style={{textAlign: "center"}}>
@@ -917,18 +926,18 @@ class App extends Component {
             </div>
 
             <div style={{marginTop: "60px"}}><span className="special">Retournez les cartes pour découvrir le pronostic</span></div>
-            <Pronocard title="Jeux vidéos" candidates={["Belgique", "France", "Brésil", "Espagne", "Allemagne"]} switzerland="0 fois"/>
-            <Pronocard title="Mathématiques" candidates={["Brésil", "Allemagne", "Argentine", "Espagne", "Belgique"]} switzerland="1,4%" />
-            <Pronocard title="Bookmakers" candidates={["Allemagne", "France", "Espagne", "Brésil", "Argentine"]} switzerland="26" />
-            <Pronocard title="Nos journalistes" candidates={["XXXXXXX", "XXXXXXX"]} switzerland="16" />
-            <Pronocard title="La chèvre" candidates={["Belgique", "France"]} switzerland="" />
+            <Pronocard title="Jeux vidéos" candidates={["Belgique", "France", "Brésil", "Espagne", "Allemagne"]} switzerland="0 fois" source="Football manager 2018: sur 100 coupes du monde simulées"/>
+            <Pronocard title="Mathématiques" candidates={["Brésil", "Allemagne", "Argentine", "Espagne", "Belgique"]} switzerland="1,4%" source="Statistiques Opta"/>
+            <Pronocard title="Bookmakers" candidates={["Allemagne", "France", "Espagne", "Brésil", "Argentine"]} switzerland="26" source="Moyenne de cotes sur 8 sites de paris sportifs en ligne"/>
+            <Pronocard title="Nos journalistes" candidates={["Allemagne", "Argentine"]} switzerland="16" source="Les pronostics du Sportcenter"/>
+            <Pronocard title="La chèvre" candidates={["Belgique", "France"]} switzerland="" source="La chèvre Zabiyaka du zoo de Samara"/>
           </div>
 
           <div className='ui container' style={{textAlign: "center"}}>
 
             <div className='ui text container no-marg'>
               <div className="title-bloc" style={{textAlign: "center"}}>
-                <img className="ui fluid image" src={require("./images/quiz_impossible-02.png")}  style={{width: "200px", display:"inline-block"}}/>
+                <img className="ui fluid image" src={require("./images/quiz_impossible-02.png")}  style={{width: "200px", display:"inline-block"}} alt="" />
               </div>
               <p><b>La réponse du quiz de l'impossible</b><br/>Nom du Joueur</p>
             </div>
@@ -939,14 +948,6 @@ class App extends Component {
         <footer className='ui vertical segment'>
           <div className='ui container'>
             <div className='ui two column divided stackable grid'>
-              {/*<div className='center aligned row teaser-section'>
-                <a href='https://interaktiv.tagesanzeiger.ch'>
-                  <img
-                    src='https://interaktiv.tagesanzeiger.ch/inline-teaser.gif'
-                    className='portfolio-teaser'
-                  />
-                </a>
-              </div>*/}
               <div className='stretched aligned row'>
                 <div className='column'>
                   <table className='ui definition very basic small infographic table'>
@@ -979,11 +980,11 @@ class App extends Component {
                     question="Vous voulez communiquer un renseignement ou vous avez repéré une erreur?"
                     call="Envoyez-nous un "
                     mail="message"
-                    mailTo='interaktiv@tages-anzeiger.ch' />
+                    mailTo='24heures.web@sr.tamedia.ch' />
                   <div className='ui fluid share container'>
                     <PolymorphicShareButtons
-                      articleId='20417500'
-                      hashtags={['TAGrafik', 'ddj']}
+                      articleId='29787437'
+                      hashtags={['Coupe du monde', 'Mondial']}
                       displayType={displayTypes.VERTICAL_BUTTONS}
                     />
                   </div>

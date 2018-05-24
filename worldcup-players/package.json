@@ -20,5 +20,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://www.24heures.ch/extern/interactive_wch/2018/foot"
+  "homepage": "https://www.24heures.ch/extern/interactive_wch/2018/mondial"
 }

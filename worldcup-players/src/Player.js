@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './Player.css';
 import { defaultClickHandler } from '@ta-interaktiv/react-share-buttons'
-import { PureShareButtons } from '@ta-interaktiv/react-share-buttons'
+//import { PureShareButtons } from '@ta-interaktiv/react-share-buttons'
+import PolymorphicShareButtons from '@ta-interaktiv/react-polymorphic-share-buttons'
+import { displayTypes } from '@ta-interaktiv/react-share-buttons'
 
 // No matched player message component
 function NoMatchedPlayerMsg(props){
@@ -29,11 +31,7 @@ function getPosition(positionId){
 }
 
 function getYears(yearsString){
-  console.log(yearsString)
   let y = yearsString.replace(/ /g, "")
-  console.log(y)
-  let years = y.split(",");
-  //return years
   return y.replace(/,/g, "∙")
 }
 
@@ -69,32 +67,20 @@ class Card extends Component {
                     </div>
                   </div>
                 </div>
-                <PureShareButtons
-                  inverted={true}
-                  url={window.location.href}
-                  clickHandler={defaultClickHandler}
-                  displayType='horizontal icons'
-                />
               </div>
-              {/*this.props.answers.map((answer, index) => {
-                return <p key={index}>{"Question " + index + ": " + answer}</p>
-              })*/}
             </div>
             <div className="portrait">
 
-                <div className='stats-header'>
-                  <div className="stats-bloc">
-                    <div className="row stats-label">
-                      Année(s) de participation
-                    </div>
-                    <div className="row stats-value">
-                      {/*getYears(this.props.player.years).map((year, index) => {
-                        return <div style={{display: 'inline-block'}}>{year} <span className='bullet'></span></div>
-                      })*/}
-                      {getYears(this.props.player.years)}
-                    </div>
+              <div className='stats-header'>
+                <div className="stats-bloc">
+                  <div className="row stats-label">
+                    Année(s) de participation
+                  </div>
+                  <div className="row stats-value">
+                    {getYears(this.props.player.years)}
                   </div>
                 </div>
+              </div>
 
               <div className='portrait-content'>
                 <div className="stats ui two column grid">
@@ -167,6 +153,24 @@ class Card extends Component {
                     </div>
                   </div>
                 </div>
+
+                <div style={{marginTop: "60px", marginBottom: "10px"}}>Partagez votre joueur...</div>
+
+                {/*<PureShareButtons
+                  inverted={false}
+                  url={window.location.href}
+                  clickHandler={defaultClickHandler}
+                  displayType='horizontal icons'
+                />*/}
+                    
+                <PolymorphicShareButtons
+                  articleId='29787437'
+                  hashtags={['Coupe du monde', 'Mondial']}
+                  displayType={displayTypes.HORIZONTAL_BUTTONS}
+                />
+
+                <div style={{marginTop: "20px", marginBottom: "5px"}}>... et <b>continuez la lecture</b>!</div>
+                <div style={{marginBottom: "40px"}}>↓</div>
               </div>
             </div>
         </div>

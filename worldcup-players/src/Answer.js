@@ -28,7 +28,7 @@ class Answer extends Component {
         // TODO: Detect the end CSS transition event instead
         // of setting a timer
         onClick={() => this.props.handleChange(this.props.id)}>
-          {!this.videoAnswer() ? this.props.label.toUpperCase() : <img style={{width:"100%", height:"auto"}} src={this.props.label} />}
+          {!this.videoAnswer() ? this.props.label.toUpperCase() : <img style={{width:"100%", height:"auto"}} src={this.props.label} alt="" />}
       </div>
     );
   }
