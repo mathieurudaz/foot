@@ -917,14 +917,27 @@ class App extends Component {
             </div>
           </div>
 
-          <div className='ui container pronocards-container' style={{textAlign: "center"}} alt="" >
+          <div className='ui container pronocards-container' style={{textAlign: "center"}}>
 
-            <div className='ui text container no-marg'>
+            <div className='ui text container no-marg' style={{textAlign: "left"}}>
               <div className="title-bloc" style={{textAlign: "center"}}>
                 <div className="section-number small inverted">13</div>
                 <h2>Le pronostic</h2>
               </div>
-              <p>Sed sit amet lacinia neque. Ut eget urna id augue viverra maximus. Curabitur consequat massa elit, sit amet fermentum leo scelerisque ut. Quisque leo turpis, posuere vitae mauris at, hendrerit hendrerit diam. Donec at faucibus sem. Maecenas et rhoncus diam. Maecenas id nunc sed eros imperdiet feugiat. Mauris eu rutrum enim. Cras vel odio a leo venenatis facilisis vel quis lacus. Phasellus hendrerit condimentum malesuada.</p>
+              <p>
+                Aux yeux des spécialistes de l’Agence Sport-Center, la rédaction sportive
+                unifiée des publications romandes de Tamedia, <b>l’Allemagne est la grande
+                favorite du Mondial qui s’annonce</b>.
+              </p>
+              <p>
+                Sur six journalistes sondés, quatre d’entre eux la donnent championne du
+                monde, un cinquième la voyant perdre en finale. Quant aux deux reporters
+                n’ayant pas plébiscité l’Allemagne, ils ont misé sur le Brésil.
+              </p>
+              <p>
+                La France, la Croatie, l’Espagne, l’Angleterre et l’Argentine sont également des
+                pays cités. Mais comme finalistes, pas comme vainqueurs.
+              </p>
             </div>
 
             <div style={{marginTop: "60px"}}><span className="special">Retournez les cartes pour découvrir le pronostic</span></div>
