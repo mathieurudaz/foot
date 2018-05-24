@@ -905,7 +905,9 @@ class App extends Component {
                 par la FIFA, jusqu’à concurrence de 50 personnes. Dans le cas de la Suisse, la
                 FIFA payera l’aller-retour Zurich - Samara (aéroport le plus proche du camp de
                 base de la Nati à Togliatti) et les transferts internes pour rallier les villes dans
-                lesquelles jouera la Suisse, plus évidemment toutes les nuitées du séjour.<br/>
+                lesquelles jouera la Suisse, plus évidemment toutes les nuitées du séjour.
+              </p>
+              <p>
                 La délégation de l’Association suisse de football (ASF) sera composée de <b>55
                 personnes</b>, soit 23 joueurs et 32 accompagnants (staff technique et médical,
                 dirigeants, officiels, cuisiniers, cellule médias, analyste vidéo). L’ASF devra donc
@@ -939,7 +941,13 @@ class App extends Component {
               <div className="title-bloc" style={{textAlign: "center"}}>
                 <img className="ui fluid image" src={require("./images/quiz_impossible-02.png")}  style={{width: "200px", display:"inline-block"}} alt="" />
               </div>
-              <p><b>La réponse du quiz de l'impossible</b><br/>Nom du Joueur</p>
+              <p><b>La réponse au quiz de l'impossible</b><br/>Nom du Joueur</p>
+              <p>
+                J’ai joué avec Frei et Yakin, mais pas Suárez.<br/>
+                J’ai évolué dans le même club que Chapuisat, mais jamais avec lui.<br/>
+                Dans ma carrière je n'ai jamais marché seul, et j'ai porté les couleurs de Barcelone, sans avoir joué en Espagne.<br/>
+                <b>Qui suis-je?</b>
+              </p>
             </div>
           </div>
 
