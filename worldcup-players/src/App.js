@@ -899,7 +899,13 @@ class App extends Component {
                 nation.
               </p>*/}
 
-              <img className="ui fluid image" src={require("./images/dataviz_argent.png")} alt="" />
+              <div className='ui container computer or lower hidden'>
+                <img className="ui fluid image" src={require("./images/dataviz_argent-desktop.png")} alt="" />
+              </div>
+
+              <div className='ui container widescreen hidden large screen hidden'>
+                <img className="ui fluid image" src={require("./images/dataviz_argent-mobile.png")} alt=""/>
+              </div>
 
               <p>
                 En plus de ces sommes qui seront donc allouées aux fédérations en fonction de
