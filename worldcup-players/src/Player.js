@@ -155,13 +155,6 @@ class Card extends Component {
                 </div>
 
                 <div style={{marginTop: "60px", marginBottom: "10px"}}>Partagez votre joueur...</div>
-
-                {/*<PureShareButtons
-                  inverted={false}
-                  url={window.location.href}
-                  clickHandler={defaultClickHandler}
-                  displayType='horizontal icons'
-                />*/}
                     
                 <PolymorphicShareButtons
                   articleId='29787437'

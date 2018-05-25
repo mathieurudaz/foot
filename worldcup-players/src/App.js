@@ -322,7 +322,7 @@ class App extends Component {
                 </div>
               </aside>
 
-              <aside className='ui right rail computer or lower hidden' style={{top: '67%'}}>
+              <aside className='ui right rail computer or lower hidden' style={{top: '36%'}}>
                 <div className='story-hint inverted'>
                   <div className='icon-container'>
                     <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
@@ -372,7 +372,7 @@ class App extends Component {
                 </div>
               </aside>
 
-              <aside className='ui right rail computer or lower hidden' style={{top: '36%'}}>
+              <aside className='ui right rail computer or lower hidden' style={{top: '67%'}}>
                 <div className='story-hint inverted'>
                   <div className='icon-container'>
                     <div className="section-number small" style={{ backgroundColor: "#ffce4d" }}>2</div>
@@ -558,19 +558,13 @@ class App extends Component {
                 1994).
               </p>
 
-            </div>
-          </div>  
+              <div className='ui container computer or lower hidden'>
+                <img className="ui fluid image" src={require("./images/dataviz_participations-desktop.png")} alt="" />
+              </div>
 
-          <div className='ui container computer or lower hidden'>
-            <img className="ui fluid image" src={require("./images/dataviz_participations-desktop.png")} alt="" />
-          </div>
-
-          <div className='ui container widescreen hidden large screen hidden'>
-            <img className="ui fluid image" src={require("./images/dataviz_participations-mobile.png")} alt=""/>
-          </div>
-
-          <div className='ui container'>
-            <div className='ui text container no-marg'>
+              <div className='ui container widescreen hidden large screen hidden'>
+                <img className="ui fluid image" src={require("./images/dataviz_participations-mobile.png")} alt=""/>
+              </div>
 
               <p>
                 Absente en France en 1998, puis au Japon et en Corée du Sud en 2002,
@@ -956,12 +950,20 @@ class App extends Component {
             <Pronocard title="Jeux vidéos" candidates={["Belgique", "France", "Brésil", "Espagne", "Allemagne"]} switzerland="0 fois" source="Football manager 2018: sur 100 coupes du monde simulées"/>
             <Pronocard title="Mathématiques" candidates={["Brésil", "Allemagne", "Argentine", "Espagne", "Belgique"]} switzerland="1,4%" source="Statistiques Opta"/>
             <Pronocard title="Bookmakers" candidates={["Allemagne", "France", "Espagne", "Brésil", "Argentine"]} switzerland="26" source="Moyenne de cotes sur 8 sites de paris sportifs en ligne"/>
-            <Pronocard title="Nos journalistes" candidates={["Allemagne", "Argentine"]} switzerland="16" source="Les pronostics du Sportcenter"/>
+            <Pronocard title="Nos journalistes" candidates={["Allemagne", "Brésil"]} switzerland="16" source="Les pronostics du Sportcenter"/>
             <Pronocard title="La chèvre" candidates={["Belgique", "France"]} switzerland="" source="La chèvre Zabiyaka du zoo de Samara"/>
           </div>
 
-          <div className='ui container' style={{textAlign: "center"}}>
+          <div className='ui container'>
+            <div className='ui text container no-marg'>
+              <p><b>Sources</b></p>
+              <p>
+                transfermarkt.com, fifa.com, Association suisse de football
+              </p>
+            </div>
+          </div>
 
+          {/*<div className='ui container' style={{textAlign: "center"}}>
             <div className='ui text container no-marg'>
               <div className="title-bloc" style={{textAlign: "center"}}>
                 <img className="ui fluid image" src={require("./images/quiz_impossible-02.png")}  style={{width: "200px", display:"inline-block"}} alt="" />
@@ -974,7 +976,7 @@ class App extends Component {
                 <b>Qui suis-je?</b>
               </p>
             </div>
-          </div>
+          </div>*/}
 
         </main>
 
