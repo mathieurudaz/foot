@@ -964,7 +964,7 @@ class App extends Component {
             <div className='ui text container no-marg'>
               <p><b>Sources</b></p>
               <p>
-                transfermarkt.com, fifa.com, Association suisse de football
+                transfermarkt.com, fifa.com, Association suisse de football (ASF), national-football-teams.com
               </p>
             </div>
           </div>
