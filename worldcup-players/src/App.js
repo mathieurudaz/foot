@@ -173,6 +173,7 @@ class App extends Component {
     return (
       <div className={"app style-" + this.state.currentTemplate}>
         <Masthead
+          enablePaywall={false}
           inverted={true}
           defaultLanguage="fr"
           mediaName='24heures'
@@ -1010,7 +1011,7 @@ class App extends Component {
                       <tr>
                         <td>Publié le</td>
                         <td>
-                          <TimestampFormatter timestamp={1525222800 - 3600} />
+                          <TimestampFormatter timestamp={1527497520} />
                         </td>
                       </tr>
                     </tbody>
@@ -1025,7 +1026,7 @@ class App extends Component {
                   <div className='ui fluid share container'>
                     <PolymorphicShareButtons
                       articleId='29787437'
-                      hashtags={['Coupe du monde', 'Mondial']}
+                      hashtags={['24heures', 'Mondial']}
                       displayType={displayTypes.VERTICAL_BUTTONS}
                     />
                   </div>

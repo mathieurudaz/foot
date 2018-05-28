@@ -158,7 +158,7 @@ class Card extends Component {
                     
                 <PolymorphicShareButtons
                   articleId='29787437'
-                  hashtags={['Coupe du monde', 'Mondial']}
+                  hashtags={['24heures', 'Mondial']}
                   displayType={displayTypes.HORIZONTAL_BUTTONS}
                 />
 
